@@ -2,6 +2,8 @@ CircleBilling
 ================================================================================
 Open Source billing software
 
+[![Docs Status](https://readthedocs.org/projects/circlebilling/badge/?version=latest)](https://readthedocs.org/projects/circlebilling/badge/?version=latest)
+
 Requirements
 ================================================================================
 
