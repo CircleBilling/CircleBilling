@@ -37,7 +37,7 @@ Using Vagrant
 
 Using Grunt
 ===========
-**we need to remove the Grunt stuf!!**
+**we need to remove the Grunt stuff!!**
 
 
 Support
