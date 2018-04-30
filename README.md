@@ -43,10 +43,9 @@ Using Grunt
 Support
 ================================================================================
 
-* add some link
-* to docs
-* to foum
-* to homepage
+* Website: https://circlebilling.com
+* Documentation: http://docs.circlebilling.com
+* Forum: https://forum.circlebilling.com
 
 Licensing
 ================================================================================
