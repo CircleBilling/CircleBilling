@@ -22,9 +22,9 @@ return array(
     /**
      * Full URL where BoxBilling is installed with trailing slash
      */
-    'url'     => 'http://www.boxbilling.test/',
+    'url'     => 'https://circlebilling.local/',
 
-    'admin_area_prefix' =>  '/bb-admin',
+    'admin_area_prefix' =>  '/admin',
 
     /**
      * Enable or Disable the display of notices
@@ -83,17 +83,17 @@ return array(
         /**
          * The name of the database for BoxBilling
          */
-        'name'   =>'boxbilling',
+        'name'   =>'circlebilling',
 
         /**
          * Database username
          */
-        'user'   =>'foo',
+        'user'   =>'root',
 
         /**
          * Database password
          */
-        'password'   =>'foo',
+        'password'   =>'',
     ),
 
     'twig'   =>  array(

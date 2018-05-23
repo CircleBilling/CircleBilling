@@ -15,6 +15,7 @@ build
 composer.phar
 public
 report/*
+composer.lock
 
 ### Vagrant & puphpet ###
 .vagrant/
