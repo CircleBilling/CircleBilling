@@ -34,11 +34,7 @@ class Box_License implements \Box\InjectionAwareInterface
      */
     public function getKey()
     {
-        $license = $this->di['config']['license'];
-        if(!$license || $license == '') {
-            throw new \Box_Exception('BoxBilling license key must be defined in bb-config.php file.', null, 315);
-        }
-        return $license;
+        return '';
     }
 
     public function check()
