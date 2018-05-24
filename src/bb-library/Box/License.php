@@ -11,6 +11,10 @@
  */
 
 
+/**
+ * @deprecated license should not longer needed. Please remove any license checks
+ * Class Box_License
+ */
 class Box_License implements \Box\InjectionAwareInterface
 {
     protected $di;
@@ -46,12 +50,7 @@ class Box_License implements \Box\InjectionAwareInterface
 
     public function isValid()
     {
-        try {
-            $this->getDetails();
-            return true;
-        } catch(\Exception $e) {
-            return false;
-        }
+        return true;
     }
 
     public function isPro()

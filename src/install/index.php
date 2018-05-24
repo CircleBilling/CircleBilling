@@ -50,6 +50,9 @@ final class Installer
 {
     private $session;
 
+    /**
+     * @var PDO
+     */
     private $dbConnection;
 
     public function __construct()
@@ -330,7 +333,7 @@ final class Installer
             }
 
             $passwordObject = new \Box_Password();
-            $sql = "INSERT INTO admin (role, name, email, pass, protected, created_at, updated_at) VALUES('admin', ':name', ':email', ':password', 1, NOW(), NOW());";
+            $sql = "INSERT INTO admin (role, name, email, pass, protected, created_at, updated_at) VALUES('admin', :name, :email, :password, 1, NOW(), NOW())";
 
             $statement = $this->dbConnection->prepare($sql);
             $statement->execute(array(
@@ -443,8 +446,8 @@ final class Installer
         $f = "define('%s', '%s');".PHP_EOL;
 
         $output = '<?php '.PHP_EOL;
-        $output .= sprintf($cf, 'BoxBilling Configuration File');
-        $output .= sprintf($cf, 'More information on this file at http://docs.boxbilling.com/');
+        $output .= sprintf($cf, 'CircleBilling Configuration File');
+        $output .= sprintf($cf, 'More information on this file at http://docs.circlebilling.com/');
 
         $output .= sprintf($cf, 'Define timezone');
         $output .= sprintf("date_default_timezone_set('%s');", 'UTC');
@@ -462,7 +465,7 @@ final class Installer
         $output .= sprintf($cf, 'Live site URL with trailing slash');
         $output .= sprintf($f, 'BB_URL', BB_URL);
         
-        $output .= sprintf($cf, 'BoxBilling license key');
+        $output .= sprintf($cf, 'CircleBilling license key');
         $output .= sprintf($f, 'BB_LICENSE', $ns->get('license'));
 
         $output .= sprintf($cf, 'Enable or disable warning messages');
