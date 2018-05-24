@@ -2,6 +2,9 @@ CircleBilling
 ================================================================================
 Open Source billing software
 
+[![Docs Status](https://readthedocs.org/projects/circlebilling/badge/?version=latest)](https://readthedocs.org/projects/circlebilling/badge/?version=latest)
+[![Travis-CI Status](https://travis-ci.org/CircleBilling/CircleBilling.svg?branch=php7)](https://travis-ci.org/CircleBilling/CircleBilling.svg?branch=php7)
+
 Requirements
 ================================================================================
 
@@ -35,16 +38,15 @@ Using Vagrant
 
 Using Grunt
 ===========
-**we need to remove the Grunt stuf!!**
+**we need to remove the Grunt stuff!!**
 
 
 Support
 ================================================================================
 
-* add some link
-* to docs
-* to foum
-* to homepage
+* Website: https://circlebilling.com
+* Documentation: http://docs.circlebilling.com
+* Forum: https://forum.circlebilling.com
 
 Licensing
 ================================================================================
