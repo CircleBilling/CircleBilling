@@ -20,6 +20,13 @@ define('BB_PATH_LANGS',     BB_PATH_ROOT . '/bb-locale');
 define('BB_PATH_UPLOADS',   BB_PATH_ROOT . '/bb-uploads');
 define('BB_PATH_DATA',   BB_PATH_ROOT . '/bb-data');
 
+function isSSL() {
+    return
+        (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+        || $_SERVER['SERVER_PORT'] == 443;
+}
+
+
 function handler_error($number, $message, $file, $line)
 {
     if (E_RECOVERABLE_ERROR===$number) {
@@ -60,7 +67,7 @@ function handler_exception(Exception $e)
         print sprintf('<p>Code: <em>%s</em></p>', $e->getCode());
     }
     print sprintf('<p>%s</p>', $e->getMessage());
-    print sprintf('<p><a href="http://docs.boxbilling.com/en/latest/search.html?q=%s&check_keywords=yes&area=default" target="_blank">Look for detailed error explanation</a></p>', urlencode($e->getMessage()));
+    print sprintf('<p><a href="http://docs.circlebilling.com/en/latest/" target="_blank">Look for detailed error explanation</a></p>', urlencode($e->getMessage()));
 
     if(defined('BB_DEBUG') && BB_DEBUG) {
         print sprintf('<em>%s</em>', 'Set BB_DEBUG to FALSE, to hide the message below');
@@ -95,8 +102,12 @@ if(!file_exists($configPath) || 0 == filesize( $configPath )) {
     
     //try create empty config file
     @file_put_contents($configPath, '');
-    
-    $base_url = "http://".$_SERVER['HTTP_HOST'];
+
+    $protocol = 'http';
+    if(isSSL() === true) {
+        $protocol .= 's';
+    }
+    $base_url = $protocol . '://' . $_SERVER['HTTP_HOST'];
     $base_url .= preg_replace('@/+$@','',dirname($_SERVER['SCRIPT_NAME'])).'/';
     $url = $base_url . 'install/index.php';
     $configFile = pathinfo($configPath, PATHINFO_BASENAME);
