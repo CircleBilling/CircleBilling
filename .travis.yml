@@ -19,7 +19,7 @@ before_script:
   - mysql -e 'create database IF NOT EXISTS boxbilling'
 
 script:
-  - ant
+# - ant
   - sh -c 'if [ "$TRAVIS_PHP_VERSION" = "5.6" ]; then src/bb-vendor/bin/phpunit --coverage-clover=build/logs/clover.xml tests/; fi;'
 
 after_script:
