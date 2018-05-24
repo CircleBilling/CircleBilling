@@ -141,13 +141,15 @@ if (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc()) {
     // Create lamba style unescaping function (for portability)
     $quotes_sybase = strtolower(ini_get('magic_quotes_sybase'));
     $unescape_function = (empty($quotes_sybase) || $quotes_sybase === 'off') ? 'stripslashes($value)' : 'str_replace("\'\'","\'",$value)';
-    $stripslashes_deep = create_function('&$value, $fn', '
+    $stripslashes_deep = function(&$value, $fn) {
         if (is_string($value)) {
             $value = ' . $unescape_function . ';
         } else if (is_array($value)) {
-            foreach ($value as &$v) $fn($v, $fn);
+            foreach ($value as &$v) {
+                $fn($v, $fn);
+            }
         }
-    ');
+    };
 
     // Unescape data
     $stripslashes_deep($_POST, $stripslashes_deep);

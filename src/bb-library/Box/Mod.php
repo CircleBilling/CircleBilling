@@ -116,13 +116,14 @@ class Box_Mod
     public function hasService($sub = '')
     {
         $filename = sprintf('Service%s.php', ucfirst($sub));
+        echo $this->_getModPath() . $filename;
         return file_exists($this->_getModPath() . $filename);
     }
 
     public function getService($sub = '')
     {
         if(!$this->hasService($sub)) {
-            throw new \Box_Exception('Module :mod does not have service class', array(':mod'=>$this->mod), 5898);
+            throw new \Box_Exception('Module :mod does not have service class (:sub)', array(':mod'=>$this->mod, ':sub'=>$sub), 5898);
         }
         $class = 'Box\\Mod\\'.ucfirst($this->mod).'\\Service'.ucfirst($sub);
     	$service = new $class();
