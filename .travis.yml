@@ -10,11 +10,11 @@ php:
 sudo: false
 
 install:
+  - bash -c 'if [ "$TRAVIS_PHP_VERSION" = "7.2" ]; then echo 'yes' |pecl install -f mcrypt-1.0.1'
+  - bash -c 'if [ "$TRAVIS_PHP_VERSION" = "7.2" ]; then echo extension=mcrypt.so >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini;'
+  - bash -c 'if [ "$TRAVIS_PHP_VERSION" = "7.2" ]; then echo extension=mcrypt.so >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini;'
   - composer self-update
   - composer require 'satooshi/php-coveralls:0.7.*@dev'
-  - pecl install -f mcrypt-1.0.1
-  - bash -c 'if [ "$TRAVIS_PHP_VERSION" = "7.2" ]; then echo extension=mcrypt.so >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini;'
-  - bash -c 'if [ "$TRAVIS_PHP_VERSION" = "7.2" ]; then echo extension=mcrypt.so >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini;'
 
 before_script:
   - mysql --user=root -e "CREATE USER 'foo'@'localhost' IDENTIFIED BY 'foo';"
