@@ -72,7 +72,7 @@ final class Installer
                 $pass = $_POST['db_pass'];
                 $name = $_POST['db_name'];
                 if(!$this->canConnectToDatabase($host, $name, $user, $pass)) {
-                    print 'Could not connect to database. Please check database details: ' . $user . ':' . $pass . '@' . $host;
+                    print 'Could not connect to database. Please check database details.';
                 } else {
                     $this->session->set('db_host', $host);
                     $this->session->set('db_name', $name);
