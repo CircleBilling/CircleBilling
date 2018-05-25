@@ -3,7 +3,7 @@ CircleBilling
 Open Source billing software
 
 [![Docs Status](https://readthedocs.org/projects/circlebilling/badge/?version=latest)](https://readthedocs.org/projects/circlebilling/badge/?version=latest)
-[![Travis-CI Status](https://travis-ci.org/CircleBilling/CircleBilling.svg?branch=php7)](https://travis-ci.org/CircleBilling/CircleBilling.svg?branch=php7)
+[![Travis-CI Status](https://travis-ci.org/CircleBilling/CircleBilling.svg?branch=develop)](https://travis-ci.org/CircleBilling/CircleBilling.)
 
 Requirements
 ================================================================================
