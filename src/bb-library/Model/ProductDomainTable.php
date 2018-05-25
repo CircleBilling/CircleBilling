@@ -125,7 +125,7 @@ class Model_ProductDomainTable extends Model_ProductTable
         return $pricing;
     }
 
-    public function getProductPrice(Model_Product $product, array $config = array())
+    public function getProductPrice(Model_Product $product, array $config = null)
     {
         $rtable = $this->di['mod_service']('servicedomain', 'Tld');
         $tld = '';
