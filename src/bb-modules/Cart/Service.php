@@ -146,7 +146,7 @@ class Service implements InjectionAwareInterface
 
             $productServiceFromList = $productFromList->getService();
 
-            //@deprecated logic
+            /** @deprecated logic */
             if (method_exists($productServiceFromList, 'prependOrderConfig')) {
                 $productFromListConfig = $productServiceFromList->prependOrderConfig($productFromList, $productFromListConfig);
             }
