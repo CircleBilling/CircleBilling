@@ -42,14 +42,25 @@ class ServiceBalance implements InjectionAwareInterface
 
     public function clientTotal(\Model_Client $c)
     {
-        $sql="
-        SELECT SUM(amount) as client_total
-        FROM client_balance
-        WHERE client_id = ?
-        GROUP BY client_id
-        ORDER BY id DESC
-        ";
-        return $this->di['db']->getCell($sql, array($c->id));
+        $sql='SELECT 
+                
+                SUM(amount) as client_total
+        
+              FROM client_balance
+            
+              WHERE client_id = ?
+              
+              GROUP BY client_id';
+
+        $result =  $this->di['db']->getRow($sql, array($c->id));
+
+        $clientTotal = $result['client_total'];
+
+        if($clientTotal === null || $clientTotal === '' || $clientTotal === false) {
+            return 0.00;
+        }
+
+        return $clientTotal;
     }
 
     public function rmByClient(\Model_Client $client)
