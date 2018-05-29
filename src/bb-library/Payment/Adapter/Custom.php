@@ -65,10 +65,17 @@ class Payment_Adapter_Custom
         $invoiceService = $this->di['mod_service']("Invoice");
         $invoice = $invoiceService->toApiArray($invoiceModel, true);
 
+        $_tpl= '';
+        if($subscription && isset($this->config['recurrent'])) {
+            $_tpl = $this->config['recurrent'];
+        } else if(isset($this->config['single'])) {
+            $_tpl = $this->config['single'];
+        }
+
         $vars = array(
             'client'    =>  $invoice['buyer'],
             'invoice'   =>  $invoice,
-            '_tpl'      =>  ($subscription) ? $this->config['recurrent'] : $this->config['single'],
+            '_tpl'      =>  $_tpl
         );
         $systemService = $this->di['mod_service']('System');
         return $systemService->renderString($vars['_tpl'], true, $vars);

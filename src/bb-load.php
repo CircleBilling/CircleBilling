@@ -37,7 +37,7 @@ function handler_error($number, $message, $file, $line)
     return false;
 }
 
-function handler_exception(Exception $e)
+function handler_exception(Throwable $e)
 {
     if(APPLICATION_ENV == 'testing') {
         print $e->getMessage() . PHP_EOL;

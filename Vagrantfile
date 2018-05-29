@@ -9,5 +9,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # Do some network configuration
     config.vm.network "private_network", ip: "192.168.45.10"
 
+    # Folder sync configuration
     config.vm.synced_folder "", "/var/www/circlebilling.local"
 end

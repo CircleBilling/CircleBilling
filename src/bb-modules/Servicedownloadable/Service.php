@@ -42,6 +42,11 @@ class Service implements InjectionAwareInterface
         $required = array(
             'filename' => 'Product is not configured completely.',
         );
+
+        if($c === null) {
+            throw new \Box_Exception('Product is not configured completely.');
+        }
+
         $this->di['validator']->checkRequiredParamsForArray($required, $c);
 
         $data['filename'] = $c['filename'];
