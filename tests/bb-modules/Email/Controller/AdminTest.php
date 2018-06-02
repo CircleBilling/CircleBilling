@@ -19,7 +19,7 @@ class AdminTest extends \BBTestCase {
         $this->assertEquals($di, $result);
     }
 
-    public function testregister()
+    public function testRegister()
     {
         $boxAppMock = $this->getMockBuilder('\Box_App')->disableOriginalConstructor()->getMock();
         $boxAppMock->expects($this->exactly(5))

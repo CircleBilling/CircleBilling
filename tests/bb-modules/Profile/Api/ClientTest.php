@@ -9,7 +9,7 @@ class ClientTest extends \BBTestCase
      */
     protected $clientApi = null;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->clientApi = new \Box\Mod\Profile\Api\Client();
     }

@@ -8,7 +8,7 @@ class ServiceTest extends \BBTestCase
      */
     protected $service = null;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->service = new \Box\Mod\Filemanager\Service();
     }

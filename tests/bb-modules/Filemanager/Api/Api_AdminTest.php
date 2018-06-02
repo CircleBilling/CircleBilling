@@ -11,7 +11,7 @@ class AdminTest extends \BBTestCase
      */
     protected $adminApi = null;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->adminApi = new \Box\Mod\Filemanager\Api\Admin();
     }

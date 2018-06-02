@@ -1,8 +1,8 @@
 <?php
-class Box_DiTest extends PHPUnit_Framework_TestCase
+class Box_DiTest extends PHPUnit\Framework\TestCase
 {
 
-    public function setup()
+    public function setup(): void
     {
         global $di;
         $this->di = clone $di;

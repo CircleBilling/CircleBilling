@@ -6,7 +6,7 @@ namespace Box\Mod\Formbuilder\Api;
 
 class GuestTest extends \BBTestCase {
 
-    public function setup()
+    public function setup(): void
     {
         $this->api = new \Box\Mod\Formbuilder\Api\Guest();
     }

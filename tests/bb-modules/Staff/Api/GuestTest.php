@@ -9,7 +9,7 @@ class GuestTest extends \BBTestCase
      */
     protected $api = null;
 
-    public function setup()
+    public function setup(): void
     {
         $this->api= new \Box\Mod\Staff\Api\Guest();
     }

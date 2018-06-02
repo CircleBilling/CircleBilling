@@ -12,7 +12,7 @@ class ServiceTest extends \BBTestCase {
     protected $service = null;
 
 
-    public function setup()
+    public function setup(): void
     {
         $this->service = new \Box\Mod\Formbuilder\Service();
     }

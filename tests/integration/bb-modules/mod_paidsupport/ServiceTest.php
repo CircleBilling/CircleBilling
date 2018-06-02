@@ -3,7 +3,7 @@
 class Box_Mod_Paidsupport_ServiceTest extends ApiTestCase
 {
 
-    public function setup()
+    public function setup(): void
     {
         parent::setUp();
         $data = array(

@@ -8,7 +8,7 @@ class ClientTest extends \BBTestCase {
      */
     protected $clientApi = null;
 
-    public function setup()
+    public function setup(): void
     {
         $this->clientApi = new \Box\Mod\Cart\Api\Client();
     }
