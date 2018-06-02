@@ -1,11 +1,11 @@
 <?php
 
 
-class Payment_Adapter_PaypalTest extends PHPUnit_Framework_TestCase {
+class Payment_Adapter_PaypalTest extends PHPUnit\Framework\TestCase {
 
     private $defaultConfig = array();
 
-    public function setup()
+    public function setup(): void
     {
         $this->defaultConfig = array(
             'email' => 'info@boxbilling.com',

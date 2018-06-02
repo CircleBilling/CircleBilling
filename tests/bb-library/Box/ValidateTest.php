@@ -3,7 +3,7 @@
 /**
  * @group Core
  */
-class Box_ValidateTest extends PHPUnit_Framework_TestCase
+class Box_ValidateTest extends PHPUnit\Framework\TestCase
 {
     public static function domains()
     {
@@ -177,15 +177,19 @@ class Box_ValidateTest extends PHPUnit_Framework_TestCase
 
     public function testcheckRequiredParamsForArray_EmptyString()
     {
-        $data     = array(
+        $data = array(
             'message' => ''
         );
+
         $required = array(
             'message'  => 'message must be set',
         );
 
         $v = new Box_Validate();
-        $this->setExpectedException('\Box_Exception', $required['message']);
+
+        $this->expectException(Box_Exception::class);
+        $this->expectExceptionMessage($required['message']);
+
         $v->checkRequiredParamsForArray($required, $data);
     }
 

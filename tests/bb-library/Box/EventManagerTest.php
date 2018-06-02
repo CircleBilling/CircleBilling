@@ -2,7 +2,7 @@
 /**
  * @group Core
  */
-class Box_EventsManagerTest extends PHPUnit_Framework_TestCase
+class Box_EventsManagerTest extends PHPUnit\Framework\TestCase
 {
 
     public function testEmptyFire()

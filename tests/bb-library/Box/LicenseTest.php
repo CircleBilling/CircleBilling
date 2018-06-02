@@ -2,9 +2,9 @@
 /**
  * @group Core
  */
-class Box_LicenseTest extends PHPUnit_Framework_TestCase
+class Box_LicenseTest extends PHPUnit\Framework\TestCase
 {
-    public function setup()
+    public function setup(): void
     {
         global $di;
         $this->di = $di;
