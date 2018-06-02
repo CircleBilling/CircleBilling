@@ -24,19 +24,19 @@ $root_url = str_replace('/install', '', $current_url).'/';
 
 define('BB_URL',            $root_url);
 define('BB_URL_INSTALL',    BB_URL.'install/');
-define('BB_URL_ADMIN',      BB_URL.'index.php?_url=/bb-admin');
+define('BB_URL_ADMIN',      BB_URL.'index.php?_url=/admin');
 
 define('BB_PATH_ROOT',      realpath(dirname(__FILE__).'/..'));
-define('BB_PATH_LIBRARY',   BB_PATH_ROOT . '/bb-library');
-define('BB_PATH_VENDOR',   BB_PATH_ROOT . '/bb-vendor');
+define('BB_PATH_LIBRARY',   BB_PATH_ROOT . '/library');
+define('BB_PATH_VENDOR',   BB_PATH_ROOT . '/vendor');
 define('BB_PATH_THEMES',    BB_PATH_ROOT . '/install');
 define('BB_PATH_LICENSE',   BB_PATH_ROOT . '/LICENSE.txt');
 define('BB_PATH_SQL',       BB_PATH_ROOT . '/install/structure.sql');
 define('BB_PATH_SQL_DATA',  BB_PATH_ROOT . '/install/content.sql');
 define('BB_PATH_INSTALL',   BB_PATH_ROOT . '/install');
-define('BB_PATH_CONFIG',    BB_PATH_ROOT . '/bb-config.php');
-define('BB_PATH_CRON',      BB_PATH_ROOT . '/bb-cron.php');
-define('BB_PATH_LANGS',     BB_PATH_ROOT . '/bb-locale');
+define('BB_PATH_CONFIG',    BB_PATH_ROOT . '/config.php');
+define('BB_PATH_CRON',      BB_PATH_ROOT . '/cron.php');
+define('BB_PATH_LANGS',     BB_PATH_ROOT . '/locale');
 
 // Ensure library/ is on include_path
 set_include_path(implode(PATH_SEPARATOR, array(
@@ -287,7 +287,7 @@ final class Installer
     private function checkConfig()
     {
         if(file_exists(BB_PATH_CONFIG) === false) {
-            throw new Exception('Create configuration file bb-config.php with content provided during installation.');
+            throw new Exception('Create configuration file config.php with content provided during installation.');
         }
     }
     
@@ -402,14 +402,14 @@ final class Installer
             'license'   => $ns->get('license'),
             'salt'      => md5(uniqid()),
             'url'       => BB_URL,
-            'admin_area_prefix' =>  '/bb-admin',
+            'admin_area_prefix' =>  '/admin',
             'sef_urls'  => FALSE,
             'timezone'  => 'UTC',
             'locale'    => 'en_US',
             'locale_date_format'    => '%A, %d %B %G',
             'locale_time_format'    => ' %T',
-            'path_data'    => BB_PATH_ROOT . '/bb-data',
-            'path_logs'    => BB_PATH_ROOT . '/bb-data/log/application.log',
+            'path_data'    => BB_PATH_ROOT . '/data',
+            'path_logs'    => BB_PATH_ROOT . '/data/log/application.log',
 
             'log_to_db'  => true,
 
@@ -424,7 +424,7 @@ final class Installer
             'twig'   =>  array(
                 'debug'         =>  true,
                 'auto_reload'   =>  true,
-                'cache'         =>  BB_PATH_ROOT . '/bb-data/cache',
+                'cache'         =>  BB_PATH_ROOT . '/data/cache',
             ),
 
             'api'   =>  array(
@@ -484,7 +484,7 @@ final class Installer
         $output .= sprintf($bf, 'BB_LOCALE_TIME_FORMAT', "' %T'");
         
         $output .= sprintf($cf, 'Default location to store application data. Must be protected from public.');
-        $output .= sprintf($bf, 'BB_PATH_DATA', "dirname(__FILE__) . '/bb-data'");
+        $output .= sprintf($bf, 'BB_PATH_DATA', "dirname(__FILE__) . '/data'");
         
         return $output;
     }
@@ -502,10 +502,10 @@ final class Installer
 
     private function generateEmailTemplates()
     {
-        define('BB_PATH_MODS',      BB_PATH_ROOT . '/bb-modules');
+        define('BB_PATH_MODS',      BB_PATH_ROOT . '/modules');
 
         $emailService = new \Box\Mod\Email\Service();
-        $di = $di = include BB_PATH_ROOT  . '/bb-di.php';
+        $di = $di = include BB_PATH_ROOT  . '/di.php';
         $di['translate']();
         $emailService->setDi($di);
         return $emailService->templateBatchGenerate();
