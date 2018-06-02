@@ -164,15 +164,20 @@ class Box_ValidateTest extends PHPUnit\Framework\TestCase
 
     public function testcheckRequiredParamsForArray_KeyValueIsZero()
     {
-        $data     = array(
+        $data = array(
             'amount' => 0
         );
+
         $required = array(
             'amount'  => 'amount must be set',
         );
 
         $v = new Box_Validate();
+
         $v->checkRequiredParamsForArray($required, $data);
+
+        //add needed assert, set to true if no exception called in $v->checkRequiredParamsForArray
+        $this->assertTrue(true);
     }
 
     public function testcheckRequiredParamsForArray_EmptyString()
@@ -204,7 +209,10 @@ class Box_ValidateTest extends PHPUnit\Framework\TestCase
         );
 
         $v = new Box_Validate();
-        $this->setExpectedException('\Box_Exception', $required['message']);
+
+        $this->expectException(Box_Exception::class);
+        $this->expectExceptionMessage($required['message']);
+
         $v->checkRequiredParamsForArray($required, $data);
     }
 

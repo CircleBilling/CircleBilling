@@ -9,6 +9,8 @@ class Box_EventsManagerTest extends PHPUnit\Framework\TestCase
     {
         $manager = new Box_EventManager();
         $manager->fire(array());
+
+        $this->assertNotNull($manager);
     }
 
     public function testFire()

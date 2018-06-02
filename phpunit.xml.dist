@@ -10,8 +10,15 @@
          stopOnFailure="false"
          syntaxCheck="false"
          beStrictAboutChangesToGlobalState="true"
-         bootstrap="tests/bootstrap.php"
-        >
+         bootstrap="tests/bootstrap.php">
+
+
+    <testsuites>
+        <testsuite name="Library">
+            <directory>tests/bb-library</directory>
+        </testsuite>
+    </testsuites>
+
     <filter>
         <whitelist excludeVendorFiles="true">
             <directory suffix=".php">src</directory>
