@@ -30,6 +30,7 @@ class Box_License implements \Box\InjectionAwareInterface
     }
 
     /**
+     * @deprecated
      * @return string
      */
     public function getKey()
@@ -37,6 +38,10 @@ class Box_License implements \Box\InjectionAwareInterface
         return '';
     }
 
+    /**
+     * @deprecated
+     * @throws Box_Exception
+     */
     public function check()
     {
         if(!$this->isValid()) {
@@ -44,16 +49,29 @@ class Box_License implements \Box\InjectionAwareInterface
         }
     }
 
+    /**
+     * @deprecated
+     * @return bool
+     */
     public function isValid()
     {
         return true;
     }
 
+
+    /**
+     * @deprecated
+     * @return bool
+     */
     public function isPro()
     {
-        return ($this->getBBType() == \Box_Version::TYPE_PRO);
+        return true;
     }
 
+    /**
+     * @deprecated
+     * @return string
+     */
     private function getBBType()
     {
         $prefixes = array(
@@ -70,6 +88,13 @@ class Box_License implements \Box\InjectionAwareInterface
         return \Box_Version::TYPE_FREE;
     }
 
+    /**
+     * @deprecated
+     *
+     * @param bool $from_server
+     * @return array|mixed
+     * @throws Exception
+     */
     public function getDetails($from_server = false)
     {
         $license = $this->getKey();
@@ -130,6 +155,13 @@ class Box_License implements \Box\InjectionAwareInterface
         return $data;
     }
 
+    /**
+     * @deprecated
+     *
+     * @param array $servers
+     * @return array
+     * @throws Exception
+     */
     public function _getLicenseDetailsFromServer(array $servers)
     {
         $params = array();

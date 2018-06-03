@@ -9,7 +9,7 @@ class ServiceTest extends \BBTestCase {
      */
     private $service = null;
 
-    public function setup()
+    public function setup(): void
     {
         $this->service = new \Box\Mod\Example\Service();
     }

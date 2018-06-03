@@ -12,7 +12,7 @@ class AdminTest extends \BBTestCase
      */
     protected $api = null;
 
-    public function setup()
+    public function setup(): void
     {
         $this->api = new \Box\Mod\Servicehosting\Api\Admin();
     }

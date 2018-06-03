@@ -186,6 +186,7 @@ class Box_Mod_Servicelicense_ServerTest extends BBDbApiTestCase
         $server->setDi($di);
 
         $result = $server->process(json_encode($data));
+
         $this->assertEquals($valid, $result['valid'], print_r($result, 1));
     }
 

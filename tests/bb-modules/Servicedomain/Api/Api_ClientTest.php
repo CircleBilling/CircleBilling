@@ -8,7 +8,7 @@ class Api_ClientTest extends \BBTestCase
      */
     protected $clientApi = null;
 
-    public function setup()
+    public function setup(): void
     {
         $this->clientApi = new \Box\Mod\Servicedomain\Api\Client();
     }

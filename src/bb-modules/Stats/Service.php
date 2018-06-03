@@ -202,7 +202,7 @@ class Service implements InjectionAwareInterface
                 FROM `client_order`
                 WHERE status = :status
                 AND `created_at` BETWEEN :date_from AND :date_to
-                GROUP BY product_id
+                GROUP BY product_id, title
                 ";
 
         $stmt = $pdo->prepare($query);

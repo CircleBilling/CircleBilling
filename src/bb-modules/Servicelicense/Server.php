@@ -111,10 +111,6 @@ class Server implements \Box\InjectionAwareInterface
         $service = $this->di['mod_service']('servicelicense');
         $model   = $this->di['db']->findOne('ServiceLicense', 'license_key = :license_key', array(':license_key' => $data['license']));
 
-        if (!$model instanceof \Model_ServiceLicense) {
-            throw new \LogicException('Your license key is not valid.', 1005);
-        }
-
         $model->pinged_at = date('Y-m-d H:i:s');
         $this->di['db']->store($model);
 

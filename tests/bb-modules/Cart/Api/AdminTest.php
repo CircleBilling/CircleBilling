@@ -9,7 +9,7 @@ class AdminTest extends \BBTestCase
      */
     protected $adminApi = null;
 
-    public function setup()
+    public function setup(): void
     {
         $this->adminApi = new \Box\Mod\Cart\Api\Admin();
     }
