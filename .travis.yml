@@ -16,9 +16,9 @@ sudo: false
 install:
   - bash -c 'if [ "$TRAVIS_PHP_VERSION" = "7.2" ]; then echo 'yes' |pecl install -f mcrypt-1.0.1; fi;'
   - bash -c 'if [ "$TRAVIS_PHP_VERSION" = "7.2" ]; then echo extension=mcrypt.so >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini; fi;'
-  - bash -c 'if [ "$TRAVIS_PHP_VERSION" = "7.2" ]; then echo extension=mcrypt.so >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini; fi;'
   - composer self-update
   - composer require 'satooshi/php-coveralls:0.7.*@dev'
+  - composer install
 
 before_script:
   - mysql --user=root -e "CREATE USER 'foo'@'localhost' IDENTIFIED BY 'foo';"
@@ -26,10 +26,11 @@ before_script:
   - mysql -e 'create database IF NOT EXISTS circlebilling'
   - mysql -D circlebilling < src/install/structure.sql
   - mysql -D circlebilling < src/install/content.sql
+  - mv ./src/bb-config-sample.php ./src/bb-config.php
 
 script:
 # - ant
-  - sh -c 'src/bb-vendor/bin/phpunit --coverage-clover=build/logs/clover.xml tests/'
+  - ./src/bb-vendor/bin/phpunit --coverage-clover=build/logs/clover.xml tests/
 
 after_script:
   - sh -c 'if [ "$TRAVIS_PHP_VERSION" >= "7.0" ]; then php vendor/bin/coveralls -v; fi;'
