@@ -77,12 +77,21 @@ class Api_Guest_ClientTest extends BBDbApiTestCase
 
     public function testVat()
     {
-        $data = array(
-            'country'   => 'GB',
-            'vat'       => 'GB999 9999 73',
+        $dataValid = array(
+            'country'   => 'DE',
+            'vat'       => 'DE314463395',
         );
-        $bool = $this->api_guest->client_is_vat($data);
-        //$this->assertTrue($bool);
+
+        $dataInvalid = array(
+            'country'   => 'GB',
+            'vat'       => 'GB999999973',
+        );
+
+        $boolValid = $this->api_guest->client_is_vat($dataValid);
+        $boolInvalid = $this->api_guest->client_is_vat($dataInvalid);
+
+        $this->assertTrue($boolValid);
+        $this->assertTrue($boolInvalid);
     }
     
     public function testClientLogin()
