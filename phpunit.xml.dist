@@ -17,6 +17,10 @@
         <testsuite name="Library">
             <directory>tests/bb-library</directory>
         </testsuite>
+
+        <testsuite name="Integration">
+            <directory>tests/integration</directory>
+        </testsuite>
     </testsuites>
 
     <filter>

@@ -1055,7 +1055,7 @@ class Service implements \Box\InjectionAwareInterface
             $query = $query . ' WHERE ' . implode(' AND ', $where);
         }
 
-        $query .= " GROUP BY spt.id ORDER BY spt.id DESC, sptm.id ASC";
+        $query .= " GROUP BY spt.id, sptm.id ORDER BY spt.id DESC, sptm.id ASC";
 
         return array($query, $bindings);
     }

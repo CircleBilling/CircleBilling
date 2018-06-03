@@ -183,6 +183,12 @@ class Service
         return $details;
     }
 
+    /**
+     * @deprecated
+     *
+     * @param $data
+     * @return array
+     */
     public function getLicenseInfo($data)
     {
         $details = $this->di['license']->getDetails();

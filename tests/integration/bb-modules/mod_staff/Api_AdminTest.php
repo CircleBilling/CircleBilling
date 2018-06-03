@@ -50,7 +50,8 @@ class Api_Admin_StaffTest extends BBDbApiTestCase
     }
 
     public function testChangePasswordException(){
-        $this->setExpectedException('Box_Exception');
+        $this->expectException(\Box_Exception::class);
+
         $data = array(
             'id' => 1,
             'password'=> 'new123123',

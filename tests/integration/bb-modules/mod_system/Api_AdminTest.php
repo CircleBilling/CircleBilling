@@ -89,9 +89,6 @@ class Api_Admin_SystemTest extends BBDbApiTestCase
         
         $array = $this->api_admin->system_messages();
         $this->assertInternalType('array', $array);
-        
-        $array = $this->api_admin->system_license_info();
-        $this->assertInternalType('array', $array);
 
         $array = $this->api_admin->system_get_params();
         $this->assertInternalType('array', $array);

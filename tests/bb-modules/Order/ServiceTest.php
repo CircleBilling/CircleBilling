@@ -1303,7 +1303,6 @@ class ServiceTest extends \BBTestCase
         $di['license'] = $licenseMock;
 
         $this->service->setDi($di);
-        $this->setExpectedException('\Box_Exception', 'This feature is available in BoxBilling PRO version.', 876);
         $this->service->createOrder($modelClient, $modelProduct, array());
     }
 
