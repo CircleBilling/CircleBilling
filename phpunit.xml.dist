@@ -8,11 +8,8 @@
          convertWarningsToExceptions="true"
          processIsolation="false"
          stopOnFailure="false"
-         syntaxCheck="false"
          beStrictAboutChangesToGlobalState="true"
          bootstrap="tests/bootstrap.php">
-
-
     <testsuites>
         <testsuite name="Library">
             <directory>tests/bb-library</directory>
@@ -24,13 +21,15 @@
     </testsuites>
 
     <filter>
-        <whitelist excludeVendorFiles="true">
+        <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">src</directory>
             <exclude>
                 <file>src/rb.php</file>
                 <file>src/bb-modules/Spamchecker/recaptchalib.php</file>
                 <file>src/bb-modules/Spamchecker/akismet.curl.class.php</file>
                 <file>src/bb-library/Box/Zip.php</file>
+            </exclude>
+            <exclude>
                 <directory>src/bb-vendor</directory>
                 <directory>src/bb-data</directory>
                 <directory>src/bb-library/Registrar/includes</directory>
