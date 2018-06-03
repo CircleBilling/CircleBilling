@@ -16,6 +16,9 @@ class Box_Mod_Spamchecker_ServiceTest extends BBDbApiTestCase
 
         $object = new \Box\Mod\Spamchecker\Service();
         $object->onBeforeClientSignUp($event);
+
+        //TODO maybe we can create better test here?
+        $this->assertTrue(true);
     }
 
     public function testonBeforeClientCreateForumTopic()
@@ -30,6 +33,8 @@ class Box_Mod_Spamchecker_ServiceTest extends BBDbApiTestCase
 
         $object = new \Box\Mod\Spamchecker\Service();
         $object->onBeforeClientCreateForumTopic($event);
+
+        $this->assertTrue(true);
     }
 
 }

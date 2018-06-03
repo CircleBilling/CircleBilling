@@ -85,6 +85,8 @@ class Api_Admin_NewsTest extends BBDbApiTestCase
 
     public function testNewsMoreTagProvider()
     {
+        $this->assertTrue(true);
+
         return array(
             array(
                 'This is blog post with<!--more--> tag',

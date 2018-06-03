@@ -581,7 +581,7 @@ class ServiceTest extends \BBTestCase {
 
         $result = $this->service->deactivate($ext);
         $this->assertTrue($result);
-       }
+   }
 
     public function testdownloadAndExtract()
     {

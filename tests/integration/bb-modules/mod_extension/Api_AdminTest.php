@@ -36,6 +36,8 @@ class Api_Admin_ExtensionTest extends BBDbApiTestCase
             'id'    =>  'news',
         );
         $bool = $this->api_admin->extension_uninstall($data);
+
+        $this->assertTrue($bool);
     }
     
     public function testUpdate()

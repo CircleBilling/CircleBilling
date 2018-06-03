@@ -19,5 +19,8 @@ class Payment_Adapter_CustomTest extends BBDbApiTestCase
 
         $tx = $this->di['db']->load('Transaction', 1);
         $adapter->process($tx);
+
+        //TODO maybe we can write a needable test here?
+        $this->assertTrue(true);
     }
 }

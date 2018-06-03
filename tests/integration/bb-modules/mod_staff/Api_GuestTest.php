@@ -16,6 +16,8 @@ class Api_Guest_StaffTest extends BBDbApiTestCase
         $this->api_admin->staff_delete(array('id' => 1));
         $this->api_guest->staff_create($data);
 
+        //TODO Maybe we can create better test here?
+        $this->assertTrue(true);
     }
 
     public function testCreateException()

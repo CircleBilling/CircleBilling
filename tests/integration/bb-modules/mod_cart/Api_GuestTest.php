@@ -36,6 +36,8 @@ class Box_Mod_Cart_Api_GuestTest extends BBDbApiTestCase
             'id'        =>  1,
         );
         $bool = $this->api_guest->cart_add_item($data);
+
+        $this->assertTrue($bool);
     }
 
     public function testAddAddons()
@@ -118,7 +120,9 @@ class Box_Mod_Cart_Api_GuestTest extends BBDbApiTestCase
                 ),
             ),
         );
-        $this->api_guest->cart_add_item($data);
+        $return = $this->api_guest->cart_add_item($data);
+
+        $this->assertTrue($return);
     }
 
     /**
@@ -504,6 +508,7 @@ class Box_Mod_Cart_Api_GuestTest extends BBDbApiTestCase
     {
         $ids = array(1, 2);
 
+        $this->assertTrue(true);
         return array(
             array(50, 5, $ids, true), //should throw exception because client group does not match ones set in Promo
             array(50, 2, $ids, false),//Client group ID is same as set for Promo, su discount must be applied
