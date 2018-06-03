@@ -17,7 +17,7 @@ install:
   - bash -c 'if [ "$TRAVIS_PHP_VERSION" = "7.2" ]; then echo 'yes' |pecl install -f mcrypt-1.0.1; fi;'
   - bash -c 'if [ "$TRAVIS_PHP_VERSION" = "7.2" ]; then echo extension=mcrypt.so >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini; fi;'
   - composer self-update
-  - composer require 'satooshi/php-coveralls:0.7.*@dev'
+  #- composer require 'satooshi/php-coveralls:0.7.*@dev'
   - composer install
 
 before_script:
@@ -30,12 +30,12 @@ before_script:
 
 script:
 # - ant
-  - ./src/bb-vendor/bin/phpunit --coverage-clover=build/logs/clover.xml tests/
+  - ./src/bb-vendor/bin/phpunit
 
 after_script:
-  - sh -c 'if [ "$TRAVIS_PHP_VERSION" >= "7.0" ]; then php vendor/bin/coveralls -v; fi;'
-  - sh -c 'if [ "$TRAVIS_PHP_VERSION" >= "7.1" ]; then wget https://scrutinizer-ci.com/ocular.phar; fi;'
-  - sh -c 'if [ "$TRAVIS_PHP_VERSION" >= "7.2" ]; then php ocular.phar code-coverage:upload --format=php-clover build/logs/clover.xml; fi;'
+ # - sh -c 'if [ "$TRAVIS_PHP_VERSION" >= "7.0" ]; then php vendor/bin/coveralls -v; fi;'
+ # - sh -c 'if [ "$TRAVIS_PHP_VERSION" >= "7.1" ]; then wget https://scrutinizer-ci.com/ocular.phar; fi;'
+ # - sh -c 'if [ "$TRAVIS_PHP_VERSION" >= "7.2" ]; then php ocular.phar code-coverage:upload --format=php-clover build/logs/clover.xml; fi;'
 
 #before_deploy:
 # - npm install -g grunt-cli
