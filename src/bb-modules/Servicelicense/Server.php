@@ -112,6 +112,11 @@ class Server implements \Box\InjectionAwareInterface
         $model   = $this->di['db']->findOne('ServiceLicense', 'license_key = :license_key', array(':license_key' => $data['license']));
 
         $model->pinged_at = date('Y-m-d H:i:s');
+
+        if($model instanceof \RedBean_SimpleModel === false) {
+            throw new \LogicException('No Databases Entry found for ' . $data['license'], 10015);
+        }
+
         $this->di['db']->store($model);
 
         if (!isset($data['host']) || empty($data['host'])) {
