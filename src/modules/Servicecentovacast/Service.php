@@ -162,7 +162,7 @@ class Service implements \Box\InjectionAwareInterface
 			'organization'		=>	$client['company'],
 			'genre'             =>	$client['company'],
 			'email'             =>	$client['email'],
-			'url'				=>	BB_URL,
+			'url'				=>	SYSTEM_URL,
 			'usesource'			=>	'1',
 			'introfile'			=>	'',
 			'fallbackfile'		=>	'',

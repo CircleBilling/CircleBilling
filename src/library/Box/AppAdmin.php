@@ -39,8 +39,8 @@ class Box_AppAdmin extends Box_App
         $theme = $service->getCurrentAdminAreaTheme();
 
         $loader = new Box_TwigLoader(array(
-                "mods"  => BB_PATH_MODS,
-                "theme" => BB_PATH_THEMES . DIRECTORY_SEPARATOR . $theme['code'],
+                "mods"  => SYSTEM_PATH_MODS,
+                "theme" => SYSTEM_PATH_THEMES . DIRECTORY_SEPARATOR . $theme['code'],
                 "type"  => "admin"
             )
         );

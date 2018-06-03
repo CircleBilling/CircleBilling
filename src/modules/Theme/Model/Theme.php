@@ -145,12 +145,12 @@ class Theme
 
     public function getUrl()
     {
-        return BB_URL . 'themes/'.$this->name;
+        return SYSTEM_URL . 'themes/'.$this->name;
     }
 
     public function getPath()
     {
-        return BB_PATH_THEMES . DIRECTORY_SEPARATOR . $this->name;
+        return SYSTEM_PATH_THEMES . DIRECTORY_SEPARATOR . $this->name;
     }
 
     public function getPathConfig()

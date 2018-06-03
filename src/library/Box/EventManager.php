@@ -42,7 +42,7 @@ class Box_EventManager implements \Box\InjectionAwareInterface
         $subject = isset($data['subject']) ? $data['subject'] : null;
         $params = isset($data['params']) ? $data['params'] : null;
 
-        if(BB_DEBUG) {
+        if(SYSTEM_DEBUG) {
             $this->di['logger']->debug($event. ': '. var_export($params, 1));
         }
 

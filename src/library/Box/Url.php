@@ -46,7 +46,7 @@ class Box_Url implements Box\InjectionAwareInterface
     {
         $uri = trim($uri, '/');
         $link =$this->baseUri .'index.php?_url=/' . $uri;
-        if(BB_SEF_URLS) {
+        if(SYSTEM_SEF_URLS) {
             $link = $this->baseUri . $uri;
             if (!empty($params)){
                 $link .= '?';

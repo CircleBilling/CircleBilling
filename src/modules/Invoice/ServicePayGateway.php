@@ -79,7 +79,7 @@ class ServicePayGateway implements InjectionAwareInterface
             $exists[ $row['gateway'] ] = $row['name'];
         }
 
-        $pattern = BB_PATH_LIBRARY.'/Payment/Adapter/*.php';
+        $pattern = SYSTEM_PATH_LIBRARY.'/Payment/Adapter/*.php';
         $adapters = array();
         foreach(glob($pattern) as $path) {
             $adapter = pathinfo($path, PATHINFO_FILENAME);
@@ -255,7 +255,7 @@ class ServicePayGateway implements InjectionAwareInterface
     public function getAdapterConfig(\Model_PayGateway $pg)
     {
         $class = $this->getAdapterClassName($pg);
-        if(!file_exists(BB_PATH_LIBRARY.'/Payment/Adapter/'.$pg->gateway.'.php')) {
+        if(!file_exists(SYSTEM_PATH_LIBRARY.'/Payment/Adapter/'.$pg->gateway.'.php')) {
             throw new \Box_Exception("Payment gateway :adapter was not found", array(':adapter'=>$pg->gateway));
         }
 

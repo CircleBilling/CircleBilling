@@ -37,8 +37,8 @@ class Box_Update
 
     public function __construct()
     {
-        if(defined('BB_VERSION_URL') && BB_VERSION_URL) {
-            $this->_url = BB_VERSION_URL;
+        if(defined('SYSTEM_VERSION_URL') && SYSTEM_VERSION_URL) {
+            $this->_url = SYSTEM_VERSION_URL;
         }
     }
 
@@ -125,7 +125,7 @@ class Box_Update
 
         error_log('Started BoxBilling auto-update script');
         $latest_version = $this->getLatestVersion();
-        $latest_version_archive = BB_PATH_CACHE.DIRECTORY_SEPARATOR.$latest_version.'.zip';
+        $latest_version_archive = SYSTEM_PATH_CACHE.DIRECTORY_SEPARATOR.$latest_version.'.zip';
 
         // download latest archive from link
         $content = $this->di['tools']->file_get_contents($this->getLatestVersionDownloadLink());
@@ -137,17 +137,17 @@ class Box_Update
 
         // Extract latest archive on top of current version
         $ff = new Box_Zip($latest_version_archive);
-        $ff->decompress(BB_PATH_ROOT);
+        $ff->decompress(SYSTEM_PATH_ROOT);
 
-        if(file_exists(BB_PATH_ROOT.'/update.php')) {
+        if(file_exists(SYSTEM_PATH_ROOT.'/update.php')) {
             error_log('Calling update.php script from auto-updater');
-            $this->di['tools']->file_get_contents(BB_URL.'update.php');
+            $this->di['tools']->file_get_contents(SYSTEM_URL.'update.php');
         }
         
         // clean up things
-        $this->di['tools']->emptyFolder(BB_PATH_CACHE);
-        $this->di['tools']->emptyFolder(BB_PATH_ROOT.'/install');
-        rmdir(BB_PATH_ROOT.'/install');
+        $this->di['tools']->emptyFolder(SYSTEM_PATH_CACHE);
+        $this->di['tools']->emptyFolder(SYSTEM_PATH_ROOT.'/install');
+        rmdir(SYSTEM_PATH_ROOT.'/install');
         return true;
     }
 }

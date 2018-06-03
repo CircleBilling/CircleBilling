@@ -45,7 +45,7 @@ class Service implements InjectionAwareInterface
             return false;
         }
 
-        $url = urldecode(BB_URL . 'sitemap.xml');
+        $url = urldecode(SYSTEM_URL . 'sitemap.xml');
         if (isset($config['sitemap_google']) && $config['sitemap_google']) {
            try{
                $link = "http://www.google.com/webmasters/sitemaps/ping?sitemap=" . $url;
@@ -74,7 +74,7 @@ class Service implements InjectionAwareInterface
 
         $rss      = '';
         $title    = '';
-        $homepage = BB_URL;
+        $homepage = SYSTEM_URL;
 
         $rss      = urldecode($rss);
         $title    = urldecode($title);

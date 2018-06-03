@@ -21,7 +21,7 @@ class FileCache
     public function __construct($cacheDir = null)
     {
         if(is_null($cacheDir)) {
-            $cacheDir = BB_PATH_CACHE;
+            $cacheDir = SYSTEM_PATH_CACHE;
         }
 
         if ($cacheDir) {

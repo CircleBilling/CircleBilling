@@ -1,4 +1,4 @@
-{% set mod = constant('BB_URL') ~ 'modules/Filemanager' %}
+{% set mod = constant('SYSTEM_URL') ~ 'modules/Filemanager' %}
 <html>
 	<head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
@@ -51,7 +51,7 @@
                 </div>
                 <script>
                 var absoDir = '{{ dir }}';
-                var apiUrl = '{{ constant('BB_URL_API') }}';
+                var apiUrl = '{{ constant('SYSTEM_URL_API') }}';
                 var bbUrl = '{{ "/" | alink }}';
                 var openFile = '{{open}}';
                 </script>

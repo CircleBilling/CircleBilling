@@ -28,7 +28,7 @@ class Guest extends \Api_Abstract
      */
     public function readme($data)
     {
-        $readme = $this->di['tools']->file_get_contents(BB_PATH_MODS . '/Example/README.md');
+        $readme = $this->di['tools']->file_get_contents(SYSTEM_PATH_MODS . '/Example/README.md');
         return $readme;
     }
     

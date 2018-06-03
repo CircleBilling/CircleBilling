@@ -69,7 +69,7 @@ class Box_Curl {
         $this->_includeHeader = $includeHeader;
         $this->_binaryTransfer = $binaryTransfer;
 
-        $this->_cookieFileLocation = BB_PATH_CACHE . '/c.txt';
+        $this->_cookieFileLocation = SYSTEM_PATH_CACHE . '/c.txt';
     }
 
     public function useAuth($use) {

@@ -102,7 +102,7 @@ class Service implements \Box\InjectionAwareInterface
 
     private function _getPath($path)
     {
-        $_path = BB_PATH_ROOT . DIRECTORY_SEPARATOR;
+        $_path = SYSTEM_PATH_ROOT . DIRECTORY_SEPARATOR;
         $path = str_replace($_path, '', $path);
         $path = trim($path, DIRECTORY_SEPARATOR);
         $path = str_replace('//', DIRECTORY_SEPARATOR, $_path . $path);

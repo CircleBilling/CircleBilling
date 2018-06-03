@@ -162,13 +162,13 @@ function twig_money_without_currency(Twig_Environment $env, $price, $currency = 
 
 function twig_mod_asset_url($asset, $mod)
 {
-    return BB_URL . 'modules/'.ucfirst($mod).'/assets/'.$asset;
+    return SYSTEM_URL . 'modules/'.ucfirst($mod).'/assets/'.$asset;
 }
 
 function twig_asset_url(Twig_Environment $env, $asset)
 {
     $globals = $env->getGlobals();
-    return BB_URL . 'themes/'.$globals['current_theme'].'/assets/'.$asset;
+    return SYSTEM_URL . 'themes/'.$globals['current_theme'].'/assets/'.$asset;
 }
 
 function twig_img_tag($path, $alt = null)
@@ -189,7 +189,7 @@ function twig_stylesheet_tag($path, $media = 'screen')
 
 function twig_gravatar_filter($email, $size = null)
 {
-	$protocol = BB_SSL ? 'https' : 'http';
+	$protocol = SYSTEM_SSL ? 'https' : 'http';
 	$link     = $protocol . '://gravatar.com/avatar/' . md5($email);
 	if ($size) {
 		$link .= '/?s=' . $size;

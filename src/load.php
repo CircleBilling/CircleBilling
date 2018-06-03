@@ -11,14 +11,14 @@
  */
 
 defined('APPLICATION_ENV') || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'production'));
-define('BB_PATH_ROOT',      dirname(__FILE__));
-define('BB_PATH_VENDOR',    BB_PATH_ROOT . '/vendor');
-define('BB_PATH_LIBRARY',   BB_PATH_ROOT . '/library');
-define('BB_PATH_THEMES',    BB_PATH_ROOT . '/themes');
-define('BB_PATH_MODS',      BB_PATH_ROOT . '/modules');
-define('BB_PATH_LANGS',     BB_PATH_ROOT . '/locale');
-define('BB_PATH_UPLOADS',   BB_PATH_ROOT . '/uploads');
-define('BB_PATH_DATA',   BB_PATH_ROOT . '/data');
+define('SYSTEM_PATH_ROOT',      dirname(__FILE__));
+define('SYSTEM_PATH_VENDOR',    SYSTEM_PATH_ROOT . '/vendor');
+define('SYSTEM_PATH_LIBRARY',   SYSTEM_PATH_ROOT . '/library');
+define('SYSTEM_PATH_THEMES',    SYSTEM_PATH_ROOT . '/themes');
+define('SYSTEM_PATH_MODS',      SYSTEM_PATH_ROOT . '/modules');
+define('SYSTEM_PATH_LANGS',     SYSTEM_PATH_ROOT . '/locale');
+define('SYSTEM_PATH_UPLOADS',   SYSTEM_PATH_ROOT . '/uploads');
+define('SYSTEM_PATH_DATA',   SYSTEM_PATH_ROOT . '/data');
 
 function isSSL() {
     return
@@ -45,7 +45,7 @@ function handler_exception(Exception $e)
     }
     error_log($e->getMessage());
 
-    if(defined('BB_MODE_API')) {
+    if(defined('SYSTEM_MODE_API')) {
         $code = $e->getCode() ? $e->getCode() : 9998;
         $result = array('result'=>NULL, 'error'=>array('message'=>$e->getMessage(), 'code'=>$code));
         print json_encode($result);
@@ -69,8 +69,8 @@ function handler_exception(Exception $e)
     print sprintf('<p>%s</p>', $e->getMessage());
     print sprintf('<p><a href="http://docs.circlebilling.com/en/latest/" target="_blank">Look for detailed error explanation</a></p>', urlencode($e->getMessage()));
 
-    if(defined('BB_DEBUG') && BB_DEBUG) {
-        print sprintf('<em>%s</em>', 'Set BB_DEBUG to FALSE, to hide the message below');
+    if(defined('SYSTEM_DEBUG') && SYSTEM_DEBUG) {
+        print sprintf('<em>%s</em>', 'Set SYSTEM_DEBUG to FALSE, to hide the message below');
         print sprintf('<p>Class: "%s"</p>', get_class($e));
         print sprintf('<p>File: "%s"</p>', $e->getFile());
         print sprintf('<p>Line: "%s"</p>', $e->getLine());
@@ -83,7 +83,7 @@ set_error_handler('handler_error');
 
 // multisite support. Load new config depending on current host
 // if run from cli first param must be hostname
-$configPath = BB_PATH_ROOT.'/config.php';
+$configPath = SYSTEM_PATH_ROOT.'/config.php';
 if((isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST']) || (php_sapi_name() == 'cli' && isset($argv[1]) ) ) {
     if(php_sapi_name() == 'cli') {
         $host = $argv[1];
@@ -91,7 +91,7 @@ if((isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST']) || (php_sapi_name() =
         $host = $_SERVER['HTTP_HOST'];
     }
 
-    $predictConfigPath = BB_PATH_ROOT.'/config-'.$host.'.php';
+    $predictConfigPath = SYSTEM_PATH_ROOT.'/config-'.$host.'.php';
     if(file_exists($predictConfigPath)) {
         $configPath = $predictConfigPath;
     }
@@ -116,21 +116,21 @@ if(!file_exists($configPath) || 0 == filesize( $configPath )) {
 }
 
 $config = require_once $configPath;
-require BB_PATH_VENDOR . '/autoload.php';
+require SYSTEM_PATH_VENDOR . '/autoload.php';
 
 date_default_timezone_set($config['timezone']);
 
-define('BB_DEBUG',          $config['debug']);
-define('BB_URL',            $config['url']);
-define('BB_SEF_URLS',       $config['sef_urls']);
-define('BB_PATH_CACHE',     $config['path_data'] . '/cache');
-define('BB_PATH_LOG',       $config['path_data'] . '/log');
-define('BB_SSL',            (substr($config['url'], 0, 5) === 'https'));
+define('SYSTEM_DEBUG',          $config['debug']);
+define('SYSTEM_URL',            $config['url']);
+define('SYSTEM_SEF_URLS',       $config['sef_urls']);
+define('SYSTEM_PATH_CACHE',     $config['path_data'] . '/cache');
+define('SYSTEM_PATH_LOG',       $config['path_data'] . '/log');
+define('SYSTEM_SSL',            (substr($config['url'], 0, 5) === 'https'));
 
 if($config['sef_urls']) {
-    define('BB_URL_API',    $config['url'] . 'api/');
+    define('SYSTEM_URL_API',    $config['url'] . 'api/');
 } else {
-    define('BB_URL_API',    $config['url'] . 'index.php?_url=/api/');
+    define('SYSTEM_URL_API',    $config['url'] . 'index.php?_url=/api/');
 }
 
 if($config['debug']) {
@@ -145,7 +145,7 @@ if($config['debug']) {
 
 ini_set('log_errors', '1');
 ini_set('html_errors', FALSE);
-ini_set('error_log', BB_PATH_LOG . '/php_error.log');
+ini_set('error_log', SYSTEM_PATH_LOG . '/php_error.log');
 
 // Strip magic quotes from request data.
 if (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc()) {

@@ -146,7 +146,7 @@ class Service
 
     public function getLanguages($deep = false)
     {
-        $path = BB_PATH_LANGS;
+        $path = SYSTEM_PATH_LANGS;
         $locales = array();
         if ($handle = opendir($path)) {
             while (false !== ($entry = readdir($handle))) {
@@ -252,8 +252,8 @@ class Service
             $msgs['info'][] = 'Cron was never executed. Make sure you have setup cron job.';
         }
 
-        $install = BB_PATH_ROOT.'/install';
-        if($this->di['tools']->fileExists(BB_PATH_ROOT.'/install')) {
+        $install = SYSTEM_PATH_ROOT.'/install';
+        if($this->di['tools']->fileExists(SYSTEM_PATH_ROOT.'/install')) {
             $msgs['info'][] = sprintf('Install module "%s" still exists. Please remove it for security reasons.', $install);
         }
 
@@ -318,7 +318,7 @@ class Service
 
     public function clearCache()
     {
-        $this->di['tools']->emptyFolder(BB_PATH_CACHE);
+        $this->di['tools']->emptyFolder(SYSTEM_PATH_CACHE);
         return true;
     }
 

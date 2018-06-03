@@ -89,23 +89,23 @@ class Box_Tools
     public function url($link = null)
     {
         $link = trim($link, '/');
-        if(BB_SEF_URLS) {
-            return BB_URL . $link;
+        if(SYSTEM_SEF_URLS) {
+            return SYSTEM_URL . $link;
         }
 
-        return BB_URL .'index.php?_url=/' . $link;
+        return SYSTEM_URL .'index.php?_url=/' . $link;
     }
     
     public function hasService($type)
     {
-        $file = BB_PATH_MODS . '/mod_'.$type.'/Service.php';
+        $file = SYSTEM_PATH_MODS . '/mod_'.$type.'/Service.php';
         return file_exists($file);
     }
     
     public function getService($type)
     {
         $class = 'Box_Mod_'.ucfirst($type).'_Service';
-        $file = BB_PATH_MODS . '/mod_'.$type.'/Service.php';
+        $file = SYSTEM_PATH_MODS . '/mod_'.$type.'/Service.php';
         if(!file_exists($file)){
             throw new \Box_Exception('Service class :class was not found in :path', array(':class'=>$class,':path'=>$file));
         }
@@ -418,7 +418,7 @@ class Box_Tools
                 $cacheKey = $buildCallback . ':' . implode(':', $args);
         }
         $cacheKey .= ':' . implode(':', $args);
-        $file_path = BB_PATH_CACHE .DIRECTORY_SEPARATOR. md5($cacheKey);
+        $file_path = SYSTEM_PATH_CACHE .DIRECTORY_SEPARATOR. md5($cacheKey);
 
         // If the file hasn't yet been created or is out of date then call the require function and store it's result.
         if(!file_exists($file_path) || filemtime($file_path) < (time() - $timeoutSeconds)){
@@ -460,7 +460,7 @@ class Box_Tools
     public function getTable($type)
     {
         $class = 'Model_'.ucfirst($type).'Table';
-        $file = BB_PATH_LIBRARY . '/Model/'.$type.'Table.php';
+        $file = SYSTEM_PATH_LIBRARY . '/Model/'.$type.'Table.php';
         if(!file_exists($file)){
             throw new \Box_Exception('Service class :class was not found in :path', array(':class'=>$class,':path'=>$file));
         }

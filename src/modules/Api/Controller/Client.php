@@ -114,10 +114,10 @@ class Client implements InjectionAwareInterface
         // snake oil: check request is from the same domain as BoxBilling is installed if present
         $check_referer_header = isset($this->_api_config['require_referrer_header']) ? (bool)$this->_api_config['require_referrer_header'] : false;
         if($check_referer_header) {
-            $url = strtolower(BB_URL);
+            $url = strtolower(SYSTEM_URL);
             $referer = isset($_SERVER['HTTP_REFERER']) ? strtolower($_SERVER['HTTP_REFERER']) : null ;
             if(!$referer || $url != substr($referer, 0, strlen($url))) {
-                throw new \Box_Exception('Invalid request. Make sure request origin is :from', array(':from'=>BB_URL), 1004);
+                throw new \Box_Exception('Invalid request. Make sure request origin is :from', array(':from'=>SYSTEM_URL), 1004);
             }
         }
         return true;

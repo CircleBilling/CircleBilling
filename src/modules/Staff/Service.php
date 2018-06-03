@@ -653,7 +653,7 @@ class Service implements InjectionAwareInterface
         $admin_url = $this->di['url']->adminLink('/');
 
         $content = "Hi $admin_name, ".PHP_EOL;
-        $content .= "You have successfully setup BoxBilling at ".BB_URL.PHP_EOL;
+        $content .= "You have successfully setup BoxBilling at ".SYSTEM_URL.PHP_EOL;
         $content .= "Access client area at: ".$client_url.PHP_EOL;
         $content .= "Access admin area at: ".$admin_url." with login details:".PHP_EOL;
         $content .= "Email: ".$admin_email.PHP_EOL;
@@ -662,7 +662,7 @@ class Service implements InjectionAwareInterface
         $content .= "Read BoxBilling documentation to get started http://docs.boxbilling.com/".PHP_EOL;
         $content .= "Thank You for using BoxBilling.".PHP_EOL;
 
-        $subject = sprintf('BoxBilling is ready at "%s"', BB_URL);
+        $subject = sprintf('BoxBilling is ready at "%s"', SYSTEM_URL);
 
         $systemService =  $this->di['mod_service']('system');
         $from = $systemService->getParamValue('company_email');

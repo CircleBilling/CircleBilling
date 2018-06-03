@@ -427,7 +427,7 @@ class ServiceTransaction implements InjectionAwareInterface
             $transaction->updated_at = date('Y-m-d H:i:s');
             $this->di['db']->store($transaction);
 
-            if(BB_DEBUG) error_log($e->getMessage());
+            if(SYSTEM_DEBUG) error_log($e->getMessage());
             if(APPLICATION_ENV == 'testing') throw $e;
         }
 

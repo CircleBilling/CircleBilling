@@ -19,7 +19,7 @@ class Box_AppClient extends Box_App
         $m->registerClientRoutes($this);
 
         if($this->mod == 'api') {
-            define ('BB_MODE_API', TRUE);
+            define ('SYSTEM_MODE_API', TRUE);
         } else {
             $extensionService = $this->di['mod_service']('extension');
             if ($extensionService->isExtensionActive('mod', 'redirect')) {
@@ -55,7 +55,7 @@ class Box_AppClient extends Box_App
         try {
             return $this->render($tpl, array('post'=>$_POST), $ext);
         } catch(Exception $e) {
-            if(BB_DEBUG) error_log($e);
+            if(SYSTEM_DEBUG) error_log($e);
         }
         throw new \Box_Exception('Page :url not found', array(':url'=>$page), 404);
     }
@@ -82,8 +82,8 @@ class Box_AppClient extends Box_App
         $settings = $service->getThemeSettings($theme);
 
         $loader = new Box_TwigLoader(array(
-                "mods" => BB_PATH_MODS,
-                "theme" => BB_PATH_THEMES.DIRECTORY_SEPARATOR.$code,
+                "mods" => SYSTEM_PATH_MODS,
+                "theme" => SYSTEM_PATH_THEMES.DIRECTORY_SEPARATOR.$code,
                 "type" => "client"
             )
         );

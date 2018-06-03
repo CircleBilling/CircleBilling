@@ -268,6 +268,6 @@ class Box_Mod
 
     private function _getModPath()
     {
-        return BB_PATH_MODS . DIRECTORY_SEPARATOR . ucfirst($this->mod) . DIRECTORY_SEPARATOR;
+        return SYSTEM_PATH_MODS . DIRECTORY_SEPARATOR . ucfirst($this->mod) . DIRECTORY_SEPARATOR;
     }
 }

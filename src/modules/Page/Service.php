@@ -43,8 +43,8 @@ class Service implements InjectionAwareInterface
         $themeService = $this->di['mod_service']('theme');
         $code = $themeService->getCurrentClientAreaThemeCode();
         $paths = array(
-            BB_PATH_THEMES . DIRECTORY_SEPARATOR . $code . DIRECTORY_SEPARATOR . 'html' . DIRECTORY_SEPARATOR,
-            BB_PATH_MODS . DIRECTORY_SEPARATOR . 'mod_page' . DIRECTORY_SEPARATOR . 'html_client' . DIRECTORY_SEPARATOR,
+            SYSTEM_PATH_THEMES . DIRECTORY_SEPARATOR . $code . DIRECTORY_SEPARATOR . 'html' . DIRECTORY_SEPARATOR,
+            SYSTEM_PATH_MODS . DIRECTORY_SEPARATOR . 'mod_page' . DIRECTORY_SEPARATOR . 'html_client' . DIRECTORY_SEPARATOR,
         );
 
         $list = array();

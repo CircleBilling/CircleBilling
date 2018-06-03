@@ -1,4 +1,4 @@
-{% set mod = constant('BB_URL') ~ 'modules/Filemanager' %}
+{% set mod = constant('SYSTEM_URL') ~ 'modules/Filemanager' %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,7 +100,7 @@ $(function(){
 
 function saveFile(path,data){	
     $('#asset-info').text('Saving file').fadeIn();
-	$.post('{{ constant("BB_URL_API") }}admin/filemanager/save_file',{path: path, data:data},function(d){
+	$.post('{{ constant("SYSTEM_URL_API") }}admin/filemanager/save_file',{path: path, data:data},function(d){
 		if(d.result){
 			$('#asset-info').text('Your file has been saved.').delay(5000).fadeOut('slow');
 		} else {

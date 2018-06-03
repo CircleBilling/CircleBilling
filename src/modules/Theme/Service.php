@@ -245,7 +245,7 @@ class Service implements InjectionAwareInterface
                ";
         $default = 'admin_default';
         $theme = $this->di['db']->getCell($query, array('param'=>'admin_theme'));
-        $path = BB_PATH_THEMES . DIRECTORY_SEPARATOR . $theme;
+        $path = SYSTEM_PATH_THEMES . DIRECTORY_SEPARATOR . $theme;
         if(null == $theme || !file_exists($path.$theme)){
             $theme = $default;
         }
@@ -261,8 +261,8 @@ class Service implements InjectionAwareInterface
 
     public function getCurrentClientAreaThemeCode()
     {
-        if(defined('BB_THEME_CLIENT')) {
-            $theme = BB_THEME_CLIENT;
+        if(defined('SYSTEM_THEME_CLIENT')) {
+            $theme = SYSTEM_THEME_CLIENT;
         } else {
             $theme = $this->di['db']->getCell("SELECT value FROM setting WHERE param = 'theme' ");
         }
@@ -322,7 +322,7 @@ class Service implements InjectionAwareInterface
 
     public function getThemesPath()
     {
-        return BB_PATH_THEMES . DIRECTORY_SEPARATOR;
+        return SYSTEM_PATH_THEMES . DIRECTORY_SEPARATOR;
     }
 
     private function _loadTheme($theme, $client = true, $mod = null)
@@ -356,10 +356,10 @@ class Service implements InjectionAwareInterface
             $ext = trim($config['extends'], '/');
             $ext = str_replace('.', '', $ext);
 
-            $config['url'] = BB_URL . 'themes/' . $ext . '/';
+            $config['url'] = SYSTEM_URL . 'themes/' . $ext . '/';
             array_push($paths, $this->getThemesPath() . $ext . '/html');
         } else {
-            $config['url'] = BB_URL . 'themes/' . $theme . '/';
+            $config['url'] = SYSTEM_URL . 'themes/' . $theme . '/';
         }
 
         //add installed modules paths
@@ -371,7 +371,7 @@ class Service implements InjectionAwareInterface
         }
         $list = array_unique($list);
         foreach ($list as $mod) {
-            $p = BB_PATH_MODS . DIRECTORY_SEPARATOR . ucfirst($mod) . DIRECTORY_SEPARATOR;
+            $p = SYSTEM_PATH_MODS . DIRECTORY_SEPARATOR . ucfirst($mod) . DIRECTORY_SEPARATOR;
             $p .= $client ? 'html_client' : 'html_admin';
             if (file_exists($p)) {
                 array_push($paths, $p);

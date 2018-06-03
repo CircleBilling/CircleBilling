@@ -65,7 +65,7 @@ class Admin implements \Box\InjectionAwareInterface
     public function get_ide(\Box_App $app)
     {
         $this->di['is_admin_logged'];
-        $dir = BB_PATH_ROOT . DIRECTORY_SEPARATOR;
+        $dir = SYSTEM_PATH_ROOT . DIRECTORY_SEPARATOR;
         $data = array('dir'=>$dir);
         if(isset($_GET['inline'])) {
             $data['show_full_screen'] = true;
@@ -86,8 +86,8 @@ class Admin implements \Box\InjectionAwareInterface
         }
         
         // check if file is from BoxBilling folder
-        $p = substr($file, 0, strlen(BB_PATH_ROOT));
-        if($p != BB_PATH_ROOT) {
+        $p = substr($file, 0, strlen(SYSTEM_PATH_ROOT));
+        if($p != SYSTEM_PATH_ROOT) {
             throw new \Box_Exception('File does not exist', null, 405);
         }
         
@@ -153,7 +153,7 @@ class Admin implements \Box\InjectionAwareInterface
             $d = array(
                 'info'      => $info,
                 'file'      => $file,
-                'src'       => BB_URL . substr($file, strlen($p)),
+                'src'       => SYSTEM_URL . substr($file, strlen($p)),
             );
             return $app->render('mod_filemanager_image', $d);
         }
@@ -162,7 +162,7 @@ class Admin implements \Box\InjectionAwareInterface
     public function get_icons(\Box_App $app)
     {
         $this->di['is_admin_logged'];
-        $location = BB_PATH_UPLOADS.'/icons/*';
+        $location = SYSTEM_PATH_UPLOADS.'/icons/*';
         $list = array();
         $files = glob($location);
         foreach($files as $f) {

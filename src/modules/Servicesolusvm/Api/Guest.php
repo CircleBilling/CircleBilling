@@ -28,7 +28,7 @@ class Guest extends \Api_Abstract
             $templates = $this->getService()->getTemplates($type);
         } catch (\Exception $exc) {
             $templates = array();
-            if(BB_DEBUG) error_log($exc);
+            if(SYSTEM_DEBUG) error_log($exc);
         }
         
         return $templates;

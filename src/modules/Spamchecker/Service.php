@@ -112,7 +112,7 @@ class Service implements InjectionAwareInterface
             return false;
         }
         
-        require_once BB_PATH_MODS . '/Spamchecker/akismet.curl.class.php';
+        require_once SYSTEM_PATH_MODS . '/Spamchecker/akismet.curl.class.php';
         
         $akismet = new \akismet($config['akismet_api_key'], $di['config']['url']);
         if(!$akismet->valid_key()) {
@@ -175,7 +175,7 @@ class Service implements InjectionAwareInterface
                     throw new \Box_Exception("To use reCAPTCHA you must get an API key from <a href='https://www.google.com/recaptcha/admin/create'>https://www.google.com/recaptcha/admin/create</a>");
                 }
 
-                require_once BB_PATH_MODS . '/Spamchecker/recaptchalib.php';
+                require_once SYSTEM_PATH_MODS . '/Spamchecker/recaptchalib.php';
                 $resp = recaptcha_check_answer($privatekey,
                                                $data['ip'],
                                                $data["recaptcha_challenge_field"],

@@ -123,7 +123,7 @@ class Service
      *
      * Make sure extension is enabled before testing this event.
      *
-     * NOTE: IF you have BB_DEBUG mode set to TRUE then all events with params
+     * NOTE: IF you have SYSTEM_DEBUG mode set to TRUE then all events with params
      * are logged to data/log/hook_*.log file. Check this file to see what
      * kind of parameters are passed to event.
      *

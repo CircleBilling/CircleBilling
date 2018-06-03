@@ -134,8 +134,8 @@ class Box_License implements \Box\InjectionAwareInterface
     {
         $params = array();
         $params['license']  = $this->di['config']['license'];
-        $params['host']     = BB_URL;
-        $params['path']     = BB_PATH_ROOT;
+        $params['host']     = SYSTEM_URL;
+        $params['path']     = SYSTEM_PATH_ROOT;
         $params['version']  = \Box_Version::VERSION;
         $params['os']       = PHP_OS;
         $params['format']   = 2;

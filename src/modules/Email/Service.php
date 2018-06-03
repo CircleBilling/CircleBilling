@@ -221,7 +221,7 @@ class Service implements \Box\InjectionAwareInterface
         $matches = array();
         preg_match("/mod_([a-zA-Z0-9]+)_([a-zA-Z0-9]+)/i", $code, $matches);
         $mod  = $matches[1];
-        $path = BB_PATH_MODS . '/' . ucfirst($mod) . '/html_email/' . $code . '.phtml';
+        $path = SYSTEM_PATH_MODS . '/' . ucfirst($mod) . '/html_email/' . $code . '.phtml';
 
         if (file_exists($path)) {
             $tpl = file_get_contents($path);
@@ -308,7 +308,7 @@ class Service implements \Box\InjectionAwareInterface
         $transport       = $this->di['array_get']($settings, 'mailer', 'sendmail');
 
         if (APPLICATION_ENV == 'testing') {
-            if (BB_DEBUG) error_log('Skipping email sending in test environment');
+            if (SYSTEM_DEBUG) error_log('Skipping email sending in test environment');
             return true;
         }
 
@@ -481,7 +481,7 @@ class Service implements \Box\InjectionAwareInterface
 
     public function templateBatchGenerate()
     {
-        $pattern = BB_PATH_MODS . '/*/html_email/*.phtml';
+        $pattern = SYSTEM_PATH_MODS . '/*/html_email/*.phtml';
         $list    = glob($pattern);
         foreach ($list as $path) {
             $code = pathinfo($path, PATHINFO_FILENAME);

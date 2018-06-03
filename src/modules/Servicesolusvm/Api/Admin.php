@@ -89,7 +89,7 @@ class Admin extends \Api_Abstract
             $nodes = $this->getService()->getNodes($type, $by);
         } catch (\Exception $exc) {
             $nodes = array();
-            if(BB_DEBUG) error_log($exc);
+            if(SYSTEM_DEBUG) error_log($exc);
         }
         return $nodes;
     }
@@ -106,7 +106,7 @@ class Admin extends \Api_Abstract
             $plans = $this->getService()->getPlans($type);
         } catch (\Exception $exc) {
             $plans = array();
-            if(BB_DEBUG) error_log($exc);
+            if(SYSTEM_DEBUG) error_log($exc);
         }
         return $plans;
     }
@@ -123,7 +123,7 @@ class Admin extends \Api_Abstract
             $templates = $this->getService()->getTemplates($type);
         } catch (\Exception $exc) {
             $templates = array();
-            if(BB_DEBUG) error_log($exc);
+            if(SYSTEM_DEBUG) error_log($exc);
         }
         return $templates;
     }

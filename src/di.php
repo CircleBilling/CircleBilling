@@ -13,7 +13,7 @@
 
 $di = new Box_Di();
 $di['config'] = function() {
-    $array = include BB_PATH_ROOT . '/config.php';
+    $array = include SYSTEM_PATH_ROOT . '/config.php';
     return new Box_Config($array);
 };
 $di['logger'] = function () use ($di) {
@@ -100,7 +100,7 @@ $di['pager'] = function() use($di) {
 $di['url'] = function() use ($di) {
     $url  = new Box_Url();
     $url->setDi($di);
-    $url->setBaseUri(BB_URL);
+    $url->setBaseUri(SYSTEM_URL);
     return $url;
 };
 $di['mod'] = $di->protect(function ($name) use($di) {
@@ -317,11 +317,11 @@ $di['service_boxbilling'] = $di->protect(function ($config) use($di) {
 $di['ftp'] = $di->protect(function($params) use($di){ return new \Box_Ftp($params); });
 
 $di['pdf'] = function () use ($di) {
-    include BB_PATH_LIBRARY . '/PDF_ImageAlpha.php';
+    include SYSTEM_PATH_LIBRARY . '/PDF_ImageAlpha.php';
     return new \PDF_ImageAlpha();
 };
 
-$di['geoip'] = function () use ($di) { return new \GeoIp2\Database\Reader(BB_PATH_LIBRARY . '/GeoLite2-Country.mmdb'); };
+$di['geoip'] = function () use ($di) { return new \GeoIp2\Database\Reader(SYSTEM_PATH_LIBRARY . '/GeoLite2-Country.mmdb'); };
 
 $di['password'] = function() use ($di) { return new Box_Password();};
 $di['translate'] = $di->protect(function($textDomain = '') use ($di) {
