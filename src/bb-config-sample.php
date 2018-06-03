@@ -17,7 +17,7 @@ return array(
      */
     'license'     => 'PRO-wfe1RJ6aqG1wurwlocc9lwouNeTcUtklsp9ujy33clb8c57fdV',
 
-    'salt'        => '',
+    'salt'        => '6090ccb2a967f521a7b07f56ef1a14f2',
 
     /**
      * Full URL where BoxBilling is installed with trailing slash
