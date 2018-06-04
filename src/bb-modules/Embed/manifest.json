@@ -8,5 +8,6 @@
     "author_url":   "http://extensions.boxbilling.com/",
 	"icon_url":     "icon.png",
     "license":      "GPL version 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html",
-    "version":      "1.0.1"
+    "version":      "1.2",
+	"icon_author_url" : "https://bit.ly/2JsHHSL"
 }
