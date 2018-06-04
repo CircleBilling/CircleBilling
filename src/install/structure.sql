@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.5.38, for debian-linux-gnu (x86_64)
 --
--- Host: localhost    Database: boxbilling
+-- Host: localhost    Database: CircleBilling
 -- ------------------------------------------------------
 -- Server version	5.5.38-0ubuntu0.14.04.1
 
@@ -961,7 +961,7 @@ CREATE TABLE `queue_message` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `service_boxbillinglicense`
+-- Table structure for table `service_circlebillinglicense`
 --
 
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
