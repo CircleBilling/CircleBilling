@@ -2,6 +2,7 @@
     "id":           "kb",
 	"type":         "mod",
     "name":         "Knowledge base",
+	"icon_url":     "icon.png",
     "description":  "Knowledge base module for BoxBilling",
     "homepage_url": "http://github.com/boxbilling/",
     "author":       "BoxBilling",
