@@ -2,6 +2,7 @@
     "id":           "branding",
 	"type":         "mod",
     "name":         "Branding",
+	"icon_url":     "icon.png",
     "description":  "BoxBilling branding module. Can be deactivated by PRO license owners only.",
     "homepage_url": "http://github.com/boxbilling/",
     "author":       "BoxBilling",
