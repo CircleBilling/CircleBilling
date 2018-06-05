@@ -20,6 +20,13 @@ define('BB_PATH_LANGS',     BB_PATH_ROOT . '/bb-locale');
 define('BB_PATH_UPLOADS',   BB_PATH_ROOT . '/bb-uploads');
 define('BB_PATH_DATA',   BB_PATH_ROOT . '/bb-data');
 
+function isSSL() {
+    return
+        (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+        || $_SERVER['SERVER_PORT'] == 443;
+}
+
+
 function handler_error($number, $message, $file, $line)
 {
     if (E_RECOVERABLE_ERROR===$number) {
@@ -30,7 +37,7 @@ function handler_error($number, $message, $file, $line)
     return false;
 }
 
-function handler_exception(Exception $e)
+function handler_exception(Throwable $e)
 {
     if(APPLICATION_ENV == 'testing') {
         print $e->getMessage() . PHP_EOL;
@@ -60,7 +67,7 @@ function handler_exception(Exception $e)
         print sprintf('<p>Code: <em>%s</em></p>', $e->getCode());
     }
     print sprintf('<p>%s</p>', $e->getMessage());
-    print sprintf('<p><a href="http://docs.boxbilling.com/en/latest/search.html?q=%s&check_keywords=yes&area=default" target="_blank">Look for detailed error explanation</a></p>', urlencode($e->getMessage()));
+    print sprintf('<p><a href="http://docs.circlebilling.com/en/latest/" target="_blank">Look for detailed error explanation</a></p>', urlencode($e->getMessage()));
 
     if(defined('BB_DEBUG') && BB_DEBUG) {
         print sprintf('<em>%s</em>', 'Set BB_DEBUG to FALSE, to hide the message below');
@@ -95,8 +102,12 @@ if(!file_exists($configPath) || 0 == filesize( $configPath )) {
     
     //try create empty config file
     @file_put_contents($configPath, '');
-    
-    $base_url = "http://".$_SERVER['HTTP_HOST'];
+
+    $protocol = 'http';
+    if(isSSL() === true) {
+        $protocol .= 's';
+    }
+    $base_url = $protocol . '://' . $_SERVER['HTTP_HOST'];
     $base_url .= preg_replace('@/+$@','',dirname($_SERVER['SCRIPT_NAME'])).'/';
     $url = $base_url . 'install/index.php';
     $configFile = pathinfo($configPath, PATHINFO_BASENAME);
@@ -141,13 +152,15 @@ if (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc()) {
     // Create lamba style unescaping function (for portability)
     $quotes_sybase = strtolower(ini_get('magic_quotes_sybase'));
     $unescape_function = (empty($quotes_sybase) || $quotes_sybase === 'off') ? 'stripslashes($value)' : 'str_replace("\'\'","\'",$value)';
-    $stripslashes_deep = create_function('&$value, $fn', '
+    $stripslashes_deep = function(&$value, $fn) {
         if (is_string($value)) {
             $value = ' . $unescape_function . ';
         } else if (is_array($value)) {
-            foreach ($value as &$v) $fn($v, $fn);
+            foreach ($value as &$v) {
+                $fn($v, $fn);
+            }
         }
-    ');
+    };
 
     // Unescape data
     $stripslashes_deep($_POST, $stripslashes_deep);

@@ -11,6 +11,10 @@
  */
 
 
+/**
+ * @deprecated license should not longer needed. Please remove any license checks
+ * Class Box_License
+ */
 class Box_License implements \Box\InjectionAwareInterface
 {
     protected $di;
@@ -26,17 +30,18 @@ class Box_License implements \Box\InjectionAwareInterface
     }
 
     /**
+     * @deprecated
      * @return string
      */
     public function getKey()
     {
-        $license = $this->di['config']['license'];
-        if(!$license || $license == '') {
-            throw new \Box_Exception('BoxBilling license key must be defined in bb-config.php file.', null, 315);
-        }
-        return $license;
+        return '';
     }
 
+    /**
+     * @deprecated
+     * @throws Box_Exception
+     */
     public function check()
     {
         if(!$this->isValid()) {
@@ -44,21 +49,29 @@ class Box_License implements \Box\InjectionAwareInterface
         }
     }
 
+    /**
+     * @deprecated
+     * @return bool
+     */
     public function isValid()
     {
-        try {
-            $this->getDetails();
-            return true;
-        } catch(\Exception $e) {
-            return false;
-        }
+        return true;
     }
 
+
+    /**
+     * @deprecated
+     * @return bool
+     */
     public function isPro()
     {
-        return ($this->getBBType() == \Box_Version::TYPE_PRO);
+        return true;
     }
 
+    /**
+     * @deprecated
+     * @return string
+     */
     private function getBBType()
     {
         $prefixes = array(
@@ -75,6 +88,13 @@ class Box_License implements \Box\InjectionAwareInterface
         return \Box_Version::TYPE_FREE;
     }
 
+    /**
+     * @deprecated
+     *
+     * @param bool $from_server
+     * @return array|mixed
+     * @throws Exception
+     */
     public function getDetails($from_server = false)
     {
         $license = $this->getKey();
@@ -135,6 +155,13 @@ class Box_License implements \Box\InjectionAwareInterface
         return $data;
     }
 
+    /**
+     * @deprecated
+     *
+     * @param array $servers
+     * @return array
+     * @throws Exception
+     */
     public function _getLicenseDetailsFromServer(array $servers)
     {
         $params = array();

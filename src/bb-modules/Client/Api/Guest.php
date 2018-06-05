@@ -16,6 +16,8 @@
 
 namespace Box\Mod\Client\Api;
 
+use PHPUnit\Runner\Exception;
+
 class Guest extends \Api_Abstract
 {
     /**
@@ -236,7 +238,7 @@ class Guest extends \Api_Abstract
     
     /**
      * Check if given vat number is valid EU country VAT number
-     * This method uses http://isvat.appspot.com/ method to validate VAT
+     * This method uses https://euvat.ga/ method to validate VAT
      * 
      * @param string $country - Country CODE: FR - France etc.
      * @param string $vat - VAT number
@@ -251,12 +253,22 @@ class Guest extends \Api_Abstract
         );
         $this->di['validator']->checkRequiredParamsForArray($required, $data);
 
-        $cc     = $data['country'];
+        //$cc     = $data['country']; *unused so commented out
         $vatnum = $data['vat'];
-        $url    = 'http://isvat.appspot.com/' . rawurlencode($cc) . '/' . rawurlencode($vatnum) . '/';
-        $result = $this->di['guzzle_client']->get($url);
+        $url    = 'https://euvat.ga/api/validate/'  . rawurlencode($vatnum);
+        $result = file_get_contents($url);
 
-        return ($result == 'true');
+        try {
+            $json = json_decode($result, true);
+
+            if(isset($json['valid']) === true) {
+                return true;
+            }
+        } catch (Exception $e) {
+            return false;
+        }
+
+        return false;
     }
     
     /**

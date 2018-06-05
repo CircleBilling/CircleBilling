@@ -22,6 +22,7 @@ class Api_GUest_FormbuilderTest extends BBDbApiTestCase
         } catch (Box_Exception $e) {
         }
 
+        $this->assertTrue(true);
     }
 
     public function testGet()

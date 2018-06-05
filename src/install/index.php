@@ -12,7 +12,7 @@ function isSSL() {
 date_default_timezone_set('UTC');
 
 error_reporting(E_ALL);
-ini_set('display_errors', 0);
+ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 ini_set('log_errors', '1');
 ini_set('error_log', dirname(__FILE__) . '/php_error.log');
@@ -36,6 +36,7 @@ define('BB_PATH_SQL_DATA',  BB_PATH_ROOT . '/install/content.sql');
 define('BB_PATH_INSTALL',   BB_PATH_ROOT . '/install');
 define('BB_PATH_CONFIG',    BB_PATH_ROOT . '/bb-config.php');
 define('BB_PATH_CRON',      BB_PATH_ROOT . '/bb-cron.php');
+define('BB_PATH_LANGS',     BB_PATH_ROOT . '/bb-locale');
 
 // Ensure library/ is on include_path
 set_include_path(implode(PATH_SEPARATOR, array(
@@ -45,13 +46,19 @@ set_include_path(implode(PATH_SEPARATOR, array(
 
 require BB_PATH_VENDOR . '/autoload.php';
 
-final class Box_Installer
+final class Installer
 {
     private $session;
 
+    /**
+     * @var PDO
+     */
+    private $dbConnection;
+
     public function __construct()
     {
-        include 'session.php';
+        require_once 'session.php';
+
         $this->session = new Session();
     }
     
@@ -105,17 +112,11 @@ final class Box_Installer
                         $this->session->set('admin_name', $admin_name);
                     }
 
-                    //license
-                    $license = $_POST['license'];
-                    if(!$this->isValidLicense($license)) {
-                        throw new Exception('License Key is not valid');
-                    } else {
-                        $this->session->set('license', $license);
-                    }
-
                     $this->makeInstall($this->session);
                     $this->generateEmailTemplates();
+
                     session_destroy();
+
                     print 'ok';
                 } catch(Exception $e) {
                     print $e->getMessage();
@@ -130,39 +131,39 @@ final class Box_Installer
                 $se = new Box_Requirements();
                 $options = $se->getOptions();
                 $vars = array(
-                    'tos'=>$this->getLicense(),
+                    'tos'                       => $this->getTOSInfo(),
 
-                    'folders'=>$se->folders(),
-                    'files'=>$se->files(),
-                    'os'=>PHP_OS,
-                    'os_ok'=>true,
-                    'php_ver'=>$options['php']['version'],
-                    'php_ver_req'=>$options['php']['min_version'],
-                    'php_safe_mode'=>$options['php']['safe_mode'],
-                    'php_ver_ok'=>$se->isPhpVersionOk(),
-                    'extensions'=>$se->extensions(),
-                    'all_ok'=>$se->canInstall(),
+                    'folders'                   => $se->folders(),
+                    'files'                     => $se->files(),
+                    'os'                        => PHP_OS,
+                    'os_ok'                     => true,
+                    'php_ver'                   => $options['php']['version'],
+                    'php_ver_req'               => $options['php']['min_version'],
+                    'php_safe_mode'             => $options['php']['safe_mode'],
+                    'php_ver_ok'                => $se->isPhpVersionOk(),
+                    'extensions'                => $se->extensions(),
+                    'all_ok'                    => $se->canInstall(),
+                    'db_host'                   => $this->session->get('db_host'),
+                    'db_name'                   => $this->session->get('db_name'),
+                    'db_user'                   => $this->session->get('db_user'),
+                    'db_pass'                   => $this->session->get('db_pass'),
 
-                    'db_host'=>$this->session->get('db_host'),
-                    'db_name'=>$this->session->get('db_name'),
-                    'db_user'=>$this->session->get('db_user'),
-                    'db_pass'=>$this->session->get('db_pass'),
+                    'admin_email'               => $this->session->get('admin_email'),
+                    'admin_pass'                => $this->session->get('admin_pass'),
+                    'admin_name'                => $this->session->get('admin_name'),
 
-                    'admin_email'=>$this->session->get('admin_email'),
-                    'admin_pass'=>$this->session->get('admin_pass'),
-                    'admin_name'=>$this->session->get('admin_name'),
+                    'license'                   => $this->session->get('license'),
+                    'agree'                     => $this->session->get('agree'),
 
-                    'license'=>$this->session->get('license'),
-                    'agree'=>$this->session->get('agree'),
-
-                    'install_module_path'=>BB_PATH_INSTALL,
-                    'cron_path'=>BB_PATH_CRON,
-                    'config_file_path'=>BB_PATH_CONFIG,
-                    'live_site'=>BB_URL,
-                    'admin_site'=>BB_URL_ADMIN,
+                    'install_module_path'       => BB_PATH_INSTALL,
+                    'cron_path'                 => BB_PATH_CRON,
+                    'config_file_path'          => BB_PATH_CONFIG,
+                    'live_site'                 => BB_URL,
+                    'admin_site'                => BB_URL_ADMIN,
                     
-                    'domain' => pathinfo(BB_URL, PATHINFO_BASENAME),
+                    'domain'                    => pathinfo(BB_URL, PATHINFO_BASENAME),
                 );
+
                 print $this->render('install.phtml', $vars);
                 break;
         }
@@ -179,35 +180,80 @@ final class Box_Installer
             'auto_reload'       => TRUE,
             'cache'             => FALSE,
         );
+
         $loader = new Twig_Loader_Filesystem($options['paths']);
         $twig = new Twig_Environment($loader, $options);
         $twig->addExtension(new Twig_Extension_Optimizer());
         $twig->addGlobal('request', $_REQUEST);
         $twig->addGlobal('version', Box_Version::VERSION);
+
         return $twig->render($name, $vars);
     }
-    
+
+    /**
+     * @deprecated function should be removed
+     * @return string
+     */
     private function getLicense()
     {
-        $path = BB_PATH_LICENSE;
-        if(!file_exists($path)) {
-            return 'Please visit http://www.boxbilling.com for licensing information';
-        }
-        return file_get_contents($path);
+        return '';
     }
 
+    public function getTOSInfo() {
+        return 'please visit https://ciclebilling.com to read our terms of service';
+    }
+
+    /**
+     * Connect to database
+     *
+     * @param $host
+     * @param $db
+     * @param $user
+     * @param $pass
+     * @return bool
+     * @throws Exception
+     */
+    protected function DBConnect($host, $db, $user, $pass) {
+        try {
+            $pdoConnectionString = 'mysql:host=' . $host . ';dbname=' . $db . ';charset=utf8';
+
+            $this->dbConnection = new PDO($pdoConnectionString, $user, $pass);
+
+            $errorInfo = $this->dbConnection->errorInfo();
+            if($errorInfo[1] !== null) {
+                return false;
+            }
+        } catch (PDOException $PDOException) {
+            //TODO need cleaner error handling
+            throw $PDOException;
+        } catch (Exception $exception) {
+            //TODO need cleaner error handling
+            throw $exception;
+        }
+
+        return true;
+    }
+
+    /**
+     * Test database connection
+     *
+     * @param $host
+     * @param $db
+     * @param $user
+     * @param $pass
+     * @return bool
+     */
     private function canConnectToDatabase($host, $db, $user, $pass)
     {
-        $link = @mysql_connect($host, $user, $pass);
-        if ($link) {
-            $db_selected = @mysql_select_db($db, $link);
-            if($db_selected) {
-                mysql_close($link);
-                return true;
-            }
-            mysql_close($link);
+        $dbStatus = false;
+
+        try {
+            $dbStatus = $this->DBConnect($host, $db, $user, $pass);
+        } catch (Exception $exception) {
+            return false;
         }
-        return false;
+
+        return $dbStatus;
     }
 
     private function isValidAdmin($email, $pass, $name)
@@ -227,17 +273,20 @@ final class Box_Installer
         return true;
     }
 
+    /**
+     * @deprecated function should me removed
+     * @param $license
+     * @return bool
+     */
     private function isValidLicense($license)
     {
-        if(empty($license)) {
-            return false;
-        }
         return true;
     }
 
+
     private function checkConfig()
     {
-        if(!file_exists(BB_PATH_CONFIG)) {
+        if(file_exists(BB_PATH_CONFIG) === false) {
             throw new Exception('Create configuration file bb-config.php with content provided during installation.');
         }
     }
@@ -247,65 +296,69 @@ final class Box_Installer
         $this->_isValidInstallData($ns);
         $this->_createConfigurationFile($ns);
 
-        $link = @mysql_connect($ns->get('db_host'), $ns->get('db_user'), $ns->get('db_pass'));
-
-        if (!$link) {
-            throw new Exception('Could not connect to database');
+        if($this->canConnectToDatabase($ns->get('db_host'), $ns->get('db_name'), $ns->get('db_user'), $ns->get('db_pass')) === false) {
+            throw new Exception('Can`t connect to database.');
         }
 
-        $db_selected = @mysql_select_db($ns->get('db_name'), $link);
-
-        if (!$db_selected) {
-            throw new Exception('Could not select database');
-        }
-
-        mysql_query("SET NAMES 'utf8'");
-        
-        /*
-        $qry = mysql_query("SHOW TABLES;");
-        while($res = mysql_fetch_array($qry)) {
-            $dropqry = mysql_query("DROP TABLE $res[0];");
-        }
-        */
-        
-        $sql = file_get_contents(BB_PATH_SQL);
-        if(!$sql) {
+        $databaseStructure = file_get_contents(BB_PATH_SQL);
+        if($databaseStructure === false) {
             throw new Exception('Could not read structure.sql file');
         }
 
-        $sql_content = file_get_contents(BB_PATH_SQL_DATA);
-        if(!$sql_content) {
+        $databaseContent = file_get_contents(BB_PATH_SQL_DATA);
+        if($databaseContent === false) {
             throw new Exception('Could not read structure.sql file');
         }
 
-        $sql .= $sql_content;
+        $sql = $databaseStructure . $databaseContent;
 
         $sql = preg_split('/\;[\r]*\n/ism', $sql);
         $sql = array_map('trim', $sql);
-        $err = '';
-        foreach ($sql as $query) {
-            if (!trim($query)) continue;
-            $res = mysql_query($query, $link);
-            $err .= mysql_error();
+
+        $this->dbConnection->beginTransaction();
+
+        try {
+            foreach ($sql as $query) {
+                if (trim($query) === false) {
+                    continue;
+                }
+
+                $installStatement = $this->dbConnection->prepare($query);
+                $installStatement->execute();
+
+                $errorInfo = $this->dbConnection->errorInfo();
+                if($errorInfo[1] !== null) {
+                    throw new PDOException('Query error (' . $errorInfo[1] . '): ' . $errorInfo[2]);
+                }
+            }
+
+            $passwordObject = new \Box_Password();
+            $sql = "INSERT INTO admin (role, name, email, pass, protected, created_at, updated_at) VALUES('admin', :name, :email, :password, 1, NOW(), NOW())";
+
+            $statement = $this->dbConnection->prepare($sql);
+            $statement->execute(array(
+                ':name' => $ns->get('admin_name'),
+                ':email' => $ns->get('admin_email'),
+                ':password' => $passwordObject->hashIt($ns->get('admin_pass')),
+            ));
+
+            $errorInfo = $this->dbConnection->errorInfo();
+            if($errorInfo[1] !== null) {
+                throw new PDOException('Query error (' . $errorInfo[1] . '): ' . $errorInfo[2]);
+            }
+        } catch (PDOException $PDOException) {
+            $this->dbConnection->rollBack();
+        } catch (Exception $exception) {
+            $this->dbConnection->rollBack();
         }
 
-        if(!empty($err)) {
-            throw new Exception($err);
-        }
-        $passwordObject = new \Box_Password();
-        $sql = "INSERT INTO admin (role, name, email, pass, protected, created_at, updated_at) VALUES('admin', '%s', '%s', '%s', 1, NOW(), NOW());";
-        $sql = sprintf($sql, mysql_real_escape_string($ns->get('admin_name')), mysql_real_escape_string($ns->get('admin_email')), mysql_real_escape_string($passwordObject->hashIt($ns->get('admin_pass'))));
-        $res = mysql_query($sql, $link);
-        if(!$res) {
-            throw new Exception(mysql_error());
-        }
-
-        mysql_close($link);
+        $this->dbConnection->commit();
 
         try {
             $this->_sendMail($ns);
         } catch (Exception $e) {
-            // email was not sent but that is not a problem
+            //TODO need cleaner error handling
+            throw $e;
         }
 
         return true;
@@ -317,17 +370,19 @@ final class Box_Installer
         $admin_email = $ns->get('admin_email');
         $admin_pass = $ns->get('admin_pass');
 
-        $content = "Hi $admin_name, ".PHP_EOL;
-        $content .= "You have successfully setup BoxBilling at ".BB_URL.PHP_EOL;
-        $content .= "Access client area at: ".BB_URL.PHP_EOL;
-        $content .= "Access admin area at: ".BB_URL_ADMIN." with login details:".PHP_EOL;
-        $content .= "Email: ".$admin_email.PHP_EOL;
-        $content .= "Password: ".$admin_pass.PHP_EOL.PHP_EOL;
+        $content = 'Hi $admin_name, ' . PHP_EOL;
+        $content .= 'You have successfully setup CircleBilling at ' . BB_URL . PHP_EOL;
+        $content .= 'Access client area at: ' . BB_URL . PHP_EOL;
+        $content .= 'Access admin area at: ' . BB_URL_ADMIN . ' with login details:' . PHP_EOL;
+        $content .= 'Email: ' . $admin_email . PHP_EOL;
+        $content .= 'Password: ' . $admin_pass . PHP_EOL;
 
-        $content .= "Read BoxBilling documentation to get started http://docs.boxbilling.com/".PHP_EOL;
-        $content .= "Thank You for using BoxBilling.".PHP_EOL;
+        $content .= PHP_EOL;
 
-        $subject = sprintf('BoxBilling is ready at "%s"', BB_URL);
+        $content .= 'Read CircleBilling documentation to get started http://docs.ciclebilling.com/' . PHP_EOL;
+        $content .= 'Thank You for using CircleBilling.' .PHP_EOL;
+
+        $subject = sprintf('CircleBilling is ready at "%s"', BB_URL);
 
         @mail($admin_email, $subject, $content);
     }
@@ -391,8 +446,8 @@ final class Box_Installer
         $f = "define('%s', '%s');".PHP_EOL;
 
         $output = '<?php '.PHP_EOL;
-        $output .= sprintf($cf, 'BoxBilling Configuration File');
-        $output .= sprintf($cf, 'More information on this file at http://docs.boxbilling.com/');
+        $output .= sprintf($cf, 'CircleBilling Configuration File');
+        $output .= sprintf($cf, 'More information on this file at http://docs.circlebilling.com/');
 
         $output .= sprintf($cf, 'Define timezone');
         $output .= sprintf("date_default_timezone_set('%s');", 'UTC');
@@ -410,7 +465,7 @@ final class Box_Installer
         $output .= sprintf($cf, 'Live site URL with trailing slash');
         $output .= sprintf($f, 'BB_URL', BB_URL);
         
-        $output .= sprintf($cf, 'BoxBilling license key');
+        $output .= sprintf($cf, 'CircleBilling license key');
         $output .= sprintf($f, 'BB_LICENSE', $ns->get('license'));
 
         $output .= sprintf($cf, 'Enable or disable warning messages');
@@ -443,10 +498,6 @@ final class Box_Installer
         if(!$this->isValidAdmin($ns->get('admin_email'), $ns->get('admin_pass'), $ns->get('admin_name'))) {
             throw new Exception('Administrators account is not valid');
         }
-
-        if(!$this->isValidLicense($ns->get('license'))) {
-            throw new Exception('License Key is not valid');
-        }
     }
 
     private function generateEmailTemplates()
@@ -462,5 +513,5 @@ final class Box_Installer
 }
 
 $action = isset($_GET['a']) ? $_GET['a'] : 'index';
-$installer = new Box_Installer;
+$installer = new Installer();
 $installer->run($action);

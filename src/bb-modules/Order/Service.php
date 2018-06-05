@@ -485,10 +485,6 @@ class Service implements InjectionAwareInterface
 
     public function createOrder(\Model_Client $client, \Model_Product $product, array $data)
     {
-        if (!$this->di['license']->isPro()) {
-            throw new \Box_Exception('This feature is available in BoxBilling PRO version.', null, 876);
-        }
-
         $currencyService = $this->di['mod_service']('currency');
         if (isset($data['currency']) && !empty($data['currency'])) {
             $currency = $currencyService->getByCode($data['currency']);
@@ -1154,7 +1150,8 @@ class Service implements InjectionAwareInterface
 
         $mod    = $this->di['mod']('order');
         $config = $mod->getConfig();
-        if (!isset($config['batch_cancel_suspended']) || !$config['batch_cancel_suspended']) {
+
+        if (isset($config['batch_cancel_suspended']) === false || $config['batch_cancel_suspended'] === null) {
             return false;
         }
 
@@ -1188,7 +1185,7 @@ class Service implements InjectionAwareInterface
 
         $this->di['logger']->info('Executed action to cancel suspended orders');
 
-        return TRUE;
+        return true;
     }
 
     public function updateOrderConfig(\Model_ClientOrder $order, array $config)

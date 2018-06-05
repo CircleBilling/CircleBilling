@@ -149,6 +149,8 @@ class Api_Admin_FormbuilderTest extends BBDbApiTestCase
             $this->fail('An expected exception has not been raised.');
         } catch (Box_Exception $e) {
         }
+
+        $this->assertTrue(true);
     }
 
 

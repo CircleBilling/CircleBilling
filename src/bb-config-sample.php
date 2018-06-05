@@ -17,14 +17,14 @@ return array(
      */
     'license'     => 'PRO-wfe1RJ6aqG1wurwlocc9lwouNeTcUtklsp9ujy33clb8c57fdV',
 
-    'salt'        => '',
+    'salt'        => '6090ccb2a967f521a7b07f56ef1a14f2',
 
     /**
      * Full URL where BoxBilling is installed with trailing slash
      */
-    'url'     => 'http://www.boxbilling.test/',
+    'url'     => 'https://circlebilling.local/',
 
-    'admin_area_prefix' =>  '/bb-admin',
+    'admin_area_prefix' =>  '/admin',
 
     /**
      * Enable or Disable the display of notices
@@ -83,17 +83,17 @@ return array(
         /**
          * The name of the database for BoxBilling
          */
-        'name'   =>'boxbilling',
+        'name'   =>'circlebilling',
 
         /**
          * Database username
          */
-        'user'   =>'foo',
+        'user'   =>'root',
 
         /**
          * Database password
          */
-        'password'   =>'foo',
+        'password'   =>'',
     ),
 
     'twig'   =>  array(

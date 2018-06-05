@@ -122,7 +122,7 @@ class Box_Mod
     public function getService($sub = '')
     {
         if(!$this->hasService($sub)) {
-            throw new \Box_Exception('Module :mod does not have service class', array(':mod'=>$this->mod), 5898);
+            throw new \Box_Exception('Module :mod does not have service class (:sub)', array(':mod'=>$this->mod, ':sub'=>$sub), 5898);
         }
         $class = 'Box\\Mod\\'.ucfirst($this->mod).'\\Service'.ucfirst($sub);
     	$service = new $class();

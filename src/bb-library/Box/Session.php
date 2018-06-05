@@ -15,26 +15,29 @@ class Box_Session
 {
     public function __construct($handler)
     {
-        session_set_save_handler(
-            array($handler, 'open'),
-            array($handler, 'close'),
-            array($handler, 'read'),
-            array($handler, 'write'),
-            array($handler, 'destroy'),
-            array($handler, 'gc')
-        );
-        if(php_sapi_name() !== 'cli'){
-            $currentCookieParams = session_get_cookie_params();
-            $currentCookieParams["httponly"] = true;
-
-            session_set_cookie_params(
-                $currentCookieParams["lifetime"],
-                $currentCookieParams["path"],
-                $currentCookieParams["domain"],
-                $currentCookieParams["secure"],
-                $currentCookieParams["httponly"]
+        if($this->isSessionStarted() === false) {
+            session_set_save_handler(
+                array($handler, 'open'),
+                array($handler, 'close'),
+                array($handler, 'read'),
+                array($handler, 'write'),
+                array($handler, 'destroy'),
+                array($handler, 'gc')
             );
-            session_start();
+
+            if(php_sapi_name() !== 'cli'){
+                $currentCookieParams = session_get_cookie_params();
+                $currentCookieParams["httponly"] = true;
+
+                session_set_cookie_params(
+                    $currentCookieParams["lifetime"],
+                    $currentCookieParams["path"],
+                    $currentCookieParams["domain"],
+                    $currentCookieParams["secure"],
+                    $currentCookieParams["httponly"]
+                );
+                session_start();
+            }
         }
     }
 
@@ -62,4 +65,17 @@ class Box_Session
     {
         session_destroy();
     }
+
+    public function isSessionStarted()
+    {
+        if ( php_sapi_name() !== 'cli' ) {
+            if ( version_compare(phpversion(), '5.4.0', '>=') ) {
+                return session_status() === PHP_SESSION_ACTIVE ? true : false;
+            } else {
+                return session_id() === '' ? false : true;
+            }
+        }
+        return false;
+    }
+
 }
