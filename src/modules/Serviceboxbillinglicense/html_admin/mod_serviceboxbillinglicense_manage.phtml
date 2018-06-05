@@ -1,5 +1,5 @@
 <div class="help">
-    <h2>{% trans 'BoxBilling license management' %}</h2>
+    <h2>{% trans 'CircleBilling license management' %}</h2>
 </div>
 
 <form method="post" action="{{ 'api/admin/serviceboxbillinglicense/update'|link }}" class="mainForm api-form save" data-api-reload="1">
@@ -7,7 +7,7 @@
         <div class="rowElem noborder">
             <label>{% trans 'License order ID' %}:</label>
             <div class="formRight">
-                <input type="text" name="oid" value="{{service.oid}}" placeholder="License order ID on BoxBilling.com"/>
+                <input type="text" name="oid" value="{{service.oid}}" placeholder="License order ID on CircleBilling.com"/>
             </div>
             <div class="fix"></div>
         </div>
