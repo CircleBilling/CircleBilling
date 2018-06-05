@@ -55,10 +55,10 @@
                                 <p>
                                     If you can not enable JavaScript for some reason you can follow these steps in
                                     order to setup CircleBilling: <br/>
-                                    * Rename "bb-config-sample.php" file to "bb-config.php", fill in the values and change this file permissions to read only (CHMOD 644).<br/>
+                                    * Rename "config-sample.php" file to "config.php", fill in the values and change this file permissions to read only (CHMOD 644).<br/>
                                     * Import /install/structure.sql to your database<br/>
                                     * Import /install/content.sql to your database<br/>
-                                    * Open browser <a href="{{constant("BB_URL")}}index.php?_url=/bb-admin">{{constant("BB_URL")}}index.php?_url=/bb-admin</a> to create new admin
+                                    * Open browser <a href="{{constant("SYSTEM_URL")}}index.php?_url=/admin">{{constant("SYSTEM_URL")}}index.php?_url=/admin</a> to create new admin
                                     account.<br/>
                                     * Remove /install directory<br/>
                                 </p>
@@ -272,7 +272,7 @@ $(function() {
     }
     
     function validateSteps(stepnumber){
-        var url = '{{constant("BB_URL_INSTALL")}}index.php?a=';
+        var url = '{{constant("SYSTEM_URL_INSTALL")}}index.php?a=';
         var data = $('#installer').serialize();
         var ok = false;
 
