@@ -6,5 +6,6 @@
     "description":  "Manage redirects",
     "author":       "BoxBilling",
     "author_url":   "http://www.boxbilling.com",
-    "version":      "1.0.0"
+	"icon_author_url" : "https://bit.ly/2JaCXlp",
+    "version":      "1.0.1"
 }

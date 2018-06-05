@@ -2,10 +2,12 @@
     "id":           "kb",
 	"type":         "mod",
     "name":         "Knowledge base",
+	"icon_url":     "icon.png",
     "description":  "Knowledge base module for BoxBilling",
     "homepage_url": "http://github.com/boxbilling/",
     "author":       "BoxBilling",
     "author_url":   "http://extensions.boxbilling.com/",
     "license":      "http://www.boxbilling.com/license.txt",
-    "version":      "1.0.0"
+    "version":      "1.2.0",
+	"icon_author_url" : "https://bit.ly/2Jp6Fmf"
 }
