@@ -223,6 +223,7 @@ class Api_Admin_ForumTest extends BBDbApiTestCase
         $this->assertArrayHasKey('list', $array);
         $list = $array['list'];
         $this->assertInternalType('array', $list);
+
         if (count($list)) {
             $item = $list[0];
             $this->assertArrayHasKey('id', $item);

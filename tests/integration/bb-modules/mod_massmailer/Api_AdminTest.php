@@ -61,6 +61,8 @@ class Box_Mod_Massmailer_Api_AdminTest extends BBModTestCase
         );
         $this->api_admin->massmailer_update(array('id'=>1, 'filter'=>$filter));
         $this->api_admin->massmailer_send(array('id'=>1));
+
+        $this->assertTrue(is_array($filter));
     }
 
     public function testMassmailerGetList()

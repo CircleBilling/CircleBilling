@@ -52,6 +52,9 @@ class Box_Mod_Theme_ServiceTest extends BBDbApiTestCase
 
         $themeModel = $service->getTheme('boxbilling');
         $service->uploadAssets($themeModel, $files);
+
+        //TODO maybe we can write better test here?
+        $this->assertTrue(true);
     }
 
     public function testupdateSettings()

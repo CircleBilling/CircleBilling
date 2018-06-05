@@ -21,7 +21,7 @@ class AdminTest extends \BBTestCase {
         return $this->getMockBuilder('\Box\Mod\Formbuilder\Service')->getMock();
     }
 
-    public function setup()
+    public function setup(): void
     {
         $this->service = new \Box\Mod\Formbuilder\Service();
         $this->api = new \Box\Mod\Formbuilder\Api\Admin();

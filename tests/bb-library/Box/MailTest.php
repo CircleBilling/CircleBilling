@@ -2,7 +2,7 @@
 /**
  * @group Core
  */
-class Box_MailTest extends PHPUnit_Framework_TestCase
+class Box_MailTest extends PHPUnit\Framework\TestCase
 {
 
     public function testsend_TransportSendMail()
@@ -41,7 +41,9 @@ class Box_MailTest extends PHPUnit_Framework_TestCase
 
         $mail = new Box_Mail();
 
-        $this->setExpectedException('\Box_Exception', sprintf('Unknown mail transport: %s', $transport));
+        $this->expectException(Box_Exception::class);
+        $this->expectExceptionMessage(sprintf('Unknown mail transport: %s', $transport));
+
         $mail->send($transport);
     }
 

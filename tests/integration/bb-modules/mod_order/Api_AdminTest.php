@@ -131,6 +131,7 @@ class Api_Admin_OrderTest extends BBDbApiTestCase
     public function testCancellationOfSuspendedOrders()
     {
         $bool = $this->api_admin->order_batch_cancel_suspended();
+
         $this->assertTrue($bool);
     }
 
@@ -184,8 +185,10 @@ class Api_Admin_OrderTest extends BBDbApiTestCase
         $this->api_admin->order_update($data);
 
         $orderConfig = $this->di['mod_config']('Order');
+
         $orderConfig['order_renewal_logic'] = 'from_today';
         $extensionService = $this->di['mod_service']('Extension');
+
         $extensionService->setConfig($orderConfig);
 
         $this->api_admin->order_renew($data);

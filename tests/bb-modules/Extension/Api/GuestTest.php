@@ -16,7 +16,7 @@ class GuestTest extends \BBTestCase {
     protected $api = null;
 
 
-    public function setup()
+    public function setup(): void
     {
         $this->service = new \Box\Mod\Extension\Service();
         $this->api = new \Box\Mod\Extension\Api\Guest();

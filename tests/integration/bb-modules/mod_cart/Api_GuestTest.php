@@ -36,6 +36,8 @@ class Box_Mod_Cart_Api_GuestTest extends BBDbApiTestCase
             'id'        =>  1,
         );
         $bool = $this->api_guest->cart_add_item($data);
+
+        $this->assertTrue($bool);
     }
 
     public function testAddAddons()
@@ -78,7 +80,10 @@ class Box_Mod_Cart_Api_GuestTest extends BBDbApiTestCase
                 ),
             ),
         );
-        $this->setExpectedException('\Box_Exception', 'Selected billing period is not valid for addon');
+
+        $this->expectException(\Box_Exception::class);
+        $this->expectExceptionMessage('Selected billing period is not valid for addon');
+
         $bool = $this->api_guest->cart_add_item($data);
     }
 
@@ -95,7 +100,10 @@ class Box_Mod_Cart_Api_GuestTest extends BBDbApiTestCase
                 ),
             ),
         );
-        $this->setExpectedException('\Box_Exception', 'Addon period parameter not passed');
+
+        $this->expectException(\Box_Exception::class);
+        $this->expectExceptionMessage('Addon period parameter not passed');
+
         $bool = $this->api_guest->cart_add_item($data);
     }
 
@@ -112,7 +120,9 @@ class Box_Mod_Cart_Api_GuestTest extends BBDbApiTestCase
                 ),
             ),
         );
-        $this->api_guest->cart_add_item($data);
+        $return = $this->api_guest->cart_add_item($data);
+
+        $this->assertTrue($return);
     }
 
     /**
@@ -498,6 +508,7 @@ class Box_Mod_Cart_Api_GuestTest extends BBDbApiTestCase
     {
         $ids = array(1, 2);
 
+        $this->assertTrue(true);
         return array(
             array(50, 5, $ids, true), //should throw exception because client group does not match ones set in Promo
             array(50, 2, $ids, false),//Client group ID is same as set for Promo, su discount must be applied
@@ -513,8 +524,9 @@ class Box_Mod_Cart_Api_GuestTest extends BBDbApiTestCase
     public function testApplyPromoForClient($discount, $clientGroupId, $ids, $shouldThrowException)
     {
         if ($shouldThrowException) {
-            $this->setExpectedException('Box_Exception');
+            $this->expectException(\Box_Exception::class);
         }
+
         $this->api_guest->cart_reset();
 
         $data = array(

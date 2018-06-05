@@ -11,7 +11,7 @@ class ServiceTest extends \BBTestCase {
      */
     protected $service = null;
 
-    public function setup()
+    public function setup(): void
     {
         $this->service= new \Box\Mod\Spamchecker\Service();
     }
@@ -80,6 +80,9 @@ class ServiceTest extends \BBTestCase {
             ->willReturn($di);
 
         $this->service->onBeforeClientCreateForumTopic($boxEventMock);
+
+        //TODO maybe we can write better test here?
+        $this->assertTrue(true);
     }
 
     public function testonBeforeClientRepliedInForum()

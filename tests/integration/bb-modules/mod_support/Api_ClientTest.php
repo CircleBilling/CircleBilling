@@ -118,5 +118,8 @@ class Api_Client_SupportTest extends BBDbApiTestCase
         );
         $this->api_client->support_ticket_create($data);
         $this->api_client->support_ticket_create($data); //should not throw an exception as delay time is not set
+
+        //TODO maybe we can write better test here?
+        $this->assertTrue(true);
     }
 }

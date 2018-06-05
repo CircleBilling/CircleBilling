@@ -19,7 +19,7 @@ class ServiceTest extends \BBTestCase {
      */
     protected $service = null;
 
-    public function setup()
+    public function setup(): void
     {
         $this->service = new \Box\Mod\Extension\Service();
     }
@@ -581,7 +581,7 @@ class ServiceTest extends \BBTestCase {
 
         $result = $this->service->deactivate($ext);
         $this->assertTrue($result);
-       }
+   }
 
     public function testdownloadAndExtract()
     {

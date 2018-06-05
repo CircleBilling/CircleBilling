@@ -861,6 +861,8 @@ class Api_Admin_InvoiceTest extends BBDbApiTestCase
 
     public function testPrepareInvoiceDueDateProvider()
     {
+        $this->assertTrue(true);
+
         return array(
             array(100, 100),
             array('', 1),

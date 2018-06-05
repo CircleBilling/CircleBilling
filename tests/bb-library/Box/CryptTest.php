@@ -2,7 +2,7 @@
 /**
  * @group Core
  */
-class Box_CryptTest extends PHPUnit_Framework_TestCase
+class Box_CryptTest extends PHPUnit\Framework\TestCase
 {
     public function testCrypt()
     {
@@ -12,6 +12,7 @@ class Box_CryptTest extends PHPUnit_Framework_TestCase
         $crypt = new Box_Crypt();
         $encoded = $crypt->encrypt($text, $key);
         $decoded = $crypt->decrypt($encoded, $key);
+
         $this->assertEquals($text, $decoded);
     }
 }

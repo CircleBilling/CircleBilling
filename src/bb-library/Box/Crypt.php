@@ -10,15 +10,20 @@
  * with this source code in the file LICENSE
  */
 
-
+/**
+ * @see https://paragonie.com/blog/2015/05/if-you-re-typing-word-mcrypt-into-your-code-you-re-doing-it-wrong
+ * Class Box_Crypt
+ */
 class Box_Crypt implements \Box\InjectionAwareInterface
 {
     protected $di = NULL;
 
+    const METHOD = 'aes-256-cbc';
+
     public function __construct()
     {
-        if (!extension_loaded('mcrypt')) {
-            throw new Box_Exception('php mcrypt extension must be enabled on your server');
+        if (!extension_loaded('openssl')) {
+            throw new Box_Exception('php openssl extension must be enabled on your server');
         }
     }
 
@@ -32,33 +37,57 @@ class Box_Crypt implements \Box\InjectionAwareInterface
         return $this->di;
     }
 
-    public function encrypt($text, $pass = null)
+    public function encrypt($message, $pass = null)
     {
         $key = $this->_getSalt($pass);
-        $mode = MCRYPT_MODE_CBC;
-        $iv_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, $mode);
-        $iv = mcrypt_create_iv($iv_size, MCRYPT_DEV_URANDOM);
-        $enc =  mcrypt_encrypt(MCRYPT_RIJNDAEL_256, $key, $text, $mode, $iv);
-        return base64_encode($iv . $enc);
+
+        //if (mb_strlen($key, '8bit') !== 32) {
+        //    throw new Exception("Needs a 256-bit key!");
+        //}
+
+        $ivsize = openssl_cipher_iv_length(self::METHOD);
+        $iv = openssl_random_pseudo_bytes($ivsize);
+
+        $ciphertext = openssl_encrypt(
+            $message,
+            self::METHOD,
+            $key,
+            OPENSSL_RAW_DATA,
+            $iv
+        );
+
+        return base64_encode($iv . $ciphertext);
     }
 
-    public function decrypt($text, $pass = null)
+    public function decrypt($message, $pass = null)
     {
-        if (is_null($text)){
+        if (is_null($message)){
             return false;
         }
         $key = $this->_getSalt($pass);
-        $mode = MCRYPT_MODE_CBC;
-        $ciphertext_dec = base64_decode($text);
 
-        $iv_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, $mode);
-        # retrieves the IV, iv_size should be created using mcrypt_get_iv_size()
-        $iv = substr($ciphertext_dec, 0, $iv_size);
-        # retrieves the cipher text (everything except the $iv_size in the front)
-        $ciphertext_dec = substr($ciphertext_dec, $iv_size);
+        $message = base64_decode($message);
 
-        # may remove 00h valued characters from end of plain text
-        return trim(mcrypt_decrypt(MCRYPT_RIJNDAEL_256, $key, $ciphertext_dec, $mode, $iv));
+
+        //if (mb_strlen($key, '8bit') !== 32) {
+        //    throw new Exception("Needs a 256-bit key!");
+        //}
+
+        $ivsize = openssl_cipher_iv_length(self::METHOD);
+        $iv = mb_substr($message, 0, $ivsize, '8bit');
+        $ciphertext = mb_substr($message, $ivsize, null, '8bit');
+
+        $result = openssl_decrypt(
+            $ciphertext,
+            self::METHOD,
+            $key,
+            OPENSSL_RAW_DATA,
+            $iv
+        );
+
+        $result = trim($result);
+
+        return $result;
     }
 
     private function _getSalt($pass = null)
