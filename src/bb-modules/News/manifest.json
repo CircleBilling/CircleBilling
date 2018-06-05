@@ -6,5 +6,6 @@
     "homepage_url": "http://github.com/boxbilling/",
     "license":      "http://www.boxbilling.com/license.txt",
 	"icon_url":     "icon.png",
-    "version":      "1.0.0"
+    "version":      "1.0.1",
+	"icon_author_url" : "https://bit.ly/2Jc2Pxg"
 }
