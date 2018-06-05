@@ -2,10 +2,12 @@
     "id":           "servicemembership",
 	"type":         "mod",
     "name":         "Membership product",
+	"icon_url":     "icon.png",
     "description":  "Sell membership subscriptions to clients",
     "homepage_url": "http://github.com/boxbilling/",
     "author":       "BoxBilling",
     "author_url":   "http://extensions.boxbilling.com/",
     "license":      "http://www.boxbilling.com/license.txt",
-    "version":      "1.0.0"
+	"icon_author_url" : "https://bit.ly/2Jt0oWA",
+    "version":      "1.0.1"
 }
