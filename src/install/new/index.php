@@ -20,16 +20,16 @@ ini_set('error_log', dirname(__FILE__) . '/php_error.log');
 $protocol = isSSL() ? 'https' : 'http';
 $url = $protocol . "://" . $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 $current_url = pathinfo($url, PATHINFO_DIRNAME);
-$root_url = str_replace('/install', '', $current_url).'/';
+$root_url = str_replace('/install/new', '', $current_url) . '/';
 
 define('BB_URL',            $root_url);
-define('BB_URL_INSTALL',    BB_URL.'install/');
+define('BB_URL_INSTALL',    BB_URL . 'install/');
 define('BB_URL_ADMIN',      BB_URL.'index.php?_url=/bb-admin');
 
-define('BB_PATH_ROOT',      realpath(dirname(__FILE__).'/..'));
+define('BB_PATH_ROOT',      realpath(dirname(__FILE__) . '/../..'));
 define('BB_PATH_LIBRARY',   BB_PATH_ROOT . '/bb-library');
-define('BB_PATH_VENDOR',   BB_PATH_ROOT . '/bb-vendor');
-define('BB_PATH_THEMES',    BB_PATH_ROOT . '/install');
+define('BB_PATH_VENDOR',    BB_PATH_ROOT . '/bb-vendor');
+define('BB_PATH_THEMES',    BB_PATH_ROOT . '/install/new');
 define('BB_PATH_LICENSE',   BB_PATH_ROOT . '/LICENSE.txt');
 define('BB_PATH_SQL',       BB_PATH_ROOT . '/install/sql/structure.sql');
 define('BB_PATH_SQL_DATA',  BB_PATH_ROOT . '/install/sql/content.sql');
@@ -61,7 +61,7 @@ final class Installer
 
         $this->session = new Session();
     }
-    
+
     public function run($action)
     {
         switch ($action) {
@@ -80,7 +80,7 @@ final class Installer
                     $this->session->set('db_pass', $pass);
                     print 'ok';
                 }
-        
+
                 break;
 
             case 'install':
@@ -121,7 +121,7 @@ final class Installer
                 } catch(Exception $e) {
                     print $e->getMessage();
                 }
-                
+
                 break;
 
             case 'index':
@@ -158,9 +158,10 @@ final class Installer
                     'install_module_path'       => BB_PATH_INSTALL,
                     'cron_path'                 => BB_PATH_CRON,
                     'config_file_path'          => BB_PATH_CONFIG,
+                    'resource_url'              => BB_URL . 'install/',
                     'live_site'                 => BB_URL,
                     'admin_site'                => BB_URL_ADMIN,
-                    
+
                     'domain'                    => pathinfo(BB_URL, PATHINFO_BASENAME),
                 );
 
@@ -168,7 +169,7 @@ final class Installer
                 break;
         }
     }
-    
+
     private function render($name, $vars = array())
     {
         $options = array(
@@ -290,7 +291,7 @@ final class Installer
             throw new Exception('Create configuration file bb-config.php with content provided during installation.');
         }
     }
-    
+
     private function makeInstall($ns)
     {
         $this->_isValidInstallData($ns);
@@ -451,7 +452,7 @@ final class Installer
 
         $output .= sprintf($cf, 'Define timezone');
         $output .= sprintf("date_default_timezone_set('%s');", 'UTC');
-        
+
         $output .= sprintf($cf, 'Set default date format');
         $output .= sprintf($f, 'BB_DATE_FORMAT', 'l, d F Y');
 
@@ -464,28 +465,28 @@ final class Installer
 
         $output .= sprintf($cf, 'Live site URL with trailing slash');
         $output .= sprintf($f, 'BB_URL', BB_URL);
-        
+
         $output .= sprintf($cf, 'CircleBilling license key');
         $output .= sprintf($f, 'BB_LICENSE', $ns->get('license'));
 
         $output .= sprintf($cf, 'Enable or disable warning messages');
         $output .= sprintf($bf, 'BB_DEBUG', 'TRUE');
-        
+
         $output .= sprintf($cf, 'Enable or disable pretty urls. Please configure .htaccess before enabling this feature.');
         $output .= sprintf($bf, 'BB_SEF_URLS', 'FALSE');
-        
+
         $output .= sprintf($cf, 'Default application locale');
         $output .= sprintf($bf, 'BB_LOCALE', "'en_US'");
-        
+
         $output .= sprintf($cf, 'Translatable locale format');
         $output .= sprintf($bf, 'BB_LOCALE_DATE_FORMAT', "'%A, %d %B %G'");
-        
+
         $output .= sprintf($cf, 'Translatable time format');
         $output .= sprintf($bf, 'BB_LOCALE_TIME_FORMAT', "' %T'");
-        
+
         $output .= sprintf($cf, 'Default location to store application data. Must be protected from public.');
         $output .= sprintf($bf, 'BB_PATH_DATA', "dirname(__FILE__) . '/bb-data'");
-        
+
         return $output;
     }
 
