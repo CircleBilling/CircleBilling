@@ -79,11 +79,10 @@
         <main role="main" class="container">
 
             <div class="row">
-                <div class="col-sm-3 col-xs-12">
-                    {% block left %}{% endblock %}
-                </div>
 
-                <div class="col-sm-9 col-xs-12">
+                {% block left %}{% endblock %}
+
+                <div class="main-content col-sm-9 col-xs-12 mt-4 mt-sm-0">
                     {% block content %}{% endblock %}
                 </div>
             </div>

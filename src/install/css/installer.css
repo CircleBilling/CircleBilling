@@ -18,7 +18,40 @@ body {
 .spacer-20 {
     height: 20px;
 }
+/*
+    BOOTSTRAP CUSTOM
+ */
+.card,
+.btn,
+.form-control{
+    border-radius: 0px;
+}
 
+.dark-header,
+.card.dark .card-header,
+.table .thead-dark th {
+    font-weight: bold;
+    color: #fff;
+    background-color: #212529;
+    border-color: #32383e;
+}
+/*
+    PAGE STYLES
+ */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #f5f5f5;
+}
+
+/*
+    PROGRESS
+ */
 .wizard ul {
     list-style: none;
     display: inline-block;
@@ -55,10 +88,6 @@ body {
     position: relative;
 }
 
-.wizard-progress .steps .step + .step {
-
-}
-
 .wizard-progress .steps .step .bs-wizard-stepnum {
     color: #595959;
     font-size: 16px;
@@ -75,7 +104,7 @@ body {
     width: 30px;
     height: 30px;
     display: block;
-    background: #6666FF;
+    background: #212529;
     top: 45px;
     left: 50%;
     margin-top: -15px;
@@ -83,16 +112,23 @@ body {
     border-radius: 50%;
 }
 
-.wizard-progress .steps .step > .bs-wizard-dot:after {
+/*.wizard-progress .steps .step.complete > .bs-wizard-dot {
+    background: #28a745;
+}*/
+
+.wizard-progress .steps .step.disabled > .bs-wizard-dot {
+    background: #6c757d;
+}
+/*.wizard-progress .steps .step > .bs-wizard-dot:after {
     content: ' ';
     width: 14px;
     height: 14px;
-    background: #e0e0ff;
+    background: #212529;
     border-radius: 50px;
     position: absolute;
     top: 8px;
     left: 8px;
-}
+}*/
 
 .wizard-progress .steps .step > .progress {
     position: relative;
@@ -105,7 +141,13 @@ body {
 .wizard-progress .steps .step > .progress > .progress-bar {
     width:0px;
     box-shadow: none;
-    background: #76d2f5;
+    background: #f8f9fa;
+    transition: none;
+}
+
+.wizard-progress .steps .step.complete > .progress > .progress-bar,
+.wizard-progress .steps .step.active > .progress > .progress-bar {
+    background:#6c757d;
 }
 
 .wizard-progress .steps .step.complete > .progress > .progress-bar {
@@ -122,14 +164,6 @@ body {
 
 .wizard-progress .steps .step:last-child.active > .progress > .progress-bar {
     width: 100%;
-}
-
-.wizard-progress .steps .step.disabled > .bs-wizard-dot {
-    background-color: #e0e0ff;
-}
-
-.wizard-progress .steps .step.disabled > .bs-wizard-dot:after {
-    opacity: 0;
 }
 
 .wizard-progress .steps .step:first-child  > .progress {
@@ -153,14 +187,4 @@ body {
     .mobile-hidden {
         display: none;
     }
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    /* Set the fixed height of the footer here */
-    height: 60px;
-    line-height: 60px; /* Vertically center the text there */
-    background-color: #f5f5f5;
 }

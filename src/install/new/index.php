@@ -201,7 +201,7 @@ final class Installer
     }
 
     public function getTOSInfo() {
-        return 'please visit https://ciclebilling.com to read our terms of service';
+        return 'I confirm that I have read and agree to the terms of service at https://ciclebilling.com.';
     }
 
     /**

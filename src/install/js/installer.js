@@ -24,14 +24,14 @@ cb.installer = {
         });
 
         jQuery('.btn-next-step').on('click', function() {
-            var currentStep = parseInt(jQuery(this).parents('.wizard-footer').attr('data-step'));
+            var currentStep = parseInt(jQuery('#installer').attr('data-step'));
             console.log(currentStep,jQuery(this).data('step'), jQuery(this));
             if(cb.installer.validateStep(currentStep) === true) {
                 cb.installer.showStep(currentStep +1);
 
-                jQuery(this).parents('.wizard-footer').attr('data-step', currentStep+1);
+                jQuery('#installer').attr('data-step', currentStep+1);
             } else {
-                alert("Please check the provided database information.");
+
             }
 
             if(currentStep +1 > 1) {
@@ -40,18 +40,18 @@ cb.installer = {
         });
 
         jQuery('.btn-prev-step').on('click', function() {
-            var currentStep = parseInt(jQuery(this).parents('.wizard-footer').attr('data-step'));
+            var currentStep = parseInt(jQuery('#installer').attr('data-step').attr('data-step'));
 
             cb.installer.showStep(currentStep -1);
 
-            jQuery(this).parents('.wizard-footer').attr('data-step', currentStep -1);
+            jQuery('#installer').attr('data-step', currentStep -1);
 
             if(currentStep -1 == 1) {
                 jQuery('.btn-prev-step').hide();
             }
         });
 
-        this.showStep(1);
+        this.showStep(jQuery('#installer').attr('data-step'));
     },
 
     validateStep : function(stepNumber) {
@@ -68,14 +68,17 @@ cb.installer = {
 
         if(stepNumber == 2){
             if(this.isEmpty('db_host')) {
+                alert("Please check the provided database information.");
                 return false;
             }
 
             if(this.isEmpty('db_name')) {
+                alert("Please check the provided database information.");
                 return false;
             }
 
             if(this.isEmpty('db_user')) {
+                alert("Please check the provided database information.");
                 return false;
             }
 
@@ -97,14 +100,17 @@ cb.installer = {
 
         if(stepNumber == 3){
             if(this.isEmpty('admin_name')) {
+                alert("Please check the provided administrator information.");
                 return false;
             }
 
             if(this.isEmpty('admin_email')) {
+                alert("Please check the provided administrator information.");
                 return false;
             }
 
             if(this.isEmpty('admin_pass')) {
+                alert("Please check the provided administrator information.");
                 return false;
             }
 
@@ -160,23 +166,22 @@ cb.installer = {
 
         });
 
-
-           // .not('.wizard-progress .step[data-target="step-' + stepNumber  + '"]')
-           // .addClass('disabled');
-
         jQuery('main[role="main"] .step').hide();
 
         jQuery('.step.step-' + stepNumber).show();
         jQuery('#step-' + stepNumber).show();
         jQuery('.wizard-progress .step[data-step="' + stepNumber  + '"]').addClass('active');
+
+        if(stepNumber == 4){
+            cb.installer.doFinish();
+        }
     },
 
     doFinish : function (){
-        $('#installer').hide();
-        $('.leftNav').animate({
-            width: '980px'
-        }, 400);
-        //$('.leftNav').css('width', '980px');
+        jQuery('.wizard-footer').hide();
+        var installerContent = jQuery('.main-content');
+        jQuery(installerContent).attr('class', '');
+        jQuery(installerContent).addClass('col-sm-12 col-xs-12')
         return false;
     },
 
