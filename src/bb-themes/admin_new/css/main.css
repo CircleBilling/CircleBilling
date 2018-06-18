@@ -1,0 +1,84 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.green {
+    color: #28a745;
+}
+
+.red {
+    color: #dc3545;
+}
+
+.spacer-20 {
+    height: 20px;
+}
+/*
+    BOOTSTRAP CUSTOM
+ */
+.card,
+.btn,
+.form-control,
+.alert,
+.breadcrumb{
+    border-radius: 0px;
+}
+
+.dark-header,
+.card.dark .card-header,
+.table .thead-dark th {
+    font-weight: bold;
+    color: #fff;
+    background-color: #212529;
+    border-color: #32383e;
+}
+
+.navbar ul.navbar-nav > li.nav-item a.nav-link {
+    font-weight: bold;
+    color: #fff;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 100%;
+    }
+}
+/*
+    PAGE STYLES
+ */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #f5f5f5;
+}
+
+/*
+    SUB DROPDOWN FIX
+ */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu a::after {
+    transform: rotate(-90deg);
+    position: absolute;
+    right: 6px;
+    top: .8em;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-left: .1rem;
+    margin-right: .1rem;
+}
