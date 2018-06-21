@@ -29,6 +29,10 @@ body {
     border-radius: 5px;
 }
 
+.breadcrumb {
+    display: none;
+}
+
 .dark-header,
 .card.dark .card-header,
 .table .thead-dark th {
