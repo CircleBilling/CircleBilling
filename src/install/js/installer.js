@@ -40,7 +40,7 @@ cb.installer = {
         });
 
         jQuery('.btn-prev-step').on('click', function() {
-            var currentStep = parseInt(jQuery('#installer').attr('data-step').attr('data-step'));
+            var currentStep = parseInt(jQuery('#installer').attr('data-step'));
 
             cb.installer.showStep(currentStep -1);
 
