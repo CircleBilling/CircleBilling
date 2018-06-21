@@ -26,7 +26,7 @@ body {
 .form-control,
 .alert,
 .breadcrumb{
-    border-radius: 0px;
+    border-radius: 5px;
 }
 
 .dark-header,
