@@ -52,7 +52,17 @@
 
 <div id="wrapper">
     <header class="container" id="header">
-            {% if settings.show_page_header %}
+        {% if settings.show_page_header %}
+            {% if settings.show_company_logo %}
+            {% if company.logo_url %}
+            <a id="logo" href="{{'/'|link }}">
+                <img src="{{ 'img/logo_circlebilling.jpg' | asset_url}}" alt="{{company.name}}" title="{{company.name}}"/>
+                {% if settings.show_company_name %}
+                <p>{{company.name}}</p>
+                {% endif %}
+            </a>
+            {% endif %}
+            {% endif %}
                 <nav>
                 <ul class="f16">
                     {% set languages = guest.extension_languages %}
@@ -89,37 +99,34 @@
                         <a href="#" class="show-tip" title="{% trans 'Order' %}">{% trans 'Order services' %}</a>
                     </li>
                     {% endif %}
-                    {% if settings.top_menu_profile %}
-                    <li>
-                        <a href="{{ 'client/me'|link }}" class="show-tip" title="{% trans 'Profile' %}">{% trans 'Profile' %}</a>
-                    </li>
-                    {% endif %}
 
-                    {% if settings.top_menu_signout %}
-                    <li>
-                        <a href="{{ 'client/logout' | link }}" class="show-tip" title="{% trans 'Sign out' %}">{% trans 'Sign out' %}</a>
+                    {% if settings.show_client_details %}
+                    <li class="user-profile">
+                        <img alt="{{profile.first_name}} {{profile.last_name}} gravatar" src="{{ 'img/gravatar.jpg' | asset_url}}">
+                        <a href="{{ 'client/profile' | link}}" class="name">TH</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="{{ 'client/profile' | link}}" class="">{{profile.first_name}} {{profile.last_name}}</a>
+                            </li>
+                            {% if settings.top_menu_profile %}
+                            <li>
+                                <a href="{{ 'client/me'|link }}" class="show-tip" title="{% trans 'Profile' %}">{% trans 'Profile' %}</a>
+                            </li>
+                            {% endif %}
+
+                            {% if settings.top_menu_signout %}
+                            <li>
+                                <a href="{{ 'client/logout' | link }}" class="show-tip" title="{% trans 'Sign out' %}">{% trans 'Sign out' %}</a>
+                            </li>
+                            {% endif %}
+                        </ul>
                     </li>
                     {% endif %}
                 </ul>
             </nav>
-
-            {% if settings.show_company_logo %}
-                {% if company.logo_url %}
-                    <h1>
-                        <a href="{{'/'|link }}">
-                            <img src="{{company.logo_url}}" alt="{{company.name}}" title="{{company.name}}" style="max-height: 75px"/>
-                        </a>
-                        <p></p>
-                    </h1>
-                {% endif %}
-            {% endif %}
-
-            {% if settings.show_company_name %}
-            <p>{{company.name}}</p>
-            {% endif %}
         {% endif %}
     </header>
-    <section class="container" role="main">
+    <section id="main" class="container" role="main">
         <div class="navigation-block">
 
             <div class="navbar">
@@ -129,22 +136,6 @@
             <nav class="main-navigation nav-collapse collapse" role="navigation">
                 {% include 'partial_menu.phtml' %}
             </nav>
-
-            {% if settings.show_client_details %}
-            <section class="user-profile">
-                <figure>
-                    <img alt="{{profile.first_name}} {{profile.last_name}} gravatar" src="{{ profile.email|gravatar(60) }}">
-                    <figcaption>
-                        <strong><a href="{{ 'client/profile' | link}}" class="">{{profile.first_name}} {{profile.last_name}}</a></strong>
-                        <em>{{ profile.company }}</em>
-                        <ul>
-                            <li><a class="btn btn-primary btn-flat" href="{{ 'client/profile' | link}}">{% trans 'profile' %}</a></li>
-                            <li><a class="btn btn-primary btn-flat" href="{{ 'client/logout' | link}}">{% trans 'sign out' %}</a></li>
-                        </ul>
-                    </figcaption>
-                </figure>
-            </section>
-            {% endif %}
 
             {% if settings.sidebar_balance_enabled %}
             <section class="balance">
@@ -250,12 +241,12 @@
         {# Removing this link is allowed only for BoxBilling PRO license owners. #}
         {% if guest.extension_is_on({"mod":'branding'}) %}
         <li>
-            <a href="http://www.boxbilling.com" title="Billing Software" target="_blank">{% trans 'Powered by BoxBilling' %}</a>
+            <a href="http://www.boxbilling.com" title="Billing Software" target="_blank">{% trans ' BoxBilling' %}</a>
         </li>
         {% endif %}
     </ul>
     {% if settings.footer_to_top_enabled %}
-    <a href="#top" class="btn btn-primary btn-flat pull-right"><span class="awe-arrow-up"></span> {% trans 'Top' %}</a>
+    <a href="#top" class="scrolltop"><span class="awe-arrow-up"></span></a>
     {% endif %}
 </footer>
 {% endif %}
