@@ -102,11 +102,15 @@
 
                     {% if settings.show_client_details %}
                     <li class="user-profile">
-                        <img alt="{{profile.first_name}} {{profile.last_name}} gravatar" src="{{ 'img/gravatar.jpg' | asset_url}}">
-                        <a href="{{ 'client/profile' | link}}" class="name">TH</a>
+                        <div class="gravatar">
+                            <a href="{{ 'client/profile' | link}}" class="name">{{profile.first_name|truncate(1, false, "")}}{{profile.last_name|truncate(1, false, "")}}</a>
+                        </div>
                         <ul class="sub-menu">
                             <li>
                                 <a href="{{ 'client/profile' | link}}" class="">{{profile.first_name}} {{profile.last_name}}</a>
+                            </li>
+                            <li>
+                                <a href="{{ 'client/profile' | link}}" class="">{{profile.email}}</a>
                             </li>
                             {% if settings.top_menu_profile %}
                             <li>
