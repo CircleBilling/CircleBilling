@@ -1,0 +1,849 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <link rel="dns-prefetch" href="https://assets-cdn.github.com">
+  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+
+
+
+  <link crossorigin="anonymous" media="all" integrity="sha512-PkbtxdWDpLChpxtWQ0KbvJoef4XMYPq5pfd/ZmylYZTzXYpCfGwN9d+bsSKcmOJLwTkfjFkfj5wz3poDrhJoSQ==" rel="stylesheet" href="https://assets-cdn.github.com/assets/frameworks-f6e6ce21346c0d2eb22def1e8534afcb.css" />
+  <link crossorigin="anonymous" media="all" integrity="sha512-XiPiEdaRO+K7+Dt5NlEkDnTWKY8GSgW4wfgvr7YV6lZiHHpjOoAnKtuK3G4y8mRnxQ4ieaEWw6ZDa2UMQHLyxQ==" rel="stylesheet" href="https://assets-cdn.github.com/assets/github-6aa762e23e9f19a4f9dd2eec1573d451.css" />
+  
+  
+  <link crossorigin="anonymous" media="all" integrity="sha512-zyxweUSm/NG+juywqcMFSS4HbKjLWCZyEM2JjoCqnQUU6RVrHpHMwH66xreiaeMIRoA6vYuk0hm8S1X42r/YWQ==" rel="stylesheet" href="https://assets-cdn.github.com/assets/site-220df28424b63d1e24f3bd909efebe81.css" />
+  
+
+  <meta name="viewport" content="width=device-width">
+  
+  <title>material-design-icons/MaterialIcons-Regular.ijmap at master · google/material-design-icons · GitHub</title>
+    <meta name="description" content="GitHub is where people build software. More than 28 million people use GitHub to discover, fork, and contribute to over 85 million projects.">
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+
+    
+    <meta property="og:image" content="https://avatars0.githubusercontent.com/u/1342004?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="google/material-design-icons" /><meta property="og:url" content="https://github.com/google/material-design-icons" /><meta property="og:description" content="material-design-icons - Material Design icons by Google" />
+
+  <link rel="assets" href="https://assets-cdn.github.com/">
+  
+  <meta name="pjax-timeout" content="1000">
+  
+  <meta name="request-id" content="D2C1:7EB1:280A6C8:4B50B3A:5B1AFC4C" data-pjax-transient>
+
+
+  
+
+  <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+  <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+  <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="D2C1:7EB1:280A6C8:4B50B3A:5B1AFC4C" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" />
+<meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
+
+
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged Out">
+
+
+  
+
+      <meta name="hostname" content="github.com">
+    <meta name="user-login" content="">
+
+      <meta name="expected-hostname" content="github.com">
+    <meta name="js-proxy-site-detection-payload" content="YzljYTQ4MmU1NzNiMzhlNzc0NWM3NDk4NDAxNDY3MjYxYTY3NGRkZjZhZDBkNjVmOWVlNjZiMDBkZTAwZDMzN3x7InJlbW90ZV9hZGRyZXNzIjoiNDYuODAuMC4xNjEiLCJyZXF1ZXN0X2lkIjoiRDJDMTo3RUIxOjI4MEE2Qzg6NEI1MEIzQTo1QjFBRkM0QyIsInRpbWVzdGFtcCI6MTUyODQ5NTE5NCwiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
+
+    <meta name="enabled-features" content="UNIVERSE_BANNER,FREE_TRIALS,MARKETPLACE_INSIGHTS,MARKETPLACE_INSIGHTS_CONVERSION_PERCENTAGES">
+
+  <meta name="html-safe-nonce" content="7e90f3032045d2afc40e920ac712760839e1a26f">
+
+  <meta http-equiv="x-pjax-version" content="8b6ccf2fb8fe60e9e375f7236dedc16a">
+  
+
+      <link href="https://github.com/google/material-design-icons/commits/master.atom" rel="alternate" title="Recent Commits to material-design-icons:master" type="application/atom+xml">
+
+  <meta name="description" content="material-design-icons - Material Design icons by Google">
+  <meta name="go-import" content="github.com/google/material-design-icons git https://github.com/google/material-design-icons.git">
+
+  <meta name="octolytics-dimension-user_id" content="1342004" /><meta name="octolytics-dimension-user_login" content="google" /><meta name="octolytics-dimension-repository_id" content="24953448" /><meta name="octolytics-dimension-repository_nwo" content="google/material-design-icons" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="24953448" /><meta name="octolytics-dimension-repository_network_root_nwo" content="google/material-design-icons" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
+
+
+    <link rel="canonical" href="https://github.com/google/material-design-icons/blob/master/iconfont/MaterialIcons-Regular.ijmap" data-pjax-transient>
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
+
+<meta name="theme-color" content="#1e2327">
+
+
+
+<link rel="manifest" href="/manifest.json" crossOrigin="use-credentials">
+
+  </head>
+
+  <body class="logged-out env-production emoji-size-boost page-blob">
+    
+
+  <div class="position-relative js-header-wrapper ">
+    <a href="#start-of-content" tabindex="1" class="px-2 py-4 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+
+    
+    
+    
+
+
+
+        <header class="Header header-logged-out  position-relative f4 py-3" role="banner">
+  <div class="container-lg d-flex px-3">
+    <div class="d-flex flex-justify-between flex-items-center">
+      <a class="header-logo-invertocat my-0" href="https://github.com/" aria-label="Homepage" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+        <svg height="32" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+      </a>
+
+    </div>
+
+    <div class="HeaderMenu HeaderMenu--bright d-flex flex-justify-between flex-auto">
+        <nav class="mt-0">
+          <ul class="d-flex list-style-none">
+              <li class="ml-2">
+                <a class="js-selected-navigation-item HeaderNavlink px-0 py-2 m-0" data-ga-click="Header, click, Nav menu - item:features" data-selected-links="/features /features/project-management /features/code-review /features/project-management /features/integrations /features" href="/features">
+                  Features
+</a>              </li>
+              <li class="ml-4">
+                <a class="js-selected-navigation-item HeaderNavlink px-0 py-2 m-0" data-ga-click="Header, click, Nav menu - item:business" data-selected-links="/business /business/security /business/customers /business" href="/business">
+                  Business
+</a>              </li>
+
+              <li class="ml-4">
+                <a class="js-selected-navigation-item HeaderNavlink px-0 py-2 m-0" data-ga-click="Header, click, Nav menu - item:explore" data-selected-links="/explore /trending /trending/developers /integrations /integrations/feature/code /integrations/feature/collaborate /integrations/feature/ship showcases showcases_search showcases_landing /explore" href="/explore">
+                  Explore
+</a>              </li>
+
+              <li class="ml-4">
+                    <a class="js-selected-navigation-item HeaderNavlink px-0 py-2 m-0" data-ga-click="Header, click, Nav menu - item:marketplace" data-selected-links=" /marketplace" href="/marketplace">
+                      Marketplace
+</a>              </li>
+              <li class="ml-4">
+                <a class="js-selected-navigation-item HeaderNavlink px-0 py-2 m-0" data-ga-click="Header, click, Nav menu - item:pricing" data-selected-links="/pricing /pricing/developer /pricing/team /pricing/business-hosted /pricing/business-enterprise /pricing" href="/pricing">
+                  Pricing
+</a>              </li>
+          </ul>
+        </nav>
+
+      <div class="d-flex">
+          <div class="d-lg-flex flex-items-center mr-3">
+            <div class="header-search scoped-search site-scoped-search js-site-search position-relative" role="search">
+  <div class="position-relative">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-site-search-form" data-scope-type="Repository" data-scope-id="24953448" data-scoped-search-url="/google/material-design-icons/search" data-unscoped-search-url="/search" action="/google/material-design-icons/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+      <label class="form-control header-search-wrapper  js-chromeless-input-container">
+            <a class="header-search-scope no-underline" href="/google/material-design-icons/blob/master/iconfont/MaterialIcons-Regular.ijmap">This repository</a>
+        <input type="text"
+          class="form-control header-search-input  js-site-search-focus js-site-search-field is-clearable"
+          data-hotkey="s,/"
+          name="q"
+          value=""
+          placeholder="Search"
+          aria-label="Search this repository"
+          data-unscoped-placeholder="Search GitHub"
+          data-scoped-placeholder="Search"
+          autocapitalize="off"
+          >
+          <input type="hidden" class="js-site-search-type-field" name="type" >
+      </label>
+</form>  </div>
+</div>
+
+          </div>
+
+        <span class="d-inline-block">
+            <div class="HeaderNavlink px-0 py-2 m-0">
+              <a class="text-bold text-white no-underline" href="/login?return_to=%2Fgoogle%2Fmaterial-design-icons%2Fblob%2Fmaster%2Ficonfont%2FMaterialIcons-Regular.ijmap" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a>
+                <span class="text-gray">or</span>
+                <a class="text-bold text-white no-underline" href="/join?source=header-repo" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a>
+            </div>
+        </span>
+      </div>
+    </div>
+  </div>
+</header>
+
+  </div>
+
+  <div id="start-of-content" class="show-on-focus"></div>
+
+    <div id="js-flash-container">
+</div>
+
+
+
+  <div role="main" class="application-main ">
+        <div itemscope itemtype="http://schema.org/SoftwareSourceCode" class="">
+    <div id="js-repo-pjax-container" data-pjax-container >
+      
+
+
+
+
+
+  
+
+
+
+  <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav  ">
+    <div class="repohead-details-container clearfix container">
+
+      <ul class="pagehead-actions">
+  <li>
+      <a href="/login?return_to=%2Fgoogle%2Fmaterial-design-icons"
+    class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to watch a repository" rel="nofollow">
+    <svg class="octicon octicon-eye" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+    Watch
+  </a>
+  <a class="social-count" href="/google/material-design-icons/watchers"
+     aria-label="1869 users are watching this repository">
+    1,869
+  </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Fgoogle%2Fmaterial-design-icons"
+    class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to star a repository" rel="nofollow">
+    <svg class="octicon octicon-star" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
+    Star
+  </a>
+
+    <a class="social-count js-social-count" href="/google/material-design-icons/stargazers"
+      aria-label="35009 users starred this repository">
+      35,009
+    </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Fgoogle%2Fmaterial-design-icons"
+        class="btn btn-sm btn-with-count tooltipped tooltipped-n"
+        aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <svg class="octicon octicon-repo-forked" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+        Fork
+      </a>
+
+    <a href="/google/material-design-icons/network" class="social-count"
+       aria-label="6951 users forked this repository">
+      6,951
+    </a>
+  </li>
+</ul>
+
+      <h1 class="public ">
+  <svg class="octicon octicon-repo" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+  <span class="author" itemprop="author"><a class="url fn" rel="author" href="/google">google</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a data-pjax="#js-repo-pjax-container" href="/google/material-design-icons">material-design-icons</a></strong>
+
+</h1>
+
+    </div>
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax container"
+     itemscope
+     itemtype="http://schema.org/BreadcrumbList"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container">
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a class="js-selected-navigation-item selected reponav-item" itemprop="url" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages /google/material-design-icons" href="/google/material-design-icons">
+      <svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a itemprop="url" data-hotkey="g i" class="js-selected-navigation-item reponav-item" data-selected-links="repo_issues repo_labels repo_milestones /google/material-design-icons/issues" href="/google/material-design-icons/issues">
+        <svg class="octicon octicon-issue-opened" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg>
+        <span itemprop="name">Issues</span>
+        <span class="Counter">429</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a data-hotkey="g p" itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_pulls checks /google/material-design-icons/pulls" href="/google/material-design-icons/pulls">
+      <svg class="octicon octicon-git-pull-request" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="Counter">23</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+    <a data-hotkey="g b" class="js-selected-navigation-item reponav-item" data-selected-links="repo_projects new_repo_project repo_project /google/material-design-icons/projects" href="/google/material-design-icons/projects">
+      <svg class="octicon octicon-project" viewBox="0 0 15 16" version="1.1" width="15" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+      Projects
+      <span class="Counter" >0</span>
+</a>
+    <a class="js-selected-navigation-item reponav-item" data-hotkey="g w" data-selected-links="repo_wiki /google/material-design-icons/wiki" href="/google/material-design-icons/wiki">
+      <svg class="octicon octicon-book" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"/></svg>
+      Wiki
+</a>
+
+  <a class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors dependency_graph pulse /google/material-design-icons/pulse" href="/google/material-design-icons/pulse">
+    <svg class="octicon octicon-graph" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"/></svg>
+    Insights
+</a>
+
+</nav>
+
+
+  </div>
+
+<div class="container new-discussion-timeline experiment-repo-nav  ">
+  <div class="repository-content ">
+
+    
+  <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/google/material-design-icons/blob/224895a86501195e7a7ff3dde18e39f00b8e3d5a/iconfont/MaterialIcons-Regular.ijmap">Permalink</a>
+
+  <!-- blob contrib key: blob_contributors:v21:a250c7ec9ed9e14eebc5397864959f8a -->
+
+  <div class="file-navigation">
+    
+<div class="select-menu branch-select-menu js-menu-container js-select-menu float-left">
+  <button class=" btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    
+    type="button" aria-label="Switch branches or tags" aria-expanded="false" aria-haspopup="true">
+      <i>Branch:</i>
+      <span class="js-select-button css-truncate-target">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax>
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <svg class="octicon octicon-x js-menu-close" role="img" aria-label="Close" viewBox="0 0 12 16" version="1.1" width="12" height="16"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+        <span class="select-menu-title">Switch branches/tags</span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="form-control js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab" role="tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/google/material-design-icons/blob/2.1.0-update/iconfont/MaterialIcons-Regular.ijmap"
+               data-name="2.1.0-update"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                2.1.0-update
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/google/material-design-icons/blob/2.2.0/iconfont/MaterialIcons-Regular.ijmap"
+               data-name="2.2.0"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                2.2.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/google/material-design-icons/blob/apache_license/iconfont/MaterialIcons-Regular.ijmap"
+               data-name="apache_license"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                apache_license
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/google/material-design-icons/blob/fix-apache-license/iconfont/MaterialIcons-Regular.ijmap"
+               data-name="fix-apache-license"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                fix-apache-license
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/google/material-design-icons/blob/generate-device-sprites/iconfont/MaterialIcons-Regular.ijmap"
+               data-name="generate-device-sprites"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                generate-device-sprites
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/google/material-design-icons/blob/gh-pages-typo/iconfont/MaterialIcons-Regular.ijmap"
+               data-name="gh-pages-typo"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                gh-pages-typo
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/google/material-design-icons/blob/gh-pages/iconfont/MaterialIcons-Regular.ijmap"
+               data-name="gh-pages"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                gh-pages
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open selected"
+               href="/google/material-design-icons/blob/master/iconfont/MaterialIcons-Regular.ijmap"
+               data-name="master"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                master
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/google/material-design-icons/blob/removal-of-gh-pages-from-master/iconfont/MaterialIcons-Regular.ijmap"
+               data-name="removal-of-gh-pages-from-master"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                removal-of-gh-pages-from-master
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/google/material-design-icons/blob/update-license/iconfont/MaterialIcons-Regular.ijmap"
+               data-name="update-license"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                update-license
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/google/material-design-icons/blob/version-info/iconfont/MaterialIcons-Regular.ijmap"
+               data-name="version-info"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                version-info
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/google/material-design-icons/blob/woff2-correction/iconfont/MaterialIcons-Regular.ijmap"
+               data-name="woff2-correction"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                woff2-correction
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/google/material-design-icons/tree/v2.1.3/iconfont/MaterialIcons-Regular.ijmap"
+              data-name="v2.1.3"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v2.1.3">
+                v2.1.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/google/material-design-icons/tree/3.0.1/iconfont/MaterialIcons-Regular.ijmap"
+              data-name="3.0.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="3.0.1">
+                3.0.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/google/material-design-icons/tree/3.0.0/iconfont/MaterialIcons-Regular.ijmap"
+              data-name="3.0.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="3.0.0">
+                3.0.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/google/material-design-icons/tree/2.2.3/iconfont/MaterialIcons-Regular.ijmap"
+              data-name="2.2.3"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.2.3">
+                2.2.3
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/google/material-design-icons/tree/2.2.2/iconfont/MaterialIcons-Regular.ijmap"
+              data-name="2.2.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.2.2">
+                2.2.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/google/material-design-icons/tree/2.2.1/iconfont/MaterialIcons-Regular.ijmap"
+              data-name="2.2.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.2.1">
+                2.2.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/google/material-design-icons/tree/2.2.0/iconfont/MaterialIcons-Regular.ijmap"
+              data-name="2.2.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.2.0">
+                2.2.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/google/material-design-icons/tree/2.1.1/iconfont/MaterialIcons-Regular.ijmap"
+              data-name="2.1.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.1.1">
+                2.1.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/google/material-design-icons/tree/2.1/iconfont/MaterialIcons-Regular.ijmap"
+              data-name="2.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.1">
+                2.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/google/material-design-icons/tree/2.0.0/iconfont/MaterialIcons-Regular.ijmap"
+              data-name="2.0.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.0.0">
+                2.0.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/google/material-design-icons/tree/2.0/iconfont/MaterialIcons-Regular.ijmap"
+              data-name="2.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="2.0">
+                2.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/google/material-design-icons/tree/1.0.2/iconfont/MaterialIcons-Regular.ijmap"
+              data-name="1.0.2"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.0.2">
+                1.0.2
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/google/material-design-icons/tree/1.0.2b/iconfont/MaterialIcons-Regular.ijmap"
+              data-name="1.0.2b"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.0.2b">
+                1.0.2b
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/google/material-design-icons/tree/1.0.1/iconfont/MaterialIcons-Regular.ijmap"
+              data-name="1.0.1"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.0.1">
+                1.0.1
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/google/material-design-icons/tree/1.0.0/iconfont/MaterialIcons-Regular.ijmap"
+              data-name="1.0.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.0.0">
+                1.0.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/google/material-design-icons/tree/1.0.0-pre/iconfont/MaterialIcons-Regular.ijmap"
+              data-name="1.0.0-pre"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="1.0.0-pre">
+                1.0.0-pre
+              </span>
+            </a>
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    <div class="BtnGroup float-right">
+      <a href="/google/material-design-icons/find/master"
+            class="js-pjax-capture-input btn btn-sm BtnGroup-item"
+            data-pjax
+            data-hotkey="t">
+        Find file
+      </a>
+      <clipboard-copy for="blob-path" class="btn btn-sm BtnGroup-item">
+        Copy path
+      </clipboard-copy>
+    </div>
+    <div id="blob-path" class="breadcrumb">
+      <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" href="/google/material-design-icons"><span>material-design-icons</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/google/material-design-icons/tree/master/iconfont"><span>iconfont</span></a></span><span class="separator">/</span><strong class="final-path">MaterialIcons-Regular.ijmap</strong>
+    </div>
+  </div>
+
+
+  <include-fragment src="/google/material-design-icons/contributors/master/iconfont/MaterialIcons-Regular.ijmap" class="commit-tease">
+    <div>
+      Fetching contributors&hellip;
+    </div>
+
+    <div class="commit-tease-contributors">
+      <img alt="" class="loader-loading float-left" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32-EAF2F5.gif" width="16" height="16" />
+      <span class="loader-error">Cannot retrieve contributors at this time</span>
+    </div>
+</include-fragment>
+
+
+  <div class="file">
+    <div class="file-header">
+  <div class="file-actions">
+
+    <div class="BtnGroup">
+      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/google/material-design-icons/raw/master/iconfont/MaterialIcons-Regular.ijmap">Raw</a>
+        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/google/material-design-icons/blame/master/iconfont/MaterialIcons-Regular.ijmap">Blame</a>
+      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/google/material-design-icons/commits/master/iconfont/MaterialIcons-Regular.ijmap">History</a>
+    </div>
+
+        <a class="btn-octicon tooltipped tooltipped-nw"
+           href="https://desktop.github.com"
+           aria-label="Open this file in GitHub Desktop"
+           data-ga-click="Repository, open with desktop, type:mac">
+            <svg class="octicon octicon-device-desktop" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"/></svg>
+        </a>
+
+        <button type="button" class="btn-octicon disabled tooltipped tooltipped-nw"
+          aria-label="You must be signed in to make or propose changes">
+          <svg class="octicon octicon-pencil" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"/></svg>
+        </button>
+        <button type="button" class="btn-octicon btn-octicon-danger disabled tooltipped tooltipped-nw"
+          aria-label="You must be signed in to make or propose changes">
+          <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/></svg>
+        </button>
+  </div>
+
+  <div class="file-info">
+      1 lines (1 sloc)
+      <span class="file-info-divider"></span>
+    27.8 KB
+  </div>
+</div>
+
+    
+
+  <div itemprop="text" class="blob-wrapper data type-text">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tr>
+        <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="LC1" class="blob-code blob-code-inner js-file-line">{&quot;icons&quot;:{&quot;e84d&quot;:{&quot;name&quot;:&quot;3d Rotation&quot;},&quot;eb3b&quot;:{&quot;name&quot;:&quot;Ac Unit&quot;},&quot;e190&quot;:{&quot;name&quot;:&quot;Access Alarm&quot;},&quot;e191&quot;:{&quot;name&quot;:&quot;Access Alarms&quot;},&quot;e192&quot;:{&quot;name&quot;:&quot;Access Time&quot;},&quot;e84e&quot;:{&quot;name&quot;:&quot;Accessibility&quot;},&quot;e914&quot;:{&quot;name&quot;:&quot;Accessible&quot;},&quot;e84f&quot;:{&quot;name&quot;:&quot;Account Balance&quot;},&quot;e850&quot;:{&quot;name&quot;:&quot;Account Balance Wallet&quot;},&quot;e851&quot;:{&quot;name&quot;:&quot;Account Box&quot;},&quot;e853&quot;:{&quot;name&quot;:&quot;Account Circle&quot;},&quot;e60e&quot;:{&quot;name&quot;:&quot;Adb&quot;},&quot;e145&quot;:{&quot;name&quot;:&quot;Add&quot;},&quot;e439&quot;:{&quot;name&quot;:&quot;Add A Photo&quot;},&quot;e193&quot;:{&quot;name&quot;:&quot;Add Alarm&quot;},&quot;e003&quot;:{&quot;name&quot;:&quot;Add Alert&quot;},&quot;e146&quot;:{&quot;name&quot;:&quot;Add Box&quot;},&quot;e147&quot;:{&quot;name&quot;:&quot;Add Circle&quot;},&quot;e148&quot;:{&quot;name&quot;:&quot;Add Circle Outline&quot;},&quot;e567&quot;:{&quot;name&quot;:&quot;Add Location&quot;},&quot;e854&quot;:{&quot;name&quot;:&quot;Add Shopping Cart&quot;},&quot;e39d&quot;:{&quot;name&quot;:&quot;Add To Photos&quot;},&quot;e05c&quot;:{&quot;name&quot;:&quot;Add To Queue&quot;},&quot;e39e&quot;:{&quot;name&quot;:&quot;Adjust&quot;},&quot;e630&quot;:{&quot;name&quot;:&quot;Airline Seat Flat&quot;},&quot;e631&quot;:{&quot;name&quot;:&quot;Airline Seat Flat Angled&quot;},&quot;e632&quot;:{&quot;name&quot;:&quot;Airline Seat Individual Suite&quot;},&quot;e633&quot;:{&quot;name&quot;:&quot;Airline Seat Legroom Extra&quot;},&quot;e634&quot;:{&quot;name&quot;:&quot;Airline Seat Legroom Normal&quot;},&quot;e635&quot;:{&quot;name&quot;:&quot;Airline Seat Legroom Reduced&quot;},&quot;e636&quot;:{&quot;name&quot;:&quot;Airline Seat Recline Extra&quot;},&quot;e637&quot;:{&quot;name&quot;:&quot;Airline Seat Recline Normal&quot;},&quot;e195&quot;:{&quot;name&quot;:&quot;Airplanemode Active&quot;},&quot;e194&quot;:{&quot;name&quot;:&quot;Airplanemode Inactive&quot;},&quot;e055&quot;:{&quot;name&quot;:&quot;Airplay&quot;},&quot;eb3c&quot;:{&quot;name&quot;:&quot;Airport Shuttle&quot;},&quot;e855&quot;:{&quot;name&quot;:&quot;Alarm&quot;},&quot;e856&quot;:{&quot;name&quot;:&quot;Alarm Add&quot;},&quot;e857&quot;:{&quot;name&quot;:&quot;Alarm Off&quot;},&quot;e858&quot;:{&quot;name&quot;:&quot;Alarm On&quot;},&quot;e019&quot;:{&quot;name&quot;:&quot;Album&quot;},&quot;eb3d&quot;:{&quot;name&quot;:&quot;All Inclusive&quot;},&quot;e90b&quot;:{&quot;name&quot;:&quot;All Out&quot;},&quot;e859&quot;:{&quot;name&quot;:&quot;Android&quot;},&quot;e85a&quot;:{&quot;name&quot;:&quot;Announcement&quot;},&quot;e5c3&quot;:{&quot;name&quot;:&quot;Apps&quot;},&quot;e149&quot;:{&quot;name&quot;:&quot;Archive&quot;},&quot;e5c4&quot;:{&quot;name&quot;:&quot;Arrow Back&quot;},&quot;e5db&quot;:{&quot;name&quot;:&quot;Arrow Downward&quot;},&quot;e5c5&quot;:{&quot;name&quot;:&quot;Arrow Drop Down&quot;},&quot;e5c6&quot;:{&quot;name&quot;:&quot;Arrow Drop Down Circle&quot;},&quot;e5c7&quot;:{&quot;name&quot;:&quot;Arrow Drop Up&quot;},&quot;e5c8&quot;:{&quot;name&quot;:&quot;Arrow Forward&quot;},&quot;e5d8&quot;:{&quot;name&quot;:&quot;Arrow Upward&quot;},&quot;e060&quot;:{&quot;name&quot;:&quot;Art Track&quot;},&quot;e85b&quot;:{&quot;name&quot;:&quot;Aspect Ratio&quot;},&quot;e85c&quot;:{&quot;name&quot;:&quot;Assessment&quot;},&quot;e85d&quot;:{&quot;name&quot;:&quot;Assignment&quot;},&quot;e85e&quot;:{&quot;name&quot;:&quot;Assignment Ind&quot;},&quot;e85f&quot;:{&quot;name&quot;:&quot;Assignment Late&quot;},&quot;e860&quot;:{&quot;name&quot;:&quot;Assignment Return&quot;},&quot;e861&quot;:{&quot;name&quot;:&quot;Assignment Returned&quot;},&quot;e862&quot;:{&quot;name&quot;:&quot;Assignment Turned In&quot;},&quot;e39f&quot;:{&quot;name&quot;:&quot;Assistant&quot;},&quot;e3a0&quot;:{&quot;name&quot;:&quot;Assistant Photo&quot;},&quot;e226&quot;:{&quot;name&quot;:&quot;Attach File&quot;},&quot;e227&quot;:{&quot;name&quot;:&quot;Attach Money&quot;},&quot;e2bc&quot;:{&quot;name&quot;:&quot;Attachment&quot;},&quot;e3a1&quot;:{&quot;name&quot;:&quot;Audiotrack&quot;},&quot;e863&quot;:{&quot;name&quot;:&quot;Autorenew&quot;},&quot;e01b&quot;:{&quot;name&quot;:&quot;Av Timer&quot;},&quot;e14a&quot;:{&quot;name&quot;:&quot;Backspace&quot;},&quot;e864&quot;:{&quot;name&quot;:&quot;Backup&quot;},&quot;e19c&quot;:{&quot;name&quot;:&quot;Battery Alert&quot;},&quot;e1a3&quot;:{&quot;name&quot;:&quot;Battery Charging Full&quot;},&quot;e1a4&quot;:{&quot;name&quot;:&quot;Battery Full&quot;},&quot;e1a5&quot;:{&quot;name&quot;:&quot;Battery Std&quot;},&quot;e1a6&quot;:{&quot;name&quot;:&quot;Battery Unknown&quot;},&quot;eb3e&quot;:{&quot;name&quot;:&quot;Beach Access&quot;},&quot;e52d&quot;:{&quot;name&quot;:&quot;Beenhere&quot;},&quot;e14b&quot;:{&quot;name&quot;:&quot;Block&quot;},&quot;e1a7&quot;:{&quot;name&quot;:&quot;Bluetooth&quot;},&quot;e60f&quot;:{&quot;name&quot;:&quot;Bluetooth Audio&quot;},&quot;e1a8&quot;:{&quot;name&quot;:&quot;Bluetooth Connected&quot;},&quot;e1a9&quot;:{&quot;name&quot;:&quot;Bluetooth Disabled&quot;},&quot;e1aa&quot;:{&quot;name&quot;:&quot;Bluetooth Searching&quot;},&quot;e3a2&quot;:{&quot;name&quot;:&quot;Blur Circular&quot;},&quot;e3a3&quot;:{&quot;name&quot;:&quot;Blur Linear&quot;},&quot;e3a4&quot;:{&quot;name&quot;:&quot;Blur Off&quot;},&quot;e3a5&quot;:{&quot;name&quot;:&quot;Blur On&quot;},&quot;e865&quot;:{&quot;name&quot;:&quot;Book&quot;},&quot;e866&quot;:{&quot;name&quot;:&quot;Bookmark&quot;},&quot;e867&quot;:{&quot;name&quot;:&quot;Bookmark Border&quot;},&quot;e228&quot;:{&quot;name&quot;:&quot;Border All&quot;},&quot;e229&quot;:{&quot;name&quot;:&quot;Border Bottom&quot;},&quot;e22a&quot;:{&quot;name&quot;:&quot;Border Clear&quot;},&quot;e22b&quot;:{&quot;name&quot;:&quot;Border Color&quot;},&quot;e22c&quot;:{&quot;name&quot;:&quot;Border Horizontal&quot;},&quot;e22d&quot;:{&quot;name&quot;:&quot;Border Inner&quot;},&quot;e22e&quot;:{&quot;name&quot;:&quot;Border Left&quot;},&quot;e22f&quot;:{&quot;name&quot;:&quot;Border Outer&quot;},&quot;e230&quot;:{&quot;name&quot;:&quot;Border Right&quot;},&quot;e231&quot;:{&quot;name&quot;:&quot;Border Style&quot;},&quot;e232&quot;:{&quot;name&quot;:&quot;Border Top&quot;},&quot;e233&quot;:{&quot;name&quot;:&quot;Border Vertical&quot;},&quot;e06b&quot;:{&quot;name&quot;:&quot;Branding Watermark&quot;},&quot;e3a6&quot;:{&quot;name&quot;:&quot;Brightness 1&quot;},&quot;e3a7&quot;:{&quot;name&quot;:&quot;Brightness 2&quot;},&quot;e3a8&quot;:{&quot;name&quot;:&quot;Brightness 3&quot;},&quot;e3a9&quot;:{&quot;name&quot;:&quot;Brightness 4&quot;},&quot;e3aa&quot;:{&quot;name&quot;:&quot;Brightness 5&quot;},&quot;e3ab&quot;:{&quot;name&quot;:&quot;Brightness 6&quot;},&quot;e3ac&quot;:{&quot;name&quot;:&quot;Brightness 7&quot;},&quot;e1ab&quot;:{&quot;name&quot;:&quot;Brightness Auto&quot;},&quot;e1ac&quot;:{&quot;name&quot;:&quot;Brightness High&quot;},&quot;e1ad&quot;:{&quot;name&quot;:&quot;Brightness Low&quot;},&quot;e1ae&quot;:{&quot;name&quot;:&quot;Brightness Medium&quot;},&quot;e3ad&quot;:{&quot;name&quot;:&quot;Broken Image&quot;},&quot;e3ae&quot;:{&quot;name&quot;:&quot;Brush&quot;},&quot;e6dd&quot;:{&quot;name&quot;:&quot;Bubble Chart&quot;},&quot;e868&quot;:{&quot;name&quot;:&quot;Bug Report&quot;},&quot;e869&quot;:{&quot;name&quot;:&quot;Build&quot;},&quot;e43c&quot;:{&quot;name&quot;:&quot;Burst Mode&quot;},&quot;e0af&quot;:{&quot;name&quot;:&quot;Business&quot;},&quot;eb3f&quot;:{&quot;name&quot;:&quot;Business Center&quot;},&quot;e86a&quot;:{&quot;name&quot;:&quot;Cached&quot;},&quot;e7e9&quot;:{&quot;name&quot;:&quot;Cake&quot;},&quot;e0b0&quot;:{&quot;name&quot;:&quot;Call&quot;},&quot;e0b1&quot;:{&quot;name&quot;:&quot;Call End&quot;},&quot;e0b2&quot;:{&quot;name&quot;:&quot;Call Made&quot;},&quot;e0b3&quot;:{&quot;name&quot;:&quot;Call Merge&quot;},&quot;e0b4&quot;:{&quot;name&quot;:&quot;Call Missed&quot;},&quot;e0e4&quot;:{&quot;name&quot;:&quot;Call Missed Outgoing&quot;},&quot;e0b5&quot;:{&quot;name&quot;:&quot;Call Received&quot;},&quot;e0b6&quot;:{&quot;name&quot;:&quot;Call Split&quot;},&quot;e06c&quot;:{&quot;name&quot;:&quot;Call To Action&quot;},&quot;e3af&quot;:{&quot;name&quot;:&quot;Camera&quot;},&quot;e3b0&quot;:{&quot;name&quot;:&quot;Camera Alt&quot;},&quot;e8fc&quot;:{&quot;name&quot;:&quot;Camera Enhance&quot;},&quot;e3b1&quot;:{&quot;name&quot;:&quot;Camera Front&quot;},&quot;e3b2&quot;:{&quot;name&quot;:&quot;Camera Rear&quot;},&quot;e3b3&quot;:{&quot;name&quot;:&quot;Camera Roll&quot;},&quot;e5c9&quot;:{&quot;name&quot;:&quot;Cancel&quot;},&quot;e8f6&quot;:{&quot;name&quot;:&quot;Card Giftcard&quot;},&quot;e8f7&quot;:{&quot;name&quot;:&quot;Card Membership&quot;},&quot;e8f8&quot;:{&quot;name&quot;:&quot;Card Travel&quot;},&quot;eb40&quot;:{&quot;name&quot;:&quot;Casino&quot;},&quot;e307&quot;:{&quot;name&quot;:&quot;Cast&quot;},&quot;e308&quot;:{&quot;name&quot;:&quot;Cast Connected&quot;},&quot;e3b4&quot;:{&quot;name&quot;:&quot;Center Focus Strong&quot;},&quot;e3b5&quot;:{&quot;name&quot;:&quot;Center Focus Weak&quot;},&quot;e86b&quot;:{&quot;name&quot;:&quot;Change History&quot;},&quot;e0b7&quot;:{&quot;name&quot;:&quot;Chat&quot;},&quot;e0ca&quot;:{&quot;name&quot;:&quot;Chat Bubble&quot;},&quot;e0cb&quot;:{&quot;name&quot;:&quot;Chat Bubble Outline&quot;},&quot;e5ca&quot;:{&quot;name&quot;:&quot;Check&quot;},&quot;e834&quot;:{&quot;name&quot;:&quot;Check Box&quot;},&quot;e835&quot;:{&quot;name&quot;:&quot;Check Box Outline Blank&quot;},&quot;e86c&quot;:{&quot;name&quot;:&quot;Check Circle&quot;},&quot;e5cb&quot;:{&quot;name&quot;:&quot;Chevron Left&quot;},&quot;e5cc&quot;:{&quot;name&quot;:&quot;Chevron Right&quot;},&quot;eb41&quot;:{&quot;name&quot;:&quot;Child Care&quot;},&quot;eb42&quot;:{&quot;name&quot;:&quot;Child Friendly&quot;},&quot;e86d&quot;:{&quot;name&quot;:&quot;Chrome Reader Mode&quot;},&quot;e86e&quot;:{&quot;name&quot;:&quot;Class&quot;},&quot;e14c&quot;:{&quot;name&quot;:&quot;Clear&quot;},&quot;e0b8&quot;:{&quot;name&quot;:&quot;Clear All&quot;},&quot;e5cd&quot;:{&quot;name&quot;:&quot;Close&quot;},&quot;e01c&quot;:{&quot;name&quot;:&quot;Closed Caption&quot;},&quot;e2bd&quot;:{&quot;name&quot;:&quot;Cloud&quot;},&quot;e2be&quot;:{&quot;name&quot;:&quot;Cloud Circle&quot;},&quot;e2bf&quot;:{&quot;name&quot;:&quot;Cloud Done&quot;},&quot;e2c0&quot;:{&quot;name&quot;:&quot;Cloud Download&quot;},&quot;e2c1&quot;:{&quot;name&quot;:&quot;Cloud Off&quot;},&quot;e2c2&quot;:{&quot;name&quot;:&quot;Cloud Queue&quot;},&quot;e2c3&quot;:{&quot;name&quot;:&quot;Cloud Upload&quot;},&quot;e86f&quot;:{&quot;name&quot;:&quot;Code&quot;},&quot;e3b6&quot;:{&quot;name&quot;:&quot;Collections&quot;},&quot;e431&quot;:{&quot;name&quot;:&quot;Collections Bookmark&quot;},&quot;e3b7&quot;:{&quot;name&quot;:&quot;Color Lens&quot;},&quot;e3b8&quot;:{&quot;name&quot;:&quot;Colorize&quot;},&quot;e0b9&quot;:{&quot;name&quot;:&quot;Comment&quot;},&quot;e3b9&quot;:{&quot;name&quot;:&quot;Compare&quot;},&quot;e915&quot;:{&quot;name&quot;:&quot;Compare Arrows&quot;},&quot;e30a&quot;:{&quot;name&quot;:&quot;Computer&quot;},&quot;e638&quot;:{&quot;name&quot;:&quot;Confirmation Number&quot;},&quot;e0d0&quot;:{&quot;name&quot;:&quot;Contact Mail&quot;},&quot;e0cf&quot;:{&quot;name&quot;:&quot;Contact Phone&quot;},&quot;e0ba&quot;:{&quot;name&quot;:&quot;Contacts&quot;},&quot;e14d&quot;:{&quot;name&quot;:&quot;Content Copy&quot;},&quot;e14e&quot;:{&quot;name&quot;:&quot;Content Cut&quot;},&quot;e14f&quot;:{&quot;name&quot;:&quot;Content Paste&quot;},&quot;e3ba&quot;:{&quot;name&quot;:&quot;Control Point&quot;},&quot;e3bb&quot;:{&quot;name&quot;:&quot;Control Point Duplicate&quot;},&quot;e90c&quot;:{&quot;name&quot;:&quot;Copyright&quot;},&quot;e150&quot;:{&quot;name&quot;:&quot;Create&quot;},&quot;e2cc&quot;:{&quot;name&quot;:&quot;Create New Folder&quot;},&quot;e870&quot;:{&quot;name&quot;:&quot;Credit Card&quot;},&quot;e3be&quot;:{&quot;name&quot;:&quot;Crop&quot;},&quot;e3bc&quot;:{&quot;name&quot;:&quot;Crop 16 9&quot;},&quot;e3bd&quot;:{&quot;name&quot;:&quot;Crop 3 2&quot;},&quot;e3bf&quot;:{&quot;name&quot;:&quot;Crop 5 4&quot;},&quot;e3c0&quot;:{&quot;name&quot;:&quot;Crop 7 5&quot;},&quot;e3c1&quot;:{&quot;name&quot;:&quot;Crop Din&quot;},&quot;e3c2&quot;:{&quot;name&quot;:&quot;Crop Free&quot;},&quot;e3c3&quot;:{&quot;name&quot;:&quot;Crop Landscape&quot;},&quot;e3c4&quot;:{&quot;name&quot;:&quot;Crop Original&quot;},&quot;e3c5&quot;:{&quot;name&quot;:&quot;Crop Portrait&quot;},&quot;e437&quot;:{&quot;name&quot;:&quot;Crop Rotate&quot;},&quot;e3c6&quot;:{&quot;name&quot;:&quot;Crop Square&quot;},&quot;e871&quot;:{&quot;name&quot;:&quot;Dashboard&quot;},&quot;e1af&quot;:{&quot;name&quot;:&quot;Data Usage&quot;},&quot;e916&quot;:{&quot;name&quot;:&quot;Date Range&quot;},&quot;e3c7&quot;:{&quot;name&quot;:&quot;Dehaze&quot;},&quot;e872&quot;:{&quot;name&quot;:&quot;Delete&quot;},&quot;e92b&quot;:{&quot;name&quot;:&quot;Delete Forever&quot;},&quot;e16c&quot;:{&quot;name&quot;:&quot;Delete Sweep&quot;},&quot;e873&quot;:{&quot;name&quot;:&quot;Description&quot;},&quot;e30b&quot;:{&quot;name&quot;:&quot;Desktop Mac&quot;},&quot;e30c&quot;:{&quot;name&quot;:&quot;Desktop Windows&quot;},&quot;e3c8&quot;:{&quot;name&quot;:&quot;Details&quot;},&quot;e30d&quot;:{&quot;name&quot;:&quot;Developer Board&quot;},&quot;e1b0&quot;:{&quot;name&quot;:&quot;Developer Mode&quot;},&quot;e335&quot;:{&quot;name&quot;:&quot;Device Hub&quot;},&quot;e1b1&quot;:{&quot;name&quot;:&quot;Devices&quot;},&quot;e337&quot;:{&quot;name&quot;:&quot;Devices Other&quot;},&quot;e0bb&quot;:{&quot;name&quot;:&quot;Dialer Sip&quot;},&quot;e0bc&quot;:{&quot;name&quot;:&quot;Dialpad&quot;},&quot;e52e&quot;:{&quot;name&quot;:&quot;Directions&quot;},&quot;e52f&quot;:{&quot;name&quot;:&quot;Directions Bike&quot;},&quot;e532&quot;:{&quot;name&quot;:&quot;Directions Boat&quot;},&quot;e530&quot;:{&quot;name&quot;:&quot;Directions Bus&quot;},&quot;e531&quot;:{&quot;name&quot;:&quot;Directions Car&quot;},&quot;e534&quot;:{&quot;name&quot;:&quot;Directions Railway&quot;},&quot;e566&quot;:{&quot;name&quot;:&quot;Directions Run&quot;},&quot;e533&quot;:{&quot;name&quot;:&quot;Directions Subway&quot;},&quot;e535&quot;:{&quot;name&quot;:&quot;Directions Transit&quot;},&quot;e536&quot;:{&quot;name&quot;:&quot;Directions Walk&quot;},&quot;e610&quot;:{&quot;name&quot;:&quot;Disc Full&quot;},&quot;e875&quot;:{&quot;name&quot;:&quot;Dns&quot;},&quot;e612&quot;:{&quot;name&quot;:&quot;Do Not Disturb&quot;},&quot;e611&quot;:{&quot;name&quot;:&quot;Do Not Disturb Alt&quot;},&quot;e643&quot;:{&quot;name&quot;:&quot;Do Not Disturb Off&quot;},&quot;e644&quot;:{&quot;name&quot;:&quot;Do Not Disturb On&quot;},&quot;e30e&quot;:{&quot;name&quot;:&quot;Dock&quot;},&quot;e7ee&quot;:{&quot;name&quot;:&quot;Domain&quot;},&quot;e876&quot;:{&quot;name&quot;:&quot;Done&quot;},&quot;e877&quot;:{&quot;name&quot;:&quot;Done All&quot;},&quot;e917&quot;:{&quot;name&quot;:&quot;Donut Large&quot;},&quot;e918&quot;:{&quot;name&quot;:&quot;Donut Small&quot;},&quot;e151&quot;:{&quot;name&quot;:&quot;Drafts&quot;},&quot;e25d&quot;:{&quot;name&quot;:&quot;Drag Handle&quot;},&quot;e613&quot;:{&quot;name&quot;:&quot;Drive Eta&quot;},&quot;e1b2&quot;:{&quot;name&quot;:&quot;Dvr&quot;},&quot;e3c9&quot;:{&quot;name&quot;:&quot;Edit&quot;},&quot;e568&quot;:{&quot;name&quot;:&quot;Edit Location&quot;},&quot;e8fb&quot;:{&quot;name&quot;:&quot;Eject&quot;},&quot;e0be&quot;:{&quot;name&quot;:&quot;Email&quot;},&quot;e63f&quot;:{&quot;name&quot;:&quot;Enhanced Encryption&quot;},&quot;e01d&quot;:{&quot;name&quot;:&quot;Equalizer&quot;},&quot;e000&quot;:{&quot;name&quot;:&quot;Error&quot;},&quot;e001&quot;:{&quot;name&quot;:&quot;Error Outline&quot;},&quot;e926&quot;:{&quot;name&quot;:&quot;Euro Symbol&quot;},&quot;e56d&quot;:{&quot;name&quot;:&quot;Ev Station&quot;},&quot;e878&quot;:{&quot;name&quot;:&quot;Event&quot;},&quot;e614&quot;:{&quot;name&quot;:&quot;Event Available&quot;},&quot;e615&quot;:{&quot;name&quot;:&quot;Event Busy&quot;},&quot;e616&quot;:{&quot;name&quot;:&quot;Event Note&quot;},&quot;e903&quot;:{&quot;name&quot;:&quot;Event Seat&quot;},&quot;e879&quot;:{&quot;name&quot;:&quot;Exit To App&quot;},&quot;e5ce&quot;:{&quot;name&quot;:&quot;Expand Less&quot;},&quot;e5cf&quot;:{&quot;name&quot;:&quot;Expand More&quot;},&quot;e01e&quot;:{&quot;name&quot;:&quot;Explicit&quot;},&quot;e87a&quot;:{&quot;name&quot;:&quot;Explore&quot;},&quot;e3ca&quot;:{&quot;name&quot;:&quot;Exposure&quot;},&quot;e3cb&quot;:{&quot;name&quot;:&quot;Exposure Neg 1&quot;},&quot;e3cc&quot;:{&quot;name&quot;:&quot;Exposure Neg 2&quot;},&quot;e3cd&quot;:{&quot;name&quot;:&quot;Exposure Plus 1&quot;},&quot;e3ce&quot;:{&quot;name&quot;:&quot;Exposure Plus 2&quot;},&quot;e3cf&quot;:{&quot;name&quot;:&quot;Exposure Zero&quot;},&quot;e87b&quot;:{&quot;name&quot;:&quot;Extension&quot;},&quot;e87c&quot;:{&quot;name&quot;:&quot;Face&quot;},&quot;e01f&quot;:{&quot;name&quot;:&quot;Fast Forward&quot;},&quot;e020&quot;:{&quot;name&quot;:&quot;Fast Rewind&quot;},&quot;e87d&quot;:{&quot;name&quot;:&quot;Favorite&quot;},&quot;e87e&quot;:{&quot;name&quot;:&quot;Favorite Border&quot;},&quot;e06d&quot;:{&quot;name&quot;:&quot;Featured Play List&quot;},&quot;e06e&quot;:{&quot;name&quot;:&quot;Featured Video&quot;},&quot;e87f&quot;:{&quot;name&quot;:&quot;Feedback&quot;},&quot;e05d&quot;:{&quot;name&quot;:&quot;Fiber Dvr&quot;},&quot;e061&quot;:{&quot;name&quot;:&quot;Fiber Manual Record&quot;},&quot;e05e&quot;:{&quot;name&quot;:&quot;Fiber New&quot;},&quot;e06a&quot;:{&quot;name&quot;:&quot;Fiber Pin&quot;},&quot;e062&quot;:{&quot;name&quot;:&quot;Fiber Smart Record&quot;},&quot;e2c4&quot;:{&quot;name&quot;:&quot;File Download&quot;},&quot;e2c6&quot;:{&quot;name&quot;:&quot;File Upload&quot;},&quot;e3d3&quot;:{&quot;name&quot;:&quot;Filter&quot;},&quot;e3d0&quot;:{&quot;name&quot;:&quot;Filter 1&quot;},&quot;e3d1&quot;:{&quot;name&quot;:&quot;Filter 2&quot;},&quot;e3d2&quot;:{&quot;name&quot;:&quot;Filter 3&quot;},&quot;e3d4&quot;:{&quot;name&quot;:&quot;Filter 4&quot;},&quot;e3d5&quot;:{&quot;name&quot;:&quot;Filter 5&quot;},&quot;e3d6&quot;:{&quot;name&quot;:&quot;Filter 6&quot;},&quot;e3d7&quot;:{&quot;name&quot;:&quot;Filter 7&quot;},&quot;e3d8&quot;:{&quot;name&quot;:&quot;Filter 8&quot;},&quot;e3d9&quot;:{&quot;name&quot;:&quot;Filter 9&quot;},&quot;e3da&quot;:{&quot;name&quot;:&quot;Filter 9 Plus&quot;},&quot;e3db&quot;:{&quot;name&quot;:&quot;Filter B And W&quot;},&quot;e3dc&quot;:{&quot;name&quot;:&quot;Filter Center Focus&quot;},&quot;e3dd&quot;:{&quot;name&quot;:&quot;Filter Drama&quot;},&quot;e3de&quot;:{&quot;name&quot;:&quot;Filter Frames&quot;},&quot;e3df&quot;:{&quot;name&quot;:&quot;Filter Hdr&quot;},&quot;e152&quot;:{&quot;name&quot;:&quot;Filter List&quot;},&quot;e3e0&quot;:{&quot;name&quot;:&quot;Filter None&quot;},&quot;e3e2&quot;:{&quot;name&quot;:&quot;Filter Tilt Shift&quot;},&quot;e3e3&quot;:{&quot;name&quot;:&quot;Filter Vintage&quot;},&quot;e880&quot;:{&quot;name&quot;:&quot;Find In Page&quot;},&quot;e881&quot;:{&quot;name&quot;:&quot;Find Replace&quot;},&quot;e90d&quot;:{&quot;name&quot;:&quot;Fingerprint&quot;},&quot;e5dc&quot;:{&quot;name&quot;:&quot;First Page&quot;},&quot;eb43&quot;:{&quot;name&quot;:&quot;Fitness Center&quot;},&quot;e153&quot;:{&quot;name&quot;:&quot;Flag&quot;},&quot;e3e4&quot;:{&quot;name&quot;:&quot;Flare&quot;},&quot;e3e5&quot;:{&quot;name&quot;:&quot;Flash Auto&quot;},&quot;e3e6&quot;:{&quot;name&quot;:&quot;Flash Off&quot;},&quot;e3e7&quot;:{&quot;name&quot;:&quot;Flash On&quot;},&quot;e539&quot;:{&quot;name&quot;:&quot;Flight&quot;},&quot;e904&quot;:{&quot;name&quot;:&quot;Flight Land&quot;},&quot;e905&quot;:{&quot;name&quot;:&quot;Flight Takeoff&quot;},&quot;e3e8&quot;:{&quot;name&quot;:&quot;Flip&quot;},&quot;e882&quot;:{&quot;name&quot;:&quot;Flip To Back&quot;},&quot;e883&quot;:{&quot;name&quot;:&quot;Flip To Front&quot;},&quot;e2c7&quot;:{&quot;name&quot;:&quot;Folder&quot;},&quot;e2c8&quot;:{&quot;name&quot;:&quot;Folder Open&quot;},&quot;e2c9&quot;:{&quot;name&quot;:&quot;Folder Shared&quot;},&quot;e617&quot;:{&quot;name&quot;:&quot;Folder Special&quot;},&quot;e167&quot;:{&quot;name&quot;:&quot;Font Download&quot;},&quot;e234&quot;:{&quot;name&quot;:&quot;Format Align Center&quot;},&quot;e235&quot;:{&quot;name&quot;:&quot;Format Align Justify&quot;},&quot;e236&quot;:{&quot;name&quot;:&quot;Format Align Left&quot;},&quot;e237&quot;:{&quot;name&quot;:&quot;Format Align Right&quot;},&quot;e238&quot;:{&quot;name&quot;:&quot;Format Bold&quot;},&quot;e239&quot;:{&quot;name&quot;:&quot;Format Clear&quot;},&quot;e23a&quot;:{&quot;name&quot;:&quot;Format Color Fill&quot;},&quot;e23b&quot;:{&quot;name&quot;:&quot;Format Color Reset&quot;},&quot;e23c&quot;:{&quot;name&quot;:&quot;Format Color Text&quot;},&quot;e23d&quot;:{&quot;name&quot;:&quot;Format Indent Decrease&quot;},&quot;e23e&quot;:{&quot;name&quot;:&quot;Format Indent Increase&quot;},&quot;e23f&quot;:{&quot;name&quot;:&quot;Format Italic&quot;},&quot;e240&quot;:{&quot;name&quot;:&quot;Format Line Spacing&quot;},&quot;e241&quot;:{&quot;name&quot;:&quot;Format List Bulleted&quot;},&quot;e242&quot;:{&quot;name&quot;:&quot;Format List Numbered&quot;},&quot;e243&quot;:{&quot;name&quot;:&quot;Format Paint&quot;},&quot;e244&quot;:{&quot;name&quot;:&quot;Format Quote&quot;},&quot;e25e&quot;:{&quot;name&quot;:&quot;Format Shapes&quot;},&quot;e245&quot;:{&quot;name&quot;:&quot;Format Size&quot;},&quot;e246&quot;:{&quot;name&quot;:&quot;Format Strikethrough&quot;},&quot;e247&quot;:{&quot;name&quot;:&quot;Format Textdirection L To R&quot;},&quot;e248&quot;:{&quot;name&quot;:&quot;Format Textdirection R To L&quot;},&quot;e249&quot;:{&quot;name&quot;:&quot;Format Underlined&quot;},&quot;e0bf&quot;:{&quot;name&quot;:&quot;Forum&quot;},&quot;e154&quot;:{&quot;name&quot;:&quot;Forward&quot;},&quot;e056&quot;:{&quot;name&quot;:&quot;Forward 10&quot;},&quot;e057&quot;:{&quot;name&quot;:&quot;Forward 30&quot;},&quot;e058&quot;:{&quot;name&quot;:&quot;Forward 5&quot;},&quot;eb44&quot;:{&quot;name&quot;:&quot;Free Breakfast&quot;},&quot;e5d0&quot;:{&quot;name&quot;:&quot;Fullscreen&quot;},&quot;e5d1&quot;:{&quot;name&quot;:&quot;Fullscreen Exit&quot;},&quot;e24a&quot;:{&quot;name&quot;:&quot;Functions&quot;},&quot;e927&quot;:{&quot;name&quot;:&quot;G Translate&quot;},&quot;e30f&quot;:{&quot;name&quot;:&quot;Gamepad&quot;},&quot;e021&quot;:{&quot;name&quot;:&quot;Games&quot;},&quot;e90e&quot;:{&quot;name&quot;:&quot;Gavel&quot;},&quot;e155&quot;:{&quot;name&quot;:&quot;Gesture&quot;},&quot;e884&quot;:{&quot;name&quot;:&quot;Get App&quot;},&quot;e908&quot;:{&quot;name&quot;:&quot;Gif&quot;},&quot;eb45&quot;:{&quot;name&quot;:&quot;Golf Course&quot;},&quot;e1b3&quot;:{&quot;name&quot;:&quot;Gps Fixed&quot;},&quot;e1b4&quot;:{&quot;name&quot;:&quot;Gps Not Fixed&quot;},&quot;e1b5&quot;:{&quot;name&quot;:&quot;Gps Off&quot;},&quot;e885&quot;:{&quot;name&quot;:&quot;Grade&quot;},&quot;e3e9&quot;:{&quot;name&quot;:&quot;Gradient&quot;},&quot;e3ea&quot;:{&quot;name&quot;:&quot;Grain&quot;},&quot;e1b8&quot;:{&quot;name&quot;:&quot;Graphic Eq&quot;},&quot;e3eb&quot;:{&quot;name&quot;:&quot;Grid Off&quot;},&quot;e3ec&quot;:{&quot;name&quot;:&quot;Grid On&quot;},&quot;e7ef&quot;:{&quot;name&quot;:&quot;Group&quot;},&quot;e7f0&quot;:{&quot;name&quot;:&quot;Group Add&quot;},&quot;e886&quot;:{&quot;name&quot;:&quot;Group Work&quot;},&quot;e052&quot;:{&quot;name&quot;:&quot;Hd&quot;},&quot;e3ed&quot;:{&quot;name&quot;:&quot;Hdr Off&quot;},&quot;e3ee&quot;:{&quot;name&quot;:&quot;Hdr On&quot;},&quot;e3f1&quot;:{&quot;name&quot;:&quot;Hdr Strong&quot;},&quot;e3f2&quot;:{&quot;name&quot;:&quot;Hdr Weak&quot;},&quot;e310&quot;:{&quot;name&quot;:&quot;Headset&quot;},&quot;e311&quot;:{&quot;name&quot;:&quot;Headset Mic&quot;},&quot;e3f3&quot;:{&quot;name&quot;:&quot;Healing&quot;},&quot;e023&quot;:{&quot;name&quot;:&quot;Hearing&quot;},&quot;e887&quot;:{&quot;name&quot;:&quot;Help&quot;},&quot;e8fd&quot;:{&quot;name&quot;:&quot;Help Outline&quot;},&quot;e024&quot;:{&quot;name&quot;:&quot;High Quality&quot;},&quot;e25f&quot;:{&quot;name&quot;:&quot;Highlight&quot;},&quot;e888&quot;:{&quot;name&quot;:&quot;Highlight Off&quot;},&quot;e889&quot;:{&quot;name&quot;:&quot;History&quot;},&quot;e88a&quot;:{&quot;name&quot;:&quot;Home&quot;},&quot;eb46&quot;:{&quot;name&quot;:&quot;Hot Tub&quot;},&quot;e53a&quot;:{&quot;name&quot;:&quot;Hotel&quot;},&quot;e88b&quot;:{&quot;name&quot;:&quot;Hourglass Empty&quot;},&quot;e88c&quot;:{&quot;name&quot;:&quot;Hourglass Full&quot;},&quot;e902&quot;:{&quot;name&quot;:&quot;Http&quot;},&quot;e88d&quot;:{&quot;name&quot;:&quot;Https&quot;},&quot;e3f4&quot;:{&quot;name&quot;:&quot;Image&quot;},&quot;e3f5&quot;:{&quot;name&quot;:&quot;Image Aspect Ratio&quot;},&quot;e0e0&quot;:{&quot;name&quot;:&quot;Import Contacts&quot;},&quot;e0c3&quot;:{&quot;name&quot;:&quot;Import Export&quot;},&quot;e912&quot;:{&quot;name&quot;:&quot;Important Devices&quot;},&quot;e156&quot;:{&quot;name&quot;:&quot;Inbox&quot;},&quot;e909&quot;:{&quot;name&quot;:&quot;Indeterminate Check Box&quot;},&quot;e88e&quot;:{&quot;name&quot;:&quot;Info&quot;},&quot;e88f&quot;:{&quot;name&quot;:&quot;Info Outline&quot;},&quot;e890&quot;:{&quot;name&quot;:&quot;Input&quot;},&quot;e24b&quot;:{&quot;name&quot;:&quot;Insert Chart&quot;},&quot;e24c&quot;:{&quot;name&quot;:&quot;Insert Comment&quot;},&quot;e24d&quot;:{&quot;name&quot;:&quot;Insert Drive File&quot;},&quot;e24e&quot;:{&quot;name&quot;:&quot;Insert Emoticon&quot;},&quot;e24f&quot;:{&quot;name&quot;:&quot;Insert Invitation&quot;},&quot;e250&quot;:{&quot;name&quot;:&quot;Insert Link&quot;},&quot;e251&quot;:{&quot;name&quot;:&quot;Insert Photo&quot;},&quot;e891&quot;:{&quot;name&quot;:&quot;Invert Colors&quot;},&quot;e0c4&quot;:{&quot;name&quot;:&quot;Invert Colors Off&quot;},&quot;e3f6&quot;:{&quot;name&quot;:&quot;Iso&quot;},&quot;e312&quot;:{&quot;name&quot;:&quot;Keyboard&quot;},&quot;e313&quot;:{&quot;name&quot;:&quot;Keyboard Arrow Down&quot;},&quot;e314&quot;:{&quot;name&quot;:&quot;Keyboard Arrow Left&quot;},&quot;e315&quot;:{&quot;name&quot;:&quot;Keyboard Arrow Right&quot;},&quot;e316&quot;:{&quot;name&quot;:&quot;Keyboard Arrow Up&quot;},&quot;e317&quot;:{&quot;name&quot;:&quot;Keyboard Backspace&quot;},&quot;e318&quot;:{&quot;name&quot;:&quot;Keyboard Capslock&quot;},&quot;e31a&quot;:{&quot;name&quot;:&quot;Keyboard Hide&quot;},&quot;e31b&quot;:{&quot;name&quot;:&quot;Keyboard Return&quot;},&quot;e31c&quot;:{&quot;name&quot;:&quot;Keyboard Tab&quot;},&quot;e31d&quot;:{&quot;name&quot;:&quot;Keyboard Voice&quot;},&quot;eb47&quot;:{&quot;name&quot;:&quot;Kitchen&quot;},&quot;e892&quot;:{&quot;name&quot;:&quot;Label&quot;},&quot;e893&quot;:{&quot;name&quot;:&quot;Label Outline&quot;},&quot;e3f7&quot;:{&quot;name&quot;:&quot;Landscape&quot;},&quot;e894&quot;:{&quot;name&quot;:&quot;Language&quot;},&quot;e31e&quot;:{&quot;name&quot;:&quot;Laptop&quot;},&quot;e31f&quot;:{&quot;name&quot;:&quot;Laptop Chromebook&quot;},&quot;e320&quot;:{&quot;name&quot;:&quot;Laptop Mac&quot;},&quot;e321&quot;:{&quot;name&quot;:&quot;Laptop Windows&quot;},&quot;e5dd&quot;:{&quot;name&quot;:&quot;Last Page&quot;},&quot;e895&quot;:{&quot;name&quot;:&quot;Launch&quot;},&quot;e53b&quot;:{&quot;name&quot;:&quot;Layers&quot;},&quot;e53c&quot;:{&quot;name&quot;:&quot;Layers Clear&quot;},&quot;e3f8&quot;:{&quot;name&quot;:&quot;Leak Add&quot;},&quot;e3f9&quot;:{&quot;name&quot;:&quot;Leak Remove&quot;},&quot;e3fa&quot;:{&quot;name&quot;:&quot;Lens&quot;},&quot;e02e&quot;:{&quot;name&quot;:&quot;Library Add&quot;},&quot;e02f&quot;:{&quot;name&quot;:&quot;Library Books&quot;},&quot;e030&quot;:{&quot;name&quot;:&quot;Library Music&quot;},&quot;e90f&quot;:{&quot;name&quot;:&quot;Lightbulb Outline&quot;},&quot;e919&quot;:{&quot;name&quot;:&quot;Line Style&quot;},&quot;e91a&quot;:{&quot;name&quot;:&quot;Line Weight&quot;},&quot;e260&quot;:{&quot;name&quot;:&quot;Linear Scale&quot;},&quot;e157&quot;:{&quot;name&quot;:&quot;Link&quot;},&quot;e438&quot;:{&quot;name&quot;:&quot;Linked Camera&quot;},&quot;e896&quot;:{&quot;name&quot;:&quot;List&quot;},&quot;e0c6&quot;:{&quot;name&quot;:&quot;Live Help&quot;},&quot;e639&quot;:{&quot;name&quot;:&quot;Live Tv&quot;},&quot;e53f&quot;:{&quot;name&quot;:&quot;Local Activity&quot;},&quot;e53d&quot;:{&quot;name&quot;:&quot;Local Airport&quot;},&quot;e53e&quot;:{&quot;name&quot;:&quot;Local Atm&quot;},&quot;e540&quot;:{&quot;name&quot;:&quot;Local Bar&quot;},&quot;e541&quot;:{&quot;name&quot;:&quot;Local Cafe&quot;},&quot;e542&quot;:{&quot;name&quot;:&quot;Local Car Wash&quot;},&quot;e543&quot;:{&quot;name&quot;:&quot;Local Convenience Store&quot;},&quot;e556&quot;:{&quot;name&quot;:&quot;Local Dining&quot;},&quot;e544&quot;:{&quot;name&quot;:&quot;Local Drink&quot;},&quot;e545&quot;:{&quot;name&quot;:&quot;Local Florist&quot;},&quot;e546&quot;:{&quot;name&quot;:&quot;Local Gas Station&quot;},&quot;e547&quot;:{&quot;name&quot;:&quot;Local Grocery Store&quot;},&quot;e548&quot;:{&quot;name&quot;:&quot;Local Hospital&quot;},&quot;e549&quot;:{&quot;name&quot;:&quot;Local Hotel&quot;},&quot;e54a&quot;:{&quot;name&quot;:&quot;Local Laundry Service&quot;},&quot;e54b&quot;:{&quot;name&quot;:&quot;Local Library&quot;},&quot;e54c&quot;:{&quot;name&quot;:&quot;Local Mall&quot;},&quot;e54d&quot;:{&quot;name&quot;:&quot;Local Movies&quot;},&quot;e54e&quot;:{&quot;name&quot;:&quot;Local Offer&quot;},&quot;e54f&quot;:{&quot;name&quot;:&quot;Local Parking&quot;},&quot;e550&quot;:{&quot;name&quot;:&quot;Local Pharmacy&quot;},&quot;e551&quot;:{&quot;name&quot;:&quot;Local Phone&quot;},&quot;e552&quot;:{&quot;name&quot;:&quot;Local Pizza&quot;},&quot;e553&quot;:{&quot;name&quot;:&quot;Local Play&quot;},&quot;e554&quot;:{&quot;name&quot;:&quot;Local Post Office&quot;},&quot;e555&quot;:{&quot;name&quot;:&quot;Local Printshop&quot;},&quot;e557&quot;:{&quot;name&quot;:&quot;Local See&quot;},&quot;e558&quot;:{&quot;name&quot;:&quot;Local Shipping&quot;},&quot;e559&quot;:{&quot;name&quot;:&quot;Local Taxi&quot;},&quot;e7f1&quot;:{&quot;name&quot;:&quot;Location City&quot;},&quot;e1b6&quot;:{&quot;name&quot;:&quot;Location Disabled&quot;},&quot;e0c7&quot;:{&quot;name&quot;:&quot;Location Off&quot;},&quot;e0c8&quot;:{&quot;name&quot;:&quot;Location On&quot;},&quot;e1b7&quot;:{&quot;name&quot;:&quot;Location Searching&quot;},&quot;e897&quot;:{&quot;name&quot;:&quot;Lock&quot;},&quot;e898&quot;:{&quot;name&quot;:&quot;Lock Open&quot;},&quot;e899&quot;:{&quot;name&quot;:&quot;Lock Outline&quot;},&quot;e3fc&quot;:{&quot;name&quot;:&quot;Looks&quot;},&quot;e3fb&quot;:{&quot;name&quot;:&quot;Looks 3&quot;},&quot;e3fd&quot;:{&quot;name&quot;:&quot;Looks 4&quot;},&quot;e3fe&quot;:{&quot;name&quot;:&quot;Looks 5&quot;},&quot;e3ff&quot;:{&quot;name&quot;:&quot;Looks 6&quot;},&quot;e400&quot;:{&quot;name&quot;:&quot;Looks One&quot;},&quot;e401&quot;:{&quot;name&quot;:&quot;Looks Two&quot;},&quot;e028&quot;:{&quot;name&quot;:&quot;Loop&quot;},&quot;e402&quot;:{&quot;name&quot;:&quot;Loupe&quot;},&quot;e16d&quot;:{&quot;name&quot;:&quot;Low Priority&quot;},&quot;e89a&quot;:{&quot;name&quot;:&quot;Loyalty&quot;},&quot;e158&quot;:{&quot;name&quot;:&quot;Mail&quot;},&quot;e0e1&quot;:{&quot;name&quot;:&quot;Mail Outline&quot;},&quot;e55b&quot;:{&quot;name&quot;:&quot;Map&quot;},&quot;e159&quot;:{&quot;name&quot;:&quot;Markunread&quot;},&quot;e89b&quot;:{&quot;name&quot;:&quot;Markunread Mailbox&quot;},&quot;e322&quot;:{&quot;name&quot;:&quot;Memory&quot;},&quot;e5d2&quot;:{&quot;name&quot;:&quot;Menu&quot;},&quot;e252&quot;:{&quot;name&quot;:&quot;Merge Type&quot;},&quot;e0c9&quot;:{&quot;name&quot;:&quot;Message&quot;},&quot;e029&quot;:{&quot;name&quot;:&quot;Mic&quot;},&quot;e02a&quot;:{&quot;name&quot;:&quot;Mic None&quot;},&quot;e02b&quot;:{&quot;name&quot;:&quot;Mic Off&quot;},&quot;e618&quot;:{&quot;name&quot;:&quot;Mms&quot;},&quot;e253&quot;:{&quot;name&quot;:&quot;Mode Comment&quot;},&quot;e254&quot;:{&quot;name&quot;:&quot;Mode Edit&quot;},&quot;e263&quot;:{&quot;name&quot;:&quot;Monetization On&quot;},&quot;e25c&quot;:{&quot;name&quot;:&quot;Money Off&quot;},&quot;e403&quot;:{&quot;name&quot;:&quot;Monochrome Photos&quot;},&quot;e7f2&quot;:{&quot;name&quot;:&quot;Mood&quot;},&quot;e7f3&quot;:{&quot;name&quot;:&quot;Mood Bad&quot;},&quot;e619&quot;:{&quot;name&quot;:&quot;More&quot;},&quot;e5d3&quot;:{&quot;name&quot;:&quot;More Horiz&quot;},&quot;e5d4&quot;:{&quot;name&quot;:&quot;More Vert&quot;},&quot;e91b&quot;:{&quot;name&quot;:&quot;Motorcycle&quot;},&quot;e323&quot;:{&quot;name&quot;:&quot;Mouse&quot;},&quot;e168&quot;:{&quot;name&quot;:&quot;Move To Inbox&quot;},&quot;e02c&quot;:{&quot;name&quot;:&quot;Movie&quot;},&quot;e404&quot;:{&quot;name&quot;:&quot;Movie Creation&quot;},&quot;e43a&quot;:{&quot;name&quot;:&quot;Movie Filter&quot;},&quot;e6df&quot;:{&quot;name&quot;:&quot;Multiline Chart&quot;},&quot;e405&quot;:{&quot;name&quot;:&quot;Music Note&quot;},&quot;e063&quot;:{&quot;name&quot;:&quot;Music Video&quot;},&quot;e55c&quot;:{&quot;name&quot;:&quot;My Location&quot;},&quot;e406&quot;:{&quot;name&quot;:&quot;Nature&quot;},&quot;e407&quot;:{&quot;name&quot;:&quot;Nature People&quot;},&quot;e408&quot;:{&quot;name&quot;:&quot;Navigate Before&quot;},&quot;e409&quot;:{&quot;name&quot;:&quot;Navigate Next&quot;},&quot;e55d&quot;:{&quot;name&quot;:&quot;Navigation&quot;},&quot;e569&quot;:{&quot;name&quot;:&quot;Near Me&quot;},&quot;e1b9&quot;:{&quot;name&quot;:&quot;Network Cell&quot;},&quot;e640&quot;:{&quot;name&quot;:&quot;Network Check&quot;},&quot;e61a&quot;:{&quot;name&quot;:&quot;Network Locked&quot;},&quot;e1ba&quot;:{&quot;name&quot;:&quot;Network Wifi&quot;},&quot;e031&quot;:{&quot;name&quot;:&quot;New Releases&quot;},&quot;e16a&quot;:{&quot;name&quot;:&quot;Next Week&quot;},&quot;e1bb&quot;:{&quot;name&quot;:&quot;Nfc&quot;},&quot;e641&quot;:{&quot;name&quot;:&quot;No Encryption&quot;},&quot;e0cc&quot;:{&quot;name&quot;:&quot;No Sim&quot;},&quot;e033&quot;:{&quot;name&quot;:&quot;Not Interested&quot;},&quot;e06f&quot;:{&quot;name&quot;:&quot;Note&quot;},&quot;e89c&quot;:{&quot;name&quot;:&quot;Note Add&quot;},&quot;e7f4&quot;:{&quot;name&quot;:&quot;Notifications&quot;},&quot;e7f7&quot;:{&quot;name&quot;:&quot;Notifications Active&quot;},&quot;e7f5&quot;:{&quot;name&quot;:&quot;Notifications None&quot;},&quot;e7f6&quot;:{&quot;name&quot;:&quot;Notifications Off&quot;},&quot;e7f8&quot;:{&quot;name&quot;:&quot;Notifications Paused&quot;},&quot;e90a&quot;:{&quot;name&quot;:&quot;Offline Pin&quot;},&quot;e63a&quot;:{&quot;name&quot;:&quot;Ondemand Video&quot;},&quot;e91c&quot;:{&quot;name&quot;:&quot;Opacity&quot;},&quot;e89d&quot;:{&quot;name&quot;:&quot;Open In Browser&quot;},&quot;e89e&quot;:{&quot;name&quot;:&quot;Open In New&quot;},&quot;e89f&quot;:{&quot;name&quot;:&quot;Open With&quot;},&quot;e7f9&quot;:{&quot;name&quot;:&quot;Pages&quot;},&quot;e8a0&quot;:{&quot;name&quot;:&quot;Pageview&quot;},&quot;e40a&quot;:{&quot;name&quot;:&quot;Palette&quot;},&quot;e925&quot;:{&quot;name&quot;:&quot;Pan Tool&quot;},&quot;e40b&quot;:{&quot;name&quot;:&quot;Panorama&quot;},&quot;e40c&quot;:{&quot;name&quot;:&quot;Panorama Fish Eye&quot;},&quot;e40d&quot;:{&quot;name&quot;:&quot;Panorama Horizontal&quot;},&quot;e40e&quot;:{&quot;name&quot;:&quot;Panorama Vertical&quot;},&quot;e40f&quot;:{&quot;name&quot;:&quot;Panorama Wide Angle&quot;},&quot;e7fa&quot;:{&quot;name&quot;:&quot;Party Mode&quot;},&quot;e034&quot;:{&quot;name&quot;:&quot;Pause&quot;},&quot;e035&quot;:{&quot;name&quot;:&quot;Pause Circle Filled&quot;},&quot;e036&quot;:{&quot;name&quot;:&quot;Pause Circle Outline&quot;},&quot;e8a1&quot;:{&quot;name&quot;:&quot;Payment&quot;},&quot;e7fb&quot;:{&quot;name&quot;:&quot;People&quot;},&quot;e7fc&quot;:{&quot;name&quot;:&quot;People Outline&quot;},&quot;e8a2&quot;:{&quot;name&quot;:&quot;Perm Camera Mic&quot;},&quot;e8a3&quot;:{&quot;name&quot;:&quot;Perm Contact Calendar&quot;},&quot;e8a4&quot;:{&quot;name&quot;:&quot;Perm Data Setting&quot;},&quot;e8a5&quot;:{&quot;name&quot;:&quot;Perm Device Information&quot;},&quot;e8a6&quot;:{&quot;name&quot;:&quot;Perm Identity&quot;},&quot;e8a7&quot;:{&quot;name&quot;:&quot;Perm Media&quot;},&quot;e8a8&quot;:{&quot;name&quot;:&quot;Perm Phone Msg&quot;},&quot;e8a9&quot;:{&quot;name&quot;:&quot;Perm Scan Wifi&quot;},&quot;e7fd&quot;:{&quot;name&quot;:&quot;Person&quot;},&quot;e7fe&quot;:{&quot;name&quot;:&quot;Person Add&quot;},&quot;e7ff&quot;:{&quot;name&quot;:&quot;Person Outline&quot;},&quot;e55a&quot;:{&quot;name&quot;:&quot;Person Pin&quot;},&quot;e56a&quot;:{&quot;name&quot;:&quot;Person Pin Circle&quot;},&quot;e63b&quot;:{&quot;name&quot;:&quot;Personal Video&quot;},&quot;e91d&quot;:{&quot;name&quot;:&quot;Pets&quot;},&quot;e0cd&quot;:{&quot;name&quot;:&quot;Phone&quot;},&quot;e324&quot;:{&quot;name&quot;:&quot;Phone Android&quot;},&quot;e61b&quot;:{&quot;name&quot;:&quot;Phone Bluetooth Speaker&quot;},&quot;e61c&quot;:{&quot;name&quot;:&quot;Phone Forwarded&quot;},&quot;e61d&quot;:{&quot;name&quot;:&quot;Phone In Talk&quot;},&quot;e325&quot;:{&quot;name&quot;:&quot;Phone Iphone&quot;},&quot;e61e&quot;:{&quot;name&quot;:&quot;Phone Locked&quot;},&quot;e61f&quot;:{&quot;name&quot;:&quot;Phone Missed&quot;},&quot;e620&quot;:{&quot;name&quot;:&quot;Phone Paused&quot;},&quot;e326&quot;:{&quot;name&quot;:&quot;Phonelink&quot;},&quot;e0db&quot;:{&quot;name&quot;:&quot;Phonelink Erase&quot;},&quot;e0dc&quot;:{&quot;name&quot;:&quot;Phonelink Lock&quot;},&quot;e327&quot;:{&quot;name&quot;:&quot;Phonelink Off&quot;},&quot;e0dd&quot;:{&quot;name&quot;:&quot;Phonelink Ring&quot;},&quot;e0de&quot;:{&quot;name&quot;:&quot;Phonelink Setup&quot;},&quot;e410&quot;:{&quot;name&quot;:&quot;Photo&quot;},&quot;e411&quot;:{&quot;name&quot;:&quot;Photo Album&quot;},&quot;e412&quot;:{&quot;name&quot;:&quot;Photo Camera&quot;},&quot;e43b&quot;:{&quot;name&quot;:&quot;Photo Filter&quot;},&quot;e413&quot;:{&quot;name&quot;:&quot;Photo Library&quot;},&quot;e432&quot;:{&quot;name&quot;:&quot;Photo Size Select Actual&quot;},&quot;e433&quot;:{&quot;name&quot;:&quot;Photo Size Select Large&quot;},&quot;e434&quot;:{&quot;name&quot;:&quot;Photo Size Select Small&quot;},&quot;e415&quot;:{&quot;name&quot;:&quot;Picture As Pdf&quot;},&quot;e8aa&quot;:{&quot;name&quot;:&quot;Picture In Picture&quot;},&quot;e911&quot;:{&quot;name&quot;:&quot;Picture In Picture Alt&quot;},&quot;e6c4&quot;:{&quot;name&quot;:&quot;Pie Chart&quot;},&quot;e6c5&quot;:{&quot;name&quot;:&quot;Pie Chart Outlined&quot;},&quot;e55e&quot;:{&quot;name&quot;:&quot;Pin Drop&quot;},&quot;e55f&quot;:{&quot;name&quot;:&quot;Place&quot;},&quot;e037&quot;:{&quot;name&quot;:&quot;Play Arrow&quot;},&quot;e038&quot;:{&quot;name&quot;:&quot;Play Circle Filled&quot;},&quot;e039&quot;:{&quot;name&quot;:&quot;Play Circle Outline&quot;},&quot;e906&quot;:{&quot;name&quot;:&quot;Play For Work&quot;},&quot;e03b&quot;:{&quot;name&quot;:&quot;Playlist Add&quot;},&quot;e065&quot;:{&quot;name&quot;:&quot;Playlist Add Check&quot;},&quot;e05f&quot;:{&quot;name&quot;:&quot;Playlist Play&quot;},&quot;e800&quot;:{&quot;name&quot;:&quot;Plus One&quot;},&quot;e801&quot;:{&quot;name&quot;:&quot;Poll&quot;},&quot;e8ab&quot;:{&quot;name&quot;:&quot;Polymer&quot;},&quot;eb48&quot;:{&quot;name&quot;:&quot;Pool&quot;},&quot;e0ce&quot;:{&quot;name&quot;:&quot;Portable Wifi Off&quot;},&quot;e416&quot;:{&quot;name&quot;:&quot;Portrait&quot;},&quot;e63c&quot;:{&quot;name&quot;:&quot;Power&quot;},&quot;e336&quot;:{&quot;name&quot;:&quot;Power Input&quot;},&quot;e8ac&quot;:{&quot;name&quot;:&quot;Power Settings New&quot;},&quot;e91e&quot;:{&quot;name&quot;:&quot;Pregnant Woman&quot;},&quot;e0df&quot;:{&quot;name&quot;:&quot;Present To All&quot;},&quot;e8ad&quot;:{&quot;name&quot;:&quot;Print&quot;},&quot;e645&quot;:{&quot;name&quot;:&quot;Priority High&quot;},&quot;e80b&quot;:{&quot;name&quot;:&quot;Public&quot;},&quot;e255&quot;:{&quot;name&quot;:&quot;Publish&quot;},&quot;e8ae&quot;:{&quot;name&quot;:&quot;Query Builder&quot;},&quot;e8af&quot;:{&quot;name&quot;:&quot;Question Answer&quot;},&quot;e03c&quot;:{&quot;name&quot;:&quot;Queue&quot;},&quot;e03d&quot;:{&quot;name&quot;:&quot;Queue Music&quot;},&quot;e066&quot;:{&quot;name&quot;:&quot;Queue Play Next&quot;},&quot;e03e&quot;:{&quot;name&quot;:&quot;Radio&quot;},&quot;e837&quot;:{&quot;name&quot;:&quot;Radio Button Checked&quot;},&quot;e836&quot;:{&quot;name&quot;:&quot;Radio Button Unchecked&quot;},&quot;e560&quot;:{&quot;name&quot;:&quot;Rate Review&quot;},&quot;e8b0&quot;:{&quot;name&quot;:&quot;Receipt&quot;},&quot;e03f&quot;:{&quot;name&quot;:&quot;Recent Actors&quot;},&quot;e91f&quot;:{&quot;name&quot;:&quot;Record Voice Over&quot;},&quot;e8b1&quot;:{&quot;name&quot;:&quot;Redeem&quot;},&quot;e15a&quot;:{&quot;name&quot;:&quot;Redo&quot;},&quot;e5d5&quot;:{&quot;name&quot;:&quot;Refresh&quot;},&quot;e15b&quot;:{&quot;name&quot;:&quot;Remove&quot;},&quot;e15c&quot;:{&quot;name&quot;:&quot;Remove Circle&quot;},&quot;e15d&quot;:{&quot;name&quot;:&quot;Remove Circle Outline&quot;},&quot;e067&quot;:{&quot;name&quot;:&quot;Remove From Queue&quot;},&quot;e417&quot;:{&quot;name&quot;:&quot;Remove Red Eye&quot;},&quot;e928&quot;:{&quot;name&quot;:&quot;Remove Shopping Cart&quot;},&quot;e8fe&quot;:{&quot;name&quot;:&quot;Reorder&quot;},&quot;e040&quot;:{&quot;name&quot;:&quot;Repeat&quot;},&quot;e041&quot;:{&quot;name&quot;:&quot;Repeat One&quot;},&quot;e042&quot;:{&quot;name&quot;:&quot;Replay&quot;},&quot;e059&quot;:{&quot;name&quot;:&quot;Replay 10&quot;},&quot;e05a&quot;:{&quot;name&quot;:&quot;Replay 30&quot;},&quot;e05b&quot;:{&quot;name&quot;:&quot;Replay 5&quot;},&quot;e15e&quot;:{&quot;name&quot;:&quot;Reply&quot;},&quot;e15f&quot;:{&quot;name&quot;:&quot;Reply All&quot;},&quot;e160&quot;:{&quot;name&quot;:&quot;Report&quot;},&quot;e8b2&quot;:{&quot;name&quot;:&quot;Report Problem&quot;},&quot;e56c&quot;:{&quot;name&quot;:&quot;Restaurant&quot;},&quot;e561&quot;:{&quot;name&quot;:&quot;Restaurant Menu&quot;},&quot;e8b3&quot;:{&quot;name&quot;:&quot;Restore&quot;},&quot;e929&quot;:{&quot;name&quot;:&quot;Restore Page&quot;},&quot;e0d1&quot;:{&quot;name&quot;:&quot;Ring Volume&quot;},&quot;e8b4&quot;:{&quot;name&quot;:&quot;Room&quot;},&quot;eb49&quot;:{&quot;name&quot;:&quot;Room Service&quot;},&quot;e418&quot;:{&quot;name&quot;:&quot;Rotate 90 Degrees Ccw&quot;},&quot;e419&quot;:{&quot;name&quot;:&quot;Rotate Left&quot;},&quot;e41a&quot;:{&quot;name&quot;:&quot;Rotate Right&quot;},&quot;e920&quot;:{&quot;name&quot;:&quot;Rounded Corner&quot;},&quot;e328&quot;:{&quot;name&quot;:&quot;Router&quot;},&quot;e921&quot;:{&quot;name&quot;:&quot;Rowing&quot;},&quot;e0e5&quot;:{&quot;name&quot;:&quot;Rss Feed&quot;},&quot;e642&quot;:{&quot;name&quot;:&quot;Rv Hookup&quot;},&quot;e562&quot;:{&quot;name&quot;:&quot;Satellite&quot;},&quot;e161&quot;:{&quot;name&quot;:&quot;Save&quot;},&quot;e329&quot;:{&quot;name&quot;:&quot;Scanner&quot;},&quot;e8b5&quot;:{&quot;name&quot;:&quot;Schedule&quot;},&quot;e80c&quot;:{&quot;name&quot;:&quot;School&quot;},&quot;e1be&quot;:{&quot;name&quot;:&quot;Screen Lock Landscape&quot;},&quot;e1bf&quot;:{&quot;name&quot;:&quot;Screen Lock Portrait&quot;},&quot;e1c0&quot;:{&quot;name&quot;:&quot;Screen Lock Rotation&quot;},&quot;e1c1&quot;:{&quot;name&quot;:&quot;Screen Rotation&quot;},&quot;e0e2&quot;:{&quot;name&quot;:&quot;Screen Share&quot;},&quot;e623&quot;:{&quot;name&quot;:&quot;Sd Card&quot;},&quot;e1c2&quot;:{&quot;name&quot;:&quot;Sd Storage&quot;},&quot;e8b6&quot;:{&quot;name&quot;:&quot;Search&quot;},&quot;e32a&quot;:{&quot;name&quot;:&quot;Security&quot;},&quot;e162&quot;:{&quot;name&quot;:&quot;Select All&quot;},&quot;e163&quot;:{&quot;name&quot;:&quot;Send&quot;},&quot;e811&quot;:{&quot;name&quot;:&quot;Sentiment Dissatisfied&quot;},&quot;e812&quot;:{&quot;name&quot;:&quot;Sentiment Neutral&quot;},&quot;e813&quot;:{&quot;name&quot;:&quot;Sentiment Satisfied&quot;},&quot;e814&quot;:{&quot;name&quot;:&quot;Sentiment Very Dissatisfied&quot;},&quot;e815&quot;:{&quot;name&quot;:&quot;Sentiment Very Satisfied&quot;},&quot;e8b8&quot;:{&quot;name&quot;:&quot;Settings&quot;},&quot;e8b9&quot;:{&quot;name&quot;:&quot;Settings Applications&quot;},&quot;e8ba&quot;:{&quot;name&quot;:&quot;Settings Backup Restore&quot;},&quot;e8bb&quot;:{&quot;name&quot;:&quot;Settings Bluetooth&quot;},&quot;e8bd&quot;:{&quot;name&quot;:&quot;Settings Brightness&quot;},&quot;e8bc&quot;:{&quot;name&quot;:&quot;Settings Cell&quot;},&quot;e8be&quot;:{&quot;name&quot;:&quot;Settings Ethernet&quot;},&quot;e8bf&quot;:{&quot;name&quot;:&quot;Settings Input Antenna&quot;},&quot;e8c0&quot;:{&quot;name&quot;:&quot;Settings Input Component&quot;},&quot;e8c1&quot;:{&quot;name&quot;:&quot;Settings Input Composite&quot;},&quot;e8c2&quot;:{&quot;name&quot;:&quot;Settings Input Hdmi&quot;},&quot;e8c3&quot;:{&quot;name&quot;:&quot;Settings Input Svideo&quot;},&quot;e8c4&quot;:{&quot;name&quot;:&quot;Settings Overscan&quot;},&quot;e8c5&quot;:{&quot;name&quot;:&quot;Settings Phone&quot;},&quot;e8c6&quot;:{&quot;name&quot;:&quot;Settings Power&quot;},&quot;e8c7&quot;:{&quot;name&quot;:&quot;Settings Remote&quot;},&quot;e1c3&quot;:{&quot;name&quot;:&quot;Settings System Daydream&quot;},&quot;e8c8&quot;:{&quot;name&quot;:&quot;Settings Voice&quot;},&quot;e80d&quot;:{&quot;name&quot;:&quot;Share&quot;},&quot;e8c9&quot;:{&quot;name&quot;:&quot;Shop&quot;},&quot;e8ca&quot;:{&quot;name&quot;:&quot;Shop Two&quot;},&quot;e8cb&quot;:{&quot;name&quot;:&quot;Shopping Basket&quot;},&quot;e8cc&quot;:{&quot;name&quot;:&quot;Shopping Cart&quot;},&quot;e261&quot;:{&quot;name&quot;:&quot;Short Text&quot;},&quot;e6e1&quot;:{&quot;name&quot;:&quot;Show Chart&quot;},&quot;e043&quot;:{&quot;name&quot;:&quot;Shuffle&quot;},&quot;e1c8&quot;:{&quot;name&quot;:&quot;Signal Cellular 4 Bar&quot;},&quot;e1cd&quot;:{&quot;name&quot;:&quot;Signal Cellular Connected No Internet 4 Bar&quot;},&quot;e1ce&quot;:{&quot;name&quot;:&quot;Signal Cellular No Sim&quot;},&quot;e1cf&quot;:{&quot;name&quot;:&quot;Signal Cellular Null&quot;},&quot;e1d0&quot;:{&quot;name&quot;:&quot;Signal Cellular Off&quot;},&quot;e1d8&quot;:{&quot;name&quot;:&quot;Signal Wifi 4 Bar&quot;},&quot;e1d9&quot;:{&quot;name&quot;:&quot;Signal Wifi 4 Bar Lock&quot;},&quot;e1da&quot;:{&quot;name&quot;:&quot;Signal Wifi Off&quot;},&quot;e32b&quot;:{&quot;name&quot;:&quot;Sim Card&quot;},&quot;e624&quot;:{&quot;name&quot;:&quot;Sim Card Alert&quot;},&quot;e044&quot;:{&quot;name&quot;:&quot;Skip Next&quot;},&quot;e045&quot;:{&quot;name&quot;:&quot;Skip Previous&quot;},&quot;e41b&quot;:{&quot;name&quot;:&quot;Slideshow&quot;},&quot;e068&quot;:{&quot;name&quot;:&quot;Slow Motion Video&quot;},&quot;e32c&quot;:{&quot;name&quot;:&quot;Smartphone&quot;},&quot;eb4a&quot;:{&quot;name&quot;:&quot;Smoke Free&quot;},&quot;eb4b&quot;:{&quot;name&quot;:&quot;Smoking Rooms&quot;},&quot;e625&quot;:{&quot;name&quot;:&quot;Sms&quot;},&quot;e626&quot;:{&quot;name&quot;:&quot;Sms Failed&quot;},&quot;e046&quot;:{&quot;name&quot;:&quot;Snooze&quot;},&quot;e164&quot;:{&quot;name&quot;:&quot;Sort&quot;},&quot;e053&quot;:{&quot;name&quot;:&quot;Sort By Alpha&quot;},&quot;eb4c&quot;:{&quot;name&quot;:&quot;Spa&quot;},&quot;e256&quot;:{&quot;name&quot;:&quot;Space Bar&quot;},&quot;e32d&quot;:{&quot;name&quot;:&quot;Speaker&quot;},&quot;e32e&quot;:{&quot;name&quot;:&quot;Speaker Group&quot;},&quot;e8cd&quot;:{&quot;name&quot;:&quot;Speaker Notes&quot;},&quot;e92a&quot;:{&quot;name&quot;:&quot;Speaker Notes Off&quot;},&quot;e0d2&quot;:{&quot;name&quot;:&quot;Speaker Phone&quot;},&quot;e8ce&quot;:{&quot;name&quot;:&quot;Spellcheck&quot;},&quot;e838&quot;:{&quot;name&quot;:&quot;Star&quot;},&quot;e83a&quot;:{&quot;name&quot;:&quot;Star Border&quot;},&quot;e839&quot;:{&quot;name&quot;:&quot;Star Half&quot;},&quot;e8d0&quot;:{&quot;name&quot;:&quot;Stars&quot;},&quot;e0d3&quot;:{&quot;name&quot;:&quot;Stay Current Landscape&quot;},&quot;e0d4&quot;:{&quot;name&quot;:&quot;Stay Current Portrait&quot;},&quot;e0d5&quot;:{&quot;name&quot;:&quot;Stay Primary Landscape&quot;},&quot;e0d6&quot;:{&quot;name&quot;:&quot;Stay Primary Portrait&quot;},&quot;e047&quot;:{&quot;name&quot;:&quot;Stop&quot;},&quot;e0e3&quot;:{&quot;name&quot;:&quot;Stop Screen Share&quot;},&quot;e1db&quot;:{&quot;name&quot;:&quot;Storage&quot;},&quot;e8d1&quot;:{&quot;name&quot;:&quot;Store&quot;},&quot;e563&quot;:{&quot;name&quot;:&quot;Store Mall Directory&quot;},&quot;e41c&quot;:{&quot;name&quot;:&quot;Straighten&quot;},&quot;e56e&quot;:{&quot;name&quot;:&quot;Streetview&quot;},&quot;e257&quot;:{&quot;name&quot;:&quot;Strikethrough S&quot;},&quot;e41d&quot;:{&quot;name&quot;:&quot;Style&quot;},&quot;e5d9&quot;:{&quot;name&quot;:&quot;Subdirectory Arrow Left&quot;},&quot;e5da&quot;:{&quot;name&quot;:&quot;Subdirectory Arrow Right&quot;},&quot;e8d2&quot;:{&quot;name&quot;:&quot;Subject&quot;},&quot;e064&quot;:{&quot;name&quot;:&quot;Subscriptions&quot;},&quot;e048&quot;:{&quot;name&quot;:&quot;Subtitles&quot;},&quot;e56f&quot;:{&quot;name&quot;:&quot;Subway&quot;},&quot;e8d3&quot;:{&quot;name&quot;:&quot;Supervisor Account&quot;},&quot;e049&quot;:{&quot;name&quot;:&quot;Surround Sound&quot;},&quot;e0d7&quot;:{&quot;name&quot;:&quot;Swap Calls&quot;},&quot;e8d4&quot;:{&quot;name&quot;:&quot;Swap Horiz&quot;},&quot;e8d5&quot;:{&quot;name&quot;:&quot;Swap Vert&quot;},&quot;e8d6&quot;:{&quot;name&quot;:&quot;Swap Vertical Circle&quot;},&quot;e41e&quot;:{&quot;name&quot;:&quot;Switch Camera&quot;},&quot;e41f&quot;:{&quot;name&quot;:&quot;Switch Video&quot;},&quot;e627&quot;:{&quot;name&quot;:&quot;Sync&quot;},&quot;e628&quot;:{&quot;name&quot;:&quot;Sync Disabled&quot;},&quot;e629&quot;:{&quot;name&quot;:&quot;Sync Problem&quot;},&quot;e62a&quot;:{&quot;name&quot;:&quot;System Update&quot;},&quot;e8d7&quot;:{&quot;name&quot;:&quot;System Update Alt&quot;},&quot;e8d8&quot;:{&quot;name&quot;:&quot;Tab&quot;},&quot;e8d9&quot;:{&quot;name&quot;:&quot;Tab Unselected&quot;},&quot;e32f&quot;:{&quot;name&quot;:&quot;Tablet&quot;},&quot;e330&quot;:{&quot;name&quot;:&quot;Tablet Android&quot;},&quot;e331&quot;:{&quot;name&quot;:&quot;Tablet Mac&quot;},&quot;e420&quot;:{&quot;name&quot;:&quot;Tag Faces&quot;},&quot;e62b&quot;:{&quot;name&quot;:&quot;Tap And Play&quot;},&quot;e564&quot;:{&quot;name&quot;:&quot;Terrain&quot;},&quot;e262&quot;:{&quot;name&quot;:&quot;Text Fields&quot;},&quot;e165&quot;:{&quot;name&quot;:&quot;Text Format&quot;},&quot;e0d8&quot;:{&quot;name&quot;:&quot;Textsms&quot;},&quot;e421&quot;:{&quot;name&quot;:&quot;Texture&quot;},&quot;e8da&quot;:{&quot;name&quot;:&quot;Theaters&quot;},&quot;e8db&quot;:{&quot;name&quot;:&quot;Thumb Down&quot;},&quot;e8dc&quot;:{&quot;name&quot;:&quot;Thumb Up&quot;},&quot;e8dd&quot;:{&quot;name&quot;:&quot;Thumbs Up Down&quot;},&quot;e62c&quot;:{&quot;name&quot;:&quot;Time To Leave&quot;},&quot;e422&quot;:{&quot;name&quot;:&quot;Timelapse&quot;},&quot;e922&quot;:{&quot;name&quot;:&quot;Timeline&quot;},&quot;e425&quot;:{&quot;name&quot;:&quot;Timer&quot;},&quot;e423&quot;:{&quot;name&quot;:&quot;Timer 10&quot;},&quot;e424&quot;:{&quot;name&quot;:&quot;Timer 3&quot;},&quot;e426&quot;:{&quot;name&quot;:&quot;Timer Off&quot;},&quot;e264&quot;:{&quot;name&quot;:&quot;Title&quot;},&quot;e8de&quot;:{&quot;name&quot;:&quot;Toc&quot;},&quot;e8df&quot;:{&quot;name&quot;:&quot;Today&quot;},&quot;e8e0&quot;:{&quot;name&quot;:&quot;Toll&quot;},&quot;e427&quot;:{&quot;name&quot;:&quot;Tonality&quot;},&quot;e913&quot;:{&quot;name&quot;:&quot;Touch App&quot;},&quot;e332&quot;:{&quot;name&quot;:&quot;Toys&quot;},&quot;e8e1&quot;:{&quot;name&quot;:&quot;Track Changes&quot;},&quot;e565&quot;:{&quot;name&quot;:&quot;Traffic&quot;},&quot;e570&quot;:{&quot;name&quot;:&quot;Train&quot;},&quot;e571&quot;:{&quot;name&quot;:&quot;Tram&quot;},&quot;e572&quot;:{&quot;name&quot;:&quot;Transfer Within A Station&quot;},&quot;e428&quot;:{&quot;name&quot;:&quot;Transform&quot;},&quot;e8e2&quot;:{&quot;name&quot;:&quot;Translate&quot;},&quot;e8e3&quot;:{&quot;name&quot;:&quot;Trending Down&quot;},&quot;e8e4&quot;:{&quot;name&quot;:&quot;Trending Flat&quot;},&quot;e8e5&quot;:{&quot;name&quot;:&quot;Trending Up&quot;},&quot;e429&quot;:{&quot;name&quot;:&quot;Tune&quot;},&quot;e8e6&quot;:{&quot;name&quot;:&quot;Turned In&quot;},&quot;e8e7&quot;:{&quot;name&quot;:&quot;Turned In Not&quot;},&quot;e333&quot;:{&quot;name&quot;:&quot;Tv&quot;},&quot;e169&quot;:{&quot;name&quot;:&quot;Unarchive&quot;},&quot;e166&quot;:{&quot;name&quot;:&quot;Undo&quot;},&quot;e5d6&quot;:{&quot;name&quot;:&quot;Unfold Less&quot;},&quot;e5d7&quot;:{&quot;name&quot;:&quot;Unfold More&quot;},&quot;e923&quot;:{&quot;name&quot;:&quot;Update&quot;},&quot;e1e0&quot;:{&quot;name&quot;:&quot;Usb&quot;},&quot;e8e8&quot;:{&quot;name&quot;:&quot;Verified User&quot;},&quot;e258&quot;:{&quot;name&quot;:&quot;Vertical Align Bottom&quot;},&quot;e259&quot;:{&quot;name&quot;:&quot;Vertical Align Center&quot;},&quot;e25a&quot;:{&quot;name&quot;:&quot;Vertical Align Top&quot;},&quot;e62d&quot;:{&quot;name&quot;:&quot;Vibration&quot;},&quot;e070&quot;:{&quot;name&quot;:&quot;Video Call&quot;},&quot;e071&quot;:{&quot;name&quot;:&quot;Video Label&quot;},&quot;e04a&quot;:{&quot;name&quot;:&quot;Video Library&quot;},&quot;e04b&quot;:{&quot;name&quot;:&quot;Videocam&quot;},&quot;e04c&quot;:{&quot;name&quot;:&quot;Videocam Off&quot;},&quot;e338&quot;:{&quot;name&quot;:&quot;Videogame Asset&quot;},&quot;e8e9&quot;:{&quot;name&quot;:&quot;View Agenda&quot;},&quot;e8ea&quot;:{&quot;name&quot;:&quot;View Array&quot;},&quot;e8eb&quot;:{&quot;name&quot;:&quot;View Carousel&quot;},&quot;e8ec&quot;:{&quot;name&quot;:&quot;View Column&quot;},&quot;e42a&quot;:{&quot;name&quot;:&quot;View Comfy&quot;},&quot;e42b&quot;:{&quot;name&quot;:&quot;View Compact&quot;},&quot;e8ed&quot;:{&quot;name&quot;:&quot;View Day&quot;},&quot;e8ee&quot;:{&quot;name&quot;:&quot;View Headline&quot;},&quot;e8ef&quot;:{&quot;name&quot;:&quot;View List&quot;},&quot;e8f0&quot;:{&quot;name&quot;:&quot;View Module&quot;},&quot;e8f1&quot;:{&quot;name&quot;:&quot;View Quilt&quot;},&quot;e8f2&quot;:{&quot;name&quot;:&quot;View Stream&quot;},&quot;e8f3&quot;:{&quot;name&quot;:&quot;View Week&quot;},&quot;e435&quot;:{&quot;name&quot;:&quot;Vignette&quot;},&quot;e8f4&quot;:{&quot;name&quot;:&quot;Visibility&quot;},&quot;e8f5&quot;:{&quot;name&quot;:&quot;Visibility Off&quot;},&quot;e62e&quot;:{&quot;name&quot;:&quot;Voice Chat&quot;},&quot;e0d9&quot;:{&quot;name&quot;:&quot;Voicemail&quot;},&quot;e04d&quot;:{&quot;name&quot;:&quot;Volume Down&quot;},&quot;e04e&quot;:{&quot;name&quot;:&quot;Volume Mute&quot;},&quot;e04f&quot;:{&quot;name&quot;:&quot;Volume Off&quot;},&quot;e050&quot;:{&quot;name&quot;:&quot;Volume Up&quot;},&quot;e0da&quot;:{&quot;name&quot;:&quot;Vpn Key&quot;},&quot;e62f&quot;:{&quot;name&quot;:&quot;Vpn Lock&quot;},&quot;e1bc&quot;:{&quot;name&quot;:&quot;Wallpaper&quot;},&quot;e002&quot;:{&quot;name&quot;:&quot;Warning&quot;},&quot;e334&quot;:{&quot;name&quot;:&quot;Watch&quot;},&quot;e924&quot;:{&quot;name&quot;:&quot;Watch Later&quot;},&quot;e42c&quot;:{&quot;name&quot;:&quot;Wb Auto&quot;},&quot;e42d&quot;:{&quot;name&quot;:&quot;Wb Cloudy&quot;},&quot;e42e&quot;:{&quot;name&quot;:&quot;Wb Incandescent&quot;},&quot;e436&quot;:{&quot;name&quot;:&quot;Wb Iridescent&quot;},&quot;e430&quot;:{&quot;name&quot;:&quot;Wb Sunny&quot;},&quot;e63d&quot;:{&quot;name&quot;:&quot;Wc&quot;},&quot;e051&quot;:{&quot;name&quot;:&quot;Web&quot;},&quot;e069&quot;:{&quot;name&quot;:&quot;Web Asset&quot;},&quot;e16b&quot;:{&quot;name&quot;:&quot;Weekend&quot;},&quot;e80e&quot;:{&quot;name&quot;:&quot;Whatshot&quot;},&quot;e1bd&quot;:{&quot;name&quot;:&quot;Widgets&quot;},&quot;e63e&quot;:{&quot;name&quot;:&quot;Wifi&quot;},&quot;e1e1&quot;:{&quot;name&quot;:&quot;Wifi Lock&quot;},&quot;e1e2&quot;:{&quot;name&quot;:&quot;Wifi Tethering&quot;},&quot;e8f9&quot;:{&quot;name&quot;:&quot;Work&quot;},&quot;e25b&quot;:{&quot;name&quot;:&quot;Wrap Text&quot;},&quot;e8fa&quot;:{&quot;name&quot;:&quot;Youtube Searched For&quot;},&quot;e8ff&quot;:{&quot;name&quot;:&quot;Zoom In&quot;},&quot;e900&quot;:{&quot;name&quot;:&quot;Zoom Out&quot;},&quot;e56b&quot;:{&quot;name&quot;:&quot;Zoom Out Map&quot;}}}</td>
+      </tr>
+</table>
+
+  <div class="BlobToolbar position-absolute js-file-line-actions dropdown js-menu-container js-select-menu d-none" aria-hidden="true">
+    <button class="btn-octicon ml-0 px-2 p-0 bg-white border border-gray-dark rounded-1 dropdown-toggle js-menu-target" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Inline file action toolbar" aria-controls="inline-file-actions">
+      <svg class="octicon octicon-kebab-horizontal" viewBox="0 0 13 16" version="1.1" width="13" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM13 7.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/></svg>
+    </button>
+    <div class="dropdown-menu-content js-menu-content" id="inline-file-actions">
+      <ul class="BlobToolbar-dropdown dropdown-menu dropdown-menu-se mt-2">
+        <li><clipboard-copy class="dropdown-item" id="js-copy-lines" style="cursor:pointer;" data-original-text="Copy lines">Copy lines</clipboard-copy></li>
+        <li><clipboard-copy class="dropdown-item" id="js-copy-permalink" style="cursor:pointer;" data-original-text="Copy permalink">Copy permalink</clipboard-copy></li>
+        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" href="/google/material-design-icons/blame/224895a86501195e7a7ff3dde18e39f00b8e3d5a/iconfont/MaterialIcons-Regular.ijmap">View git blame</a></li>
+          <li><a class="dropdown-item" id="js-new-issue" href="/google/material-design-icons/issues/new">Open new issue</a></li>
+      </ul>
+    </div>
+  </div>
+
+  </div>
+
+  </div>
+
+  <button type="button" data-facebox="#jump-to-line" data-facebox-class="linejump" data-hotkey="l" class="d-none">Jump to Line</button>
+  <div id="jump-to-line" style="display:none">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-jump-to-line-form" action="" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+      <input class="form-control linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" aria-label="Jump to line" autofocus>
+      <button type="submit" class="btn">Go</button>
+</form>  </div>
+
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+      
+<div class="footer container-lg px-3" role="contentinfo">
+  <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <ul class="list-style-none d-flex flex-wrap ">
+      <li class="mr-3">&copy; 2018 <span title="0.28280s from unicorn-7cbd898f9f-tkdb8">GitHub</span>, Inc.</li>
+        <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
+        <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
+        <li class="mr-3"><a href="https://help.github.com/articles/github-security/" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li class="mr-3"><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a data-ga-click="Footer, go to help, text:help" href="https://help.github.com">Help</a></li>
+    </ul>
+
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon" href="https://github.com">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+   <ul class="list-style-none d-flex flex-wrap ">
+        <li class="mr-3"><a data-ga-click="Footer, go to contact, text:contact" href="https://github.com/contact">Contact GitHub</a></li>
+      <li class="mr-3"><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li class="mr-3"><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li class="mr-3"><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li class="mr-3"><a href="https://blog.github.com" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a data-ga-click="Footer, go to about, text:about" href="https://github.com/about">About</a></li>
+
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+</div>
+
+
+
+  <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
+    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+    </button>
+    You can’t perform that action at this time.
+  </div>
+
+
+    <script crossorigin="anonymous" integrity="sha512-AJroIDzeBTsez82UXWwVAmoSz2nKhws/uQvJ8aKfadJZcvL83MIXMjRYm7MVZaKSNXvifa/OGpn54kiDBKpyLw==" type="application/javascript" src="https://assets-cdn.github.com/assets/compat-37e9ce8318a51dd51033283da82c8546.js"></script>
+    <script crossorigin="anonymous" integrity="sha512-A0o32UigVgm0vxC5rUiim8r+tiSbIUPgybIJ76dL835MEyecNQOOkZ08YPRdpcPQWrF7k2apKd6gVtNmP0fbeg==" type="application/javascript" src="https://assets-cdn.github.com/assets/frameworks-9892af3afe548c0749013c43e335ae31.js"></script>
+    
+    <script crossorigin="anonymous" async="async" integrity="sha512-GwXdJGfmE4Y7zwaQcLCiC/XjFA9h8sBysvwAmFyP4EEez2tWJhjSqJNRNQCEQZDaBCM8MbJ4J/zxtuE/2DG2WQ==" type="application/javascript" src="https://assets-cdn.github.com/assets/github-bcc5d59bbfe92b3354a32701be238fb9.js"></script>
+    
+    
+    
+  <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
+    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+  </div>
+  <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+    </button>
+  </div>
+</div>
+
+  <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
+  <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
+  </div>
+</div>
+
+<div id="hovercard-aria-description" class="sr-only">
+  Press h to open a hovercard with more details.
+</div>
+
+
+  </body>
+</html>
+
