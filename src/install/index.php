@@ -20,7 +20,7 @@ ini_set('error_log', dirname(__FILE__) . '/php_error.log');
 $protocol = isSSL() ? 'https' : 'http';
 $url = $protocol . "://" . $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 $current_url = pathinfo($url, PATHINFO_DIRNAME);
-$root_url = str_replace('/install', '', $current_url).'/';
+$root_url = str_replace('/install', '', $current_url) . '/';
 
 define('SYSTEM_URL',            $root_url);
 define('SYSTEM_URL_INSTALL',    SYSTEM_URL.'install/');
@@ -160,7 +160,7 @@ final class Installer
                     'config_file_path'          => SYSTEM_PATH_CONFIG,
                     'live_site'                 => SYSTEM_URL,
                     'admin_site'                => SYSTEM_URL_ADMIN,
-                    
+
                     'domain'                    => pathinfo(SYSTEM_URL, PATHINFO_BASENAME),
                 );
 
@@ -200,7 +200,7 @@ final class Installer
     }
 
     public function getTOSInfo() {
-        return 'please visit https://ciclebilling.com to read our terms of service';
+        return 'I confirm that I have read and agree to the terms of service at https://ciclebilling.com.';
     }
 
     /**

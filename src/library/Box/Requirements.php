@@ -38,10 +38,10 @@ class Box_Requirements implements \Box\InjectionAwareInterface
                     'curl',
                     'zlib',
                     'gettext',
-                    'mcrypt',
+                    'openssl',
                  ),
-                'version'       =>  PHP_VERSION,
-                'min_version'   =>  '5.3',
+                'version'       =>  $this->getPHPVersion(),
+                'min_version'   =>  '7.0',
                 'safe_mode'     =>  ini_get('safe_mode'),
             ),
             'writable_folders' => array(
@@ -53,6 +53,11 @@ class Box_Requirements implements \Box\InjectionAwareInterface
                 $this->_app_path . '/config.php',
             ),
         );
+    }
+
+    public function getPHPVersion() {
+        preg_match("#^\d+(\.\d+)*#", PHP_VERSION, $match);
+        return $match[0];
     }
 
     public function getOptions()
