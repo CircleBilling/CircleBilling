@@ -11,9 +11,9 @@ abstract class BBDatabaseTestCase extends PHPUnit\DbUnit\TestCase
     {
         if ($this->conn === null) {
             if (self::$pdo == null) {
-                self::$pdo = new PDO( 'mysql:dbname='.BB_DB_NAME.';host=127.0.0.1', BB_DB_USER, BB_DB_PASSWORD );
+                self::$pdo = new PDO( 'mysql:dbname='.TEST_DB_NAME.';host=127.0.0.1', TEST_DB_USER, TEST_DB_PASSWORD );
             }
-            $this->conn = $this->createDefaultDBConnection(self::$pdo, BB_DB_NAME);
+            $this->conn = $this->createDefaultDBConnection(self::$pdo, TEST_DB_NAME);
         }
 
         return $this->conn;
@@ -27,7 +27,7 @@ abstract class BBDatabaseTestCase extends PHPUnit\DbUnit\TestCase
     public function getSeedFilesPath()
     {
         if ($this->_seedFilesPath == NULL) {
-            $this->_seedFilesPath = BB_PATH_TESTS.'/fixtures';
+            $this->_seedFilesPath = TEST_PATH_TESTS.'/fixtures';
         }
 
         return rtrim($this->_seedFilesPath, '/') . '/';

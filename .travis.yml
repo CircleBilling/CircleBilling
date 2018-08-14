@@ -26,7 +26,7 @@ before_script:
   - mysql -e 'create database IF NOT EXISTS circlebilling'
   - mysql -D circlebilling < src/install/structure.sql
   - mysql -D circlebilling < src/install/content.sql
-  - mv ./src/bb-config-sample.php ./src/bb-config.php
+  - mv ./src/config-sample.php ./src/config.php
 
 script:
 # - ant

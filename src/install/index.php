@@ -22,29 +22,29 @@ $url = $protocol . "://" . $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 $current_url = pathinfo($url, PATHINFO_DIRNAME);
 $root_url = str_replace('/install', '', $current_url) . '/';
 
-define('BB_URL',            $root_url);
-define('BB_URL_INSTALL',    BB_URL . 'install/');
-define('BB_URL_ADMIN',      BB_URL.'index.php?_url=/bb-admin');
+define('SYSTEM_URL',            $root_url);
+define('SYSTEM_URL_INSTALL',    SYSTEM_URL.'install/');
+define('SYSTEM_URL_ADMIN',      SYSTEM_URL.'index.php?_url=/admin');
 
-define('BB_PATH_ROOT',      realpath(dirname(__FILE__) . '/..'));
-define('BB_PATH_LIBRARY',   BB_PATH_ROOT . '/bb-library');
-define('BB_PATH_VENDOR',    BB_PATH_ROOT . '/bb-vendor');
-define('BB_PATH_THEMES',    BB_PATH_ROOT . '/install');
-define('BB_PATH_LICENSE',   BB_PATH_ROOT . '/LICENSE.txt');
-define('BB_PATH_SQL',       BB_PATH_ROOT . '/install/sql/structure.sql');
-define('BB_PATH_SQL_DATA',  BB_PATH_ROOT . '/install/sql/content.sql');
-define('BB_PATH_INSTALL',   BB_PATH_ROOT . '/install');
-define('BB_PATH_CONFIG',    BB_PATH_ROOT . '/bb-config.php');
-define('BB_PATH_CRON',      BB_PATH_ROOT . '/bb-cron.php');
-define('BB_PATH_LANGS',     BB_PATH_ROOT . '/bb-locale');
+define('SYSTEM_PATH_ROOT',      realpath(dirname(__FILE__).'/..'));
+define('SYSTEM_PATH_LIBRARY',   SYSTEM_PATH_ROOT . '/library');
+define('SYSTEM_PATH_VENDOR',    SYSTEM_PATH_ROOT . '/vendor');
+define('SYSTEM_PATH_THEMES',    SYSTEM_PATH_ROOT . '/install');
+define('SYSTEM_PATH_LICENSE',   SYSTEM_PATH_ROOT . '/LICENSE.txt');
+define('SYSTEM_PATH_SQL',       SYSTEM_PATH_ROOT . '/install/structure.sql');
+define('SYSTEM_PATH_SQL_DATA',  SYSTEM_PATH_ROOT . '/install/content.sql');
+define('SYSTEM_PATH_INSTALL',   SYSTEM_PATH_ROOT . '/install');
+define('SYSTEM_PATH_CONFIG',    SYSTEM_PATH_ROOT . '/config.php');
+define('SYSTEM_PATH_CRON',      SYSTEM_PATH_ROOT . '/cron.php');
+define('SYSTEM_PATH_LANGS',     SYSTEM_PATH_ROOT . '/locale');
 
 // Ensure library/ is on include_path
 set_include_path(implode(PATH_SEPARATOR, array(
-    BB_PATH_LIBRARY,
+    SYSTEM_PATH_LIBRARY,
     get_include_path(),
 )));
 
-require BB_PATH_VENDOR . '/autoload.php';
+require SYSTEM_PATH_VENDOR . '/autoload.php';
 
 final class Installer
 {
@@ -61,7 +61,7 @@ final class Installer
 
         $this->session = new Session();
     }
-
+    
     public function run($action)
     {
         switch ($action) {
@@ -80,7 +80,7 @@ final class Installer
                     $this->session->set('db_pass', $pass);
                     print 'ok';
                 }
-
+        
                 break;
 
             case 'install':
@@ -121,7 +121,7 @@ final class Installer
                 } catch(Exception $e) {
                     print $e->getMessage();
                 }
-
+                
                 break;
 
             case 'index':
@@ -155,25 +155,24 @@ final class Installer
                     'license'                   => $this->session->get('license'),
                     'agree'                     => $this->session->get('agree'),
 
-                    'install_module_path'       => BB_PATH_INSTALL,
-                    'cron_path'                 => BB_PATH_CRON,
-                    'config_file_path'          => BB_PATH_CONFIG,
-                    'resource_url'              => BB_URL . 'install/',
-                    'live_site'                 => BB_URL,
-                    'admin_site'                => BB_URL_ADMIN,
+                    'install_module_path'       => SYSTEM_PATH_INSTALL,
+                    'cron_path'                 => SYSTEM_PATH_CRON,
+                    'config_file_path'          => SYSTEM_PATH_CONFIG,
+                    'live_site'                 => SYSTEM_URL,
+                    'admin_site'                => SYSTEM_URL_ADMIN,
 
-                    'domain'                    => pathinfo(BB_URL, PATHINFO_BASENAME),
+                    'domain'                    => pathinfo(SYSTEM_URL, PATHINFO_BASENAME),
                 );
 
                 print $this->render('install.phtml', $vars);
                 break;
         }
     }
-
+    
     private function render($name, $vars = array())
     {
         $options = array(
-            'paths'             => array(BB_PATH_THEMES),
+            'paths'             => array(SYSTEM_PATH_THEMES),
             'debug'             => TRUE,
             'charset'           => 'utf-8',
             'optimizations'     => 1,
@@ -287,11 +286,11 @@ final class Installer
 
     private function checkConfig()
     {
-        if(file_exists(BB_PATH_CONFIG) === false) {
-            throw new Exception('Create configuration file bb-config.php with content provided during installation.');
+        if(file_exists(SYSTEM_PATH_CONFIG) === false) {
+            throw new Exception('Create configuration file config.php with content provided during installation.');
         }
     }
-
+    
     private function makeInstall($ns)
     {
         $this->_isValidInstallData($ns);
@@ -301,12 +300,12 @@ final class Installer
             throw new Exception('Can`t connect to database.');
         }
 
-        $databaseStructure = file_get_contents(BB_PATH_SQL);
+        $databaseStructure = file_get_contents(SYSTEM_PATH_SQL);
         if($databaseStructure === false) {
             throw new Exception('Could not read structure.sql file');
         }
 
-        $databaseContent = file_get_contents(BB_PATH_SQL_DATA);
+        $databaseContent = file_get_contents(SYSTEM_PATH_SQL_DATA);
         if($databaseContent === false) {
             throw new Exception('Could not read structure.sql file');
         }
@@ -372,9 +371,9 @@ final class Installer
         $admin_pass = $ns->get('admin_pass');
 
         $content = 'Hi $admin_name, ' . PHP_EOL;
-        $content .= 'You have successfully setup CircleBilling at ' . BB_URL . PHP_EOL;
-        $content .= 'Access client area at: ' . BB_URL . PHP_EOL;
-        $content .= 'Access admin area at: ' . BB_URL_ADMIN . ' with login details:' . PHP_EOL;
+        $content .= 'You have successfully setup CircleBilling at ' . SYSTEM_URL . PHP_EOL;
+        $content .= 'Access client area at: ' . SYSTEM_URL . PHP_EOL;
+        $content .= 'Access admin area at: ' . SYSTEM_URL_ADMIN . ' with login details:' . PHP_EOL;
         $content .= 'Email: ' . $admin_email . PHP_EOL;
         $content .= 'Password: ' . $admin_pass . PHP_EOL;
 
@@ -383,7 +382,7 @@ final class Installer
         $content .= 'Read CircleBilling documentation to get started http://docs.ciclebilling.com/' . PHP_EOL;
         $content .= 'Thank You for using CircleBilling.' .PHP_EOL;
 
-        $subject = sprintf('CircleBilling is ready at "%s"', BB_URL);
+        $subject = sprintf('CircleBilling is ready at "%s"', SYSTEM_URL);
 
         @mail($admin_email, $subject, $content);
     }
@@ -391,8 +390,8 @@ final class Installer
     private function _createConfigurationFile($data)
     {
         $output = $this->_getConfigOutput($data);
-        if(!@file_put_contents(BB_PATH_CONFIG, $output)) {
-            throw new Exception('Configuration file is not writable or does not exists. Please create file '. BB_PATH_CONFIG. ' and make it writable', 101);
+        if(!@file_put_contents(SYSTEM_PATH_CONFIG, $output)) {
+            throw new Exception('Configuration file is not writable or does not exists. Please create file '. SYSTEM_PATH_CONFIG. ' and make it writable', 101);
         }
     }
 
@@ -402,15 +401,15 @@ final class Installer
             'debug'     => FALSE,
             'license'   => $ns->get('license'),
             'salt'      => md5(uniqid()),
-            'url'       => BB_URL,
-            'admin_area_prefix' =>  '/bb-admin',
+            'url'       => SYSTEM_URL,
+            'admin_area_prefix' =>  '/admin',
             'sef_urls'  => FALSE,
             'timezone'  => 'UTC',
             'locale'    => 'en_US',
             'locale_date_format'    => '%A, %d %B %G',
             'locale_time_format'    => ' %T',
-            'path_data'    => BB_PATH_ROOT . '/bb-data',
-            'path_logs'    => BB_PATH_ROOT . '/bb-data/log/application.log',
+            'path_data'    => SYSTEM_PATH_ROOT . '/data',
+            'path_logs'    => SYSTEM_PATH_ROOT . '/data/log/application.log',
 
             'log_to_db'  => true,
 
@@ -425,7 +424,7 @@ final class Installer
             'twig'   =>  array(
                 'debug'         =>  true,
                 'auto_reload'   =>  true,
-                'cache'         =>  BB_PATH_ROOT . '/bb-data/cache',
+                'cache'         =>  SYSTEM_PATH_ROOT . '/data/cache',
             ),
 
             'api'   =>  array(
@@ -452,41 +451,41 @@ final class Installer
 
         $output .= sprintf($cf, 'Define timezone');
         $output .= sprintf("date_default_timezone_set('%s');", 'UTC');
-
+        
         $output .= sprintf($cf, 'Set default date format');
-        $output .= sprintf($f, 'BB_DATE_FORMAT', 'l, d F Y');
+        $output .= sprintf($f, 'SYSTEM_DATE_FORMAT', 'l, d F Y');
 
         $output .= sprintf($cf, 'Database');
-        $output .= sprintf($f, 'BB_DB_NAME', $ns->get('db_name'));
-        $output .= sprintf($f, 'BB_DB_USER', $ns->get('db_user'));
-        $output .= sprintf($f, 'BB_DB_PASSWORD', $ns->get('db_pass'));
-        $output .= sprintf($f, 'BB_DB_HOST', $ns->get('db_host'));
-        $output .= sprintf($f, 'BB_DB_TYPE', 'mysql');
+        $output .= sprintf($f, 'SYSTEM_DB_NAME', $ns->get('db_name'));
+        $output .= sprintf($f, 'SYSTEM_DB_USER', $ns->get('db_user'));
+        $output .= sprintf($f, 'SYSTEM_DB_PASSWORD', $ns->get('db_pass'));
+        $output .= sprintf($f, 'SYSTEM_DB_HOST', $ns->get('db_host'));
+        $output .= sprintf($f, 'SYSTEM_DB_TYPE', 'mysql');
 
         $output .= sprintf($cf, 'Live site URL with trailing slash');
-        $output .= sprintf($f, 'BB_URL', BB_URL);
-
+        $output .= sprintf($f, 'SYSTEM_URL', SYSTEM_URL);
+        
         $output .= sprintf($cf, 'CircleBilling license key');
-        $output .= sprintf($f, 'BB_LICENSE', $ns->get('license'));
+        $output .= sprintf($f, 'SYSTEM_LICENSE', $ns->get('license'));
 
         $output .= sprintf($cf, 'Enable or disable warning messages');
-        $output .= sprintf($bf, 'BB_DEBUG', 'TRUE');
-
+        $output .= sprintf($bf, 'SYSTEM_DEBUG', 'TRUE');
+        
         $output .= sprintf($cf, 'Enable or disable pretty urls. Please configure .htaccess before enabling this feature.');
-        $output .= sprintf($bf, 'BB_SEF_URLS', 'FALSE');
-
+        $output .= sprintf($bf, 'SYSTEM_SEF_URLS', 'FALSE');
+        
         $output .= sprintf($cf, 'Default application locale');
-        $output .= sprintf($bf, 'BB_LOCALE', "'en_US'");
-
+        $output .= sprintf($bf, 'SYSTEM_LOCALE', "'en_US'");
+        
         $output .= sprintf($cf, 'Translatable locale format');
-        $output .= sprintf($bf, 'BB_LOCALE_DATE_FORMAT', "'%A, %d %B %G'");
-
+        $output .= sprintf($bf, 'SYSTEM_LOCALE_DATE_FORMAT', "'%A, %d %B %G'");
+        
         $output .= sprintf($cf, 'Translatable time format');
-        $output .= sprintf($bf, 'BB_LOCALE_TIME_FORMAT', "' %T'");
-
+        $output .= sprintf($bf, 'SYSTEM_LOCALE_TIME_FORMAT', "' %T'");
+        
         $output .= sprintf($cf, 'Default location to store application data. Must be protected from public.');
-        $output .= sprintf($bf, 'BB_PATH_DATA', "dirname(__FILE__) . '/bb-data'");
-
+        $output .= sprintf($bf, 'SYSTEM_PATH_DATA', "dirname(__FILE__) . '/data'");
+        
         return $output;
     }
 
@@ -503,10 +502,10 @@ final class Installer
 
     private function generateEmailTemplates()
     {
-        define('BB_PATH_MODS',      BB_PATH_ROOT . '/bb-modules');
+        define('SYSTEM_PATH_MODS',      SYSTEM_PATH_ROOT . '/modules');
 
         $emailService = new \Box\Mod\Email\Service();
-        $di = $di = include BB_PATH_ROOT  . '/bb-di.php';
+        $di = $di = include SYSTEM_PATH_ROOT  . '/di.php';
         $di['translate']();
         $emailService->setDi($di);
         return $emailService->templateBatchGenerate();
