@@ -247,6 +247,8 @@ class Guest extends \Api_Abstract
      */
     public function is_vat($data)
     {
+        return true;
+
         $required = array(
             'country' => 'Country code',
             'vat'     => 'Country VAT is required',
