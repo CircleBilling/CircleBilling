@@ -24,8 +24,8 @@ before_script:
   - mysql --user=root -e "CREATE USER 'foo'@'localhost' IDENTIFIED BY 'foo';"
   - mysql --user=root -e "GRANT ALL PRIVILEGES ON *.* TO 'foo'@'localhost'"
   - mysql -e 'create database IF NOT EXISTS circlebilling'
-  - mysql -D circlebilling < src/install/structure.sql
-  - mysql -D circlebilling < src/install/content.sql
+  - mysql -D circlebilling < src/install/sql/structure.sql
+  - mysql -D circlebilling < src/install/sql/content.sql
   - mv ./src/config-sample.php ./src/config.php
 
 script:
