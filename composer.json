@@ -42,11 +42,11 @@
         "ext-gettext": "*"
     },
     "config": {
-        "vendor-dir": "src/bb-vendor"
+        "vendor-dir": "src/vendor"
     },
     "autoload": {
-        "psr-0": {"": "src/bb-library"},
-        "psr-4": {"Box\\Mod\\": "src/bb-modules"}
+        "psr-0": {"": "src/library"},
+        "psr-4": {"Box\\Mod\\": "src/modules"}
     },
 
     "require-dev": {
@@ -56,6 +56,6 @@
 
     },
     "autoload-dev": {
-        "psr-0": { "": "tests/bb-library" }
+        "psr-0": { "": "tests/library" }
     }
 }

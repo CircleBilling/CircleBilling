@@ -10,8 +10,8 @@
  * with this source code in the file LICENSE
  */
 
-require_once dirname(__FILE__) . '/bb-load.php';
-$di = include dirname(__FILE__) . '/bb-di.php';
+require_once dirname(__FILE__) . '/load.php';
+$di = include dirname(__FILE__) . '/di.php';
 $url = $di['request']->getQuery('_url');
 $admin_prefix = $di['config']['admin_area_prefix'];
 if (strncasecmp($url,$admin_prefix, strlen($admin_prefix)) === 0) {
