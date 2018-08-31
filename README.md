@@ -5,6 +5,7 @@ Open Source billing software
 [![Docs Status](https://readthedocs.org/projects/circlebilling/badge/?version=latest)](https://readthedocs.org/projects/circlebilling/badge/?version=latest)
 [![Travis-CI Status](https://travis-ci.org/CircleBilling/CircleBilling.svg?branch=develop)](https://travis-ci.org/CircleBilling/CircleBilling)
 [![Coverage Status](https://coveralls.io/repos/github/CircleBilling/CircleBilling/badge.svg?branch=master)](https://coveralls.io/github/CircleBilling/CircleBilling?branch=master)
+[![Slack](https://img.shields.io/badge/chat-on%20slack-red.svgg)](https://circlebilling.slack.com/)
 
 Requirements
 ================================================================================
