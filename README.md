@@ -49,6 +49,7 @@ Support
 * Website: https://circlebilling.com
 * Documentation: http://docs.circlebilling.com
 * Forum: https://forum.circlebilling.com
+* Slack: https://circlebilling.slack.com/
 
 Licensing
 ================================================================================
