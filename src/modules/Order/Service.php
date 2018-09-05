@@ -359,8 +359,6 @@ class Service implements InjectionAwareInterface
             }else{
                 $data['plugin'] = null;
             }
-            $client = $this->di['db']->getExistingModelById('Client', $model->client_id, 'Client not found');
-            $data['client'] = $clientService->toApiArray($client, false);
         }
 
         return $data;
