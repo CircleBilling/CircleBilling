@@ -46,7 +46,7 @@ Using Grunt
 Support
 ================================================================================
 
-* Website: https://circlebilling.com
+* Website: https://www.circlebilling.com
 * Documentation: http://docs.circlebilling.com
 * Forum: https://forum.circlebilling.com
 * Slack: https://circlebilling.slack.com/
