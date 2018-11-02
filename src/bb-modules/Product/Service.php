@@ -718,7 +718,10 @@ class Service implements InjectionAwareInterface
                 $min_price = $startingPrice;
             }
         }
-
+        // sort products by priority
+        $keys = array_column($products, 'priority');
+        array_multisort($keys, SORT_ASC, $products);
+        
         $data                        = $this->di['db']->toArray($model);
         $data['price_starting_from'] = $min_price;
         $data['icon_url']            = $model->icon_url;
