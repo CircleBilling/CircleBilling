@@ -121,8 +121,14 @@ class ServiceInvoiceItem implements InjectionAwareInterface
                 'type' => 'invoice',
                 'rel_id' => $item->invoice_id,
             );
-            $clientService->addFunds($client, $this->getTotal($item), $item->title, $data);
 
+	    $this->di['logger']->info('executeTask %s: addFunds (Credit) $%s to invoice ID: %s', $item->type, $this->getTotal($item), $item->invoice_id);
+            $clientService->addFunds($client, $this->getTotal($item), 'Credit applied to client balance', $data);
+	    
+	    /* Insert client_balance record with negative amount to indicate item paid. */
+            $this->di['logger']->info('executeTask %s: addFunds (Debit) $%s to invoice ID: %s', $item->type, $this->getTotal($item), $item->invoice_id);
+            $clientService->addFunds($client, $this->getTotal($item) * -1, '(Debit) ' . $item->title, $data);
+	    
             $this->markAsExecuted($item);
         }
 
