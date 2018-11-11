@@ -15,6 +15,25 @@ namespace Box\Mod\Servicelicense\Plugin;
 
 class Simple
 {
+    
+    protected $di;
+    
+     /**
+     * @param \Box_Di $di
+     */
+    public function setDi($di)
+    {
+        $this->di = $di;
+    }
+    
+    /**
+     * @return \Box_Di
+    */
+    public function getDi()
+    {
+        return $this->di;
+    }
+    
     /**
      * License generation script
      *
@@ -25,6 +44,9 @@ class Simple
      */
     public function generate(\Model_ServiceLicense $service, \Model_ClientOrder $order, array $config)
     {
+	//Optional: to get customer data
+        //$client = $this->di['db']->load('Client', $order->client_id);
+        
         $length = isset($config['length']) ? $config['length'] : 25;
         $prefix = isset($config['prefix']) ? $config['prefix'] : NULL;
 
@@ -55,7 +77,7 @@ class Simple
         if(!$validation_rule) {
             throw new LogicException('Some validation rule did not pass', 1020);
         }
-
+	
         return array(
             'key'   =>  'value',
             'key2'  =>  'value2'
