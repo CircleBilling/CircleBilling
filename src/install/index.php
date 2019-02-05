@@ -130,6 +130,7 @@ final class Installer
 
                 $se = new Box_Requirements();
                 $options = $se->getOptions();
+
                 $vars = array(
                     'tos'                       => $this->getTOSInfo(),
 
@@ -159,13 +160,14 @@ final class Installer
                     'cron_path'                 => SYSTEM_PATH_CRON,
                     'config_file_path'          => SYSTEM_PATH_CONFIG,
                     'live_site'                 => SYSTEM_URL,
+                    'resource_url'              => SYSTEM_URL . 'install/resources/',
                     'admin_site'                => SYSTEM_URL_ADMIN,
 
                     'domain'                    => pathinfo(SYSTEM_URL, PATHINFO_BASENAME),
                 );
 
-                print $this->render('install.phtml', $vars);
-                break;
+                $this->render('installer.tpl', $vars);
+                exit;
         }
     }
     
@@ -181,13 +183,18 @@ final class Installer
             'cache'             => FALSE,
         );
 
-        $loader = new Twig_Loader_Filesystem($options['paths']);
-        $twig = new Twig_Environment($loader, $options);
-        $twig->addExtension(new Twig_Extension_Optimizer());
-        $twig->addGlobal('request', $_REQUEST);
-        $twig->addGlobal('version', Box_Version::VERSION);
 
-        return $twig->render($name, $vars);
+        $smarty = new Smarty();
+        $smarty->setTemplateDir(SYSTEM_PATH_INSTALL . '/views/');
+        $smarty->setCompileDir(SYSTEM_PATH_ROOT . '/cache/smarty/templates_c/');
+        $smarty->setCacheDir(SYSTEM_PATH_ROOT . '/cache/smarty/cache/');
+
+
+        $smarty->assign('request', $_REQUEST);
+        $smarty->assign('version', Box_Version::VERSION);
+
+        $smarty->assign($vars);
+        $smarty->display($name);
     }
 
     /**
@@ -245,8 +252,6 @@ final class Installer
      */
     private function canConnectToDatabase($host, $db, $user, $pass)
     {
-        $dbStatus = false;
-
         try {
             $dbStatus = $this->DBConnect($host, $db, $user, $pass);
         } catch (Exception $exception) {
