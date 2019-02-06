@@ -15,7 +15,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 ini_set('log_errors', '1');
-ini_set('error_log', dirname(__FILE__) . '/php_error.log');
+ini_set('error_log', dirname(__FILE__) . '/../data/log/php_error_installer.log');
 
 $protocol = isSSL() ? 'https' : 'http';
 $url = $protocol . "://" . $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
@@ -186,8 +186,8 @@ final class Installer
 
         $smarty = new Smarty();
         $smarty->setTemplateDir(SYSTEM_PATH_INSTALL . '/views/');
-        $smarty->setCompileDir(SYSTEM_PATH_ROOT . '/cache/smarty/templates_c/');
-        $smarty->setCacheDir(SYSTEM_PATH_ROOT . '/cache/smarty/cache/');
+        $smarty->setCompileDir(SYSTEM_PATH_ROOT . '/data/cache/smarty/templates_c/');
+        $smarty->setCacheDir(SYSTEM_PATH_ROOT . '/data/cache/smarty/cache/');
 
 
         $smarty->assign('request', $_REQUEST);
@@ -404,7 +404,6 @@ final class Installer
     {
         $data = array(
             'debug'     => FALSE,
-            'license'   => $ns->get('license'),
             'salt'      => md5(uniqid()),
             'url'       => SYSTEM_URL,
             'admin_area_prefix' =>  '/admin',
@@ -429,7 +428,13 @@ final class Installer
             'twig'   =>  array(
                 'debug'         =>  true,
                 'auto_reload'   =>  true,
-                'cache'         =>  SYSTEM_PATH_ROOT . '/data/cache',
+                'cache'         =>  SYSTEM_PATH_ROOT . '/data/cache/twig',
+            ),
+
+            'smarty'   =>  array(
+                'debug'         =>  true,
+                'auto_reload'   =>  true,
+                'cache'         =>  SYSTEM_PATH_ROOT . '/data/cache/smarty',
             ),
 
             'api'   =>  array(
@@ -439,8 +444,10 @@ final class Installer
                 'rate_limit'        =>  1000,
             ),
         );
+
         $output = '<?php '.PHP_EOL;
         $output .= 'return '.var_export($data, true).';';
+
         return $output;
     }
 
