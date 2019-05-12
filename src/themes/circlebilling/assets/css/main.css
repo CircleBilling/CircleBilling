@@ -64,6 +64,22 @@ nav .dropdown-menu .dropdown-item.active, .dropdown-item:active {
     background-color: rgba(52, 58, 64, 0.17);
 }
 
+nav .nav-tabs .nav-item {
+    border-radius: 0;
+    color: #212529;
+    border: 1px solid #dee2e6;
+    border-bottom: none;
+}
+
+nav .nav-tabs .nav-item.active {
+    background-color: #212529;
+    color: white;
+}
+
+.tab-content {
+    border: 1px solid #dee2e6;
+}
+
 .breadcrumb li {
     margin: 0 5px 0 5px;
 }

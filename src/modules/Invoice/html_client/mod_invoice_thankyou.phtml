@@ -3,28 +3,34 @@
 {% block breadcrumb %}<li class="active">{% trans 'Thank you' %}</li>{% endblock %}
 
 {% block content %}
-
-<div class="row">
-
-    <article class="span12 data-block">
-        <div class="data-container">
-            <header>
-                <h1>{% trans 'Thank you' %}</h1>
-                <p>{% trans%}Your payment is being processed right now. It can take up 5 minutes to complete.{% endtrans %}</p>
-            </header>
-            <section>
-                <p>{% trans %}Payment for invoice received{% endtrans %}</p>
-
-                <p>{% trans%}You will be automatically redirected to invoice page after 5 minutes.{% endtrans %}</p>
-
-                <script type="text/javascript">
-                    setTimeout(function(){ bb.redirect("{{('/invoice/'~invoice.hash)|link }}";}, 5*60*1000);
-                </script>
-            </section>
+    <div class="row mt-5">
+        <div class="col-md-12 text-center">
+            <h1>{% trans 'Thank you' %}</h1>
+            <p>{% trans%}Your payment is being processed right now. It can take up 5 minutes to complete.{% endtrans %}</p>
         </div>
-    </article>
+    </div>
 
+    <div class="row mt-5">
+        <div class="col-md-4 ml-auto mr-auto">
+            <div class="card dark">
+                <div class="card-header">
+                    {% trans %}Payment for invoice received{% endtrans %}
+                </div>
 
-</div>
+                <div class="card-body">
+                    <p>{% trans%}You will be automatically redirected to invoice page after 5 minutes.{% endtrans %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
 
+{% block js %}
+    <script type="text/javascript">
+        setTimeout(
+            function(){
+                CB.APP.Redirect("{{('/invoice/'~invoice.hash)|link }}");
+            }, 5*60*1000
+        );
+    </script>
 {% endblock %}
