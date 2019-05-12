@@ -58,10 +58,14 @@ nav.navbar .navbar-right .dropdown-menu.show {
     right: 0;
 }
 
-.dropdown-menu .dropdown-item.active, .dropdown-item:active {
+nav .dropdown-menu .dropdown-item.active, .dropdown-item:active {
     color: #212529;
     text-decoration: none;
     background-color: rgba(52, 58, 64, 0.17);
+}
+
+.breadcrumb li {
+    margin: 0 5px 0 5px;
 }
 
 .card,
@@ -75,10 +79,6 @@ nav.navbar .navbar-right .dropdown-menu.show {
 
 .modal-content {
     border: none;
-}
-
-.breadcrumb {
-    display: none;
 }
 
 .dark-header,

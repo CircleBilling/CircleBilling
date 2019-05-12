@@ -11,7 +11,8 @@
 {% block breadcrumbs %}
     {% if not settings.hide_dashboard_breadcrumb %}
         <ul class="breadcrumb">
-            <li><a href="{{ '/'|link }}">{% trans 'Home' %}</a> <span class="divider">/</span></li>
+            <li><a href="{{ '/'|link }}">{% trans 'Home' %}</a></li>
+            <li class="divider">/</li>
             <li class="active">{% trans 'Dashboard' %}</li>
         </ul>
     {% endif %}

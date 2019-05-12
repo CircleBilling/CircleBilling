@@ -4,8 +4,9 @@
 {% set addons = client.order_addons({"id":order.id}) %}
 
 {% block breadcrumb %}
-<li><a href="{{ 'service' | link}}">{% trans 'Orders' %}</a><span class="divider">/</span></li>
-{{ order.title }}
+    <li><a href="{{ 'service' | link}}">{% trans 'Orders' %}</a></li>
+    <li class="divider">/</li>
+    {{ order.title }}
 {% endblock %}
 
 {% set service_partial = "mod_service" ~ order.service_type ~ "_manage.phtml" %}

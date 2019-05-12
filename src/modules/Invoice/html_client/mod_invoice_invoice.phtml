@@ -6,7 +6,8 @@
 
 
 {% block breadcrumb %}
-    <li><a href="{{ '/invoice'|link }}">{% trans 'Invoices' %}</a> <span class="divider">/</span></li>
+    <li><a href="{{ '/invoice'|link }}">{% trans 'Invoices' %}</a></li>
+    <li class="divider">/</li>
     <li class="active">{% trans 'Invoice' %} {{nr}}</li>
 {% endblock %}
 

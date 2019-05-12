@@ -4,7 +4,8 @@
 {% block meta_title %}{{ticket.subject}}{% endblock %}
 
 {% block breadcrumb %}
-    <li><a href="{{ 'support/contact-us' | link}}">{% trans 'Contact us' %}</a><span class="divider">/</span></li>
+    <li><a href="{{ 'support/contact-us' | link}}">{% trans 'Contact us' %}</a></li>
+    <li class="divider">/</li>
     <li class="active">{{ticket.subject}}</li>
 {% endblock %}
 

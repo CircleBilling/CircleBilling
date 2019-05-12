@@ -36,31 +36,37 @@
             {% else %}
                 {% set profile = client.client_get %}
                 {% set company = guest.system_company %}
+                <header>
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                        <a class="navbar-brand" href="#">CircleBilling ClientArea</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#adminMainNavbar" aria-controls="adminMainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
 
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <a class="navbar-brand" href="#">CircleBilling ClientArea</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#adminMainNavbar" aria-controls="adminMainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                        <div class="collapse navbar-collapse" id="adminMainNavbar">
+                            {% include 'partial_menu.phtml' %}
+                        </div>
+                    </nav>
 
-                    <div class="collapse navbar-collapse" id="adminMainNavbar">
-                        {% include 'partial_menu.phtml' %}
-                    </div>
-                </nav>
+                    {% if settings.show_breadcrumb %}
+                        {% block breadcrumbs %}
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li><a href="{{ '/'|link }}">{% trans 'Home' %}</a></li>
+
+                                    <li class="divider">/</li>
+
+                                    {% block breadcrumb %}
+                                        <li class="active">{% trans 'Dashboard' %}</li>
+                                    {% endblock %}
+                                </ol>
+                            </nav>
+                        {% endblock %}
+                    {% endif %}
+                </header>
 
                 <main class="container" role="main">
                     <div class="page-content">
-                        {% if settings.show_breadcrumb %}
-                            {% block breadcrumbs %}
-                                <ul class="breadcrumb">
-                                    <li><a href="{{ '/'|link }}">{% trans 'Home' %}</a> <span class="divider">/</span></li>
-                                    {% block breadcrumb %}
-                                    <li class="active">{% trans 'Dashboard' %}</li>
-                                    {% endblock %}
-                                </ul>
-                            {% endblock %}
-                        {% endif %}
-
                         {% if settings.show_page_header %}
                             {# block page_header %}
                                 <article class="page-header">

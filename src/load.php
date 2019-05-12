@@ -144,7 +144,7 @@ if($config['debug']) {
 }
 
 ini_set('log_errors', '1');
-ini_set('html_errors', FALSE);
+ini_set('html_errors', true);
 ini_set('error_log', SYSTEM_PATH_LOG . '/php_error.log');
 
 // Strip magic quotes from request data.
