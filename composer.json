@@ -26,6 +26,7 @@
         "ext-zlib": "*",
         "ext-PDO": "*",
         "ext-mbstring" : "*",
+        "smarty/smarty": "~3.1",
         "pimple/pimple": "v2.0.0",
         "twig/twig": "v2.9.0",
         "twig/extensions": "1.5.4",

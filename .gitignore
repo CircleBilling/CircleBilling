@@ -8,26 +8,22 @@ src/config.php
 src/bb-config*
 !src/bb-config-sample.php
 
-src/bb-data/log/*
-!src/bb-data/log/.gitkeep
+src/data/log/*
+!src/data/log/.gitkeep
 
-src/bb-data/cache/*
-!src/bb-data/cache/.gitkeep
-src/bb-data/tmp.txt
-src/bb-vendor
+src/data/cache/*
+!src/data/cache/smarty/cache/.gitkeep
+!src/data/cache/smarty/templates_c/.gitkeep
+!src/data/cache/twig/.gitkeep
+
+src/data/tmp.txt
 src/vendor
-src/bb-test.php
 src/install/php_error.log
 build
-composer.phar
-public
-report/*
 composer.lock
 
 ### Vagrant & puphpet ###
 .vagrant/
-puphpet/files/dot/ssh/*
-!puphpet/files/dot/ssh/insecure_private_key
 
 ### node_moduels ###
 node_modules

@@ -60,7 +60,7 @@ cb.installer = {
         var ok = false;
 
         if(stepNumber == 1){
-            if($('#agree').is(':checked') === false) {
+            if(jQuery('#tos-agree').is(':checked') === false) {
                 alert('You must agree with terms of service');
                 return false;
             }
