@@ -16,6 +16,7 @@ $di['config'] = function() {
     $array = include SYSTEM_PATH_ROOT . '/config.php';
     return new Box_Config($array);
 };
+
 $di['logger'] = function () use ($di) {
     $logFile = $di['config']['path_logs'];
     $writer  = new Box_LogStream($logFile);
@@ -263,7 +264,9 @@ $di['curl'] = function ($url) use ($di) {
 $di['zip_archive'] = function () use ($di) {return new ZipArchive();};
 
 $di['server_package'] = function () use ($di) {return new Server_Package();};
+
 $di['server_client'] = function () use ($di) {return new Server_Client();};
+
 $di['server_account'] = function () use ($di) {return new Server_Account();};
 
 $di['server_manager'] = $di->protect(function ($manager, $config) use($di) {
@@ -324,6 +327,7 @@ $di['pdf'] = function () use ($di) {
 $di['geoip'] = function () use ($di) { return new \GeoIp2\Database\Reader(SYSTEM_PATH_LIBRARY . '/GeoLite2-Country.mmdb'); };
 
 $di['password'] = function() use ($di) { return new Box_Password();};
+
 $di['translate'] = $di->protect(function($textDomain = '') use ($di) {
     $tr = new Box_Translate();
     if (!empty($textDomain)){
@@ -337,7 +341,9 @@ $di['translate'] = $di->protect(function($textDomain = '') use ($di) {
     $tr->setup();
     return $tr;
 });
+
 $di['array_get'] = $di->protect(function (array $array, $key, $default = null) use ($di) {
     return isset ($array[$key]) ? $array[$key] : $default;
 });
+
 return $di;
