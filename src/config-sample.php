@@ -99,7 +99,13 @@ return array(
     'twig'   =>  array(
         'debug'         =>  false,
         'auto_reload'   =>  false,
-        'cache'         =>  dirname(__FILE__) . '/data/cache',
+        'cache'         =>  dirname(__FILE__) . '/data/cache/twig',
+    ),
+
+    'smarty'   =>  array(
+        'debug'         =>  true,
+        'auto_reload'   =>  true,
+        'cache'         =>  SYSTEM_PATH_ROOT . '/data/cache/smarty',
     ),
 
     'api'   =>  array(

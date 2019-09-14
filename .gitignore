@@ -3,6 +3,7 @@
 .DS_Store
 .vagrant*
 src/.htaccess
+
 src/config*
 !src/config-sample.php
 
@@ -10,7 +11,10 @@ src/data/log/*
 !src/data/log/.gitkeep
 
 src/data/cache/*
-!src/data/cache/.gitkeep
+!src/data/cache/smarty/cache/.gitkeep
+!src/data/cache/smarty/templates_c/.gitkeep
+!src/data/cache/twig/.gitkeep
+
 src/data/tmp.txt
 src/vendor
 src/install/php_error.log

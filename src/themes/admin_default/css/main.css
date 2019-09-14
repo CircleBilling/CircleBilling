@@ -438,7 +438,7 @@ main {
     padding: 20px;
     position: fixed;
     height: calc(100% - 70px);
-    overflow-y: scroll;
+    overflow: hidden;
 }
 
 /*.subnav { width: 212px; max-width: 36%; margin-top: -1px; float: left; margin-bottom: 80px; margin-right: 41px; }*/
@@ -1321,7 +1321,7 @@ ul.listData li { display: inline-block; padding: 0 6px 1px 6px!important; border
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     border-radius: 6px;
-    overflow: scroll;
+    overflow: hidden;
 }
 #popup_title {
     text-align: center;

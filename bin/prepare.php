@@ -3,7 +3,7 @@
 $pathApp = realpath(dirname(__FILE__) . '/..');
 $pathAppRoot = $pathApp . '/src';
 $pathAppInstall = $pathApp . '/src/install';
-$config = include $pathAppRoot . '/bb-config.php';
+$config = include $pathAppRoot . '/config.php';
 
 $structureSql = '/structure.sql';
 $contentSql = '/content_test.sql';
