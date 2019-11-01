@@ -3,8 +3,10 @@
 {% block meta_title %}{{ topic.title }}{% endblock %}
 {% block meta_description%}{{ topic.first.message|truncate(200) }}{% endblock %}
 {% block breadcrumb %}
-    <li> <a href="{{ '/forum' | link }}">{% trans 'Forum' %}</a><span class="divider">/</span> </li>
-    <li> <a href="{{ '/forum'|link }}/{{forum.slug}}"> {{ forum.title }}</a><span class="divider">/</span> </li>
+    <li><a href="{{ '/forum' | link }}">{% trans 'Forum' %}</a></li>
+    <li class="divider">/</li>
+    <li><a href="{{ '/forum'|link }}/{{forum.slug}}"> {{ forum.title }}</a></li>
+    <li class="divider">/</li>
     <li class="active"> {{ topic.title }} </li>
 {% endblock %}
 

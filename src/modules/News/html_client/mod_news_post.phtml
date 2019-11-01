@@ -2,8 +2,9 @@
 
 {% block meta_title %}{{post.title}}{% endblock %}
 {% block breadcrumb %}
-<li><a href="{{ 'news' | link}}">{% trans 'Blog' %}</a><span class="divider">/</span></li>
-<li class="active">{{post.title}}</li>
+    <li><a href="{{ 'news' | link}}">{% trans 'Blog' %}</a></li>
+    <li class="divider">/</li>
+    <li class="active">{{post.title}}</li>
 {% endblock %}
 
 {% block opengraph %}

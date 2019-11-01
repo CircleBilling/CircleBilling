@@ -3,7 +3,8 @@
 {% block meta_title %}{{category.title}}{% endblock %}
 
 {% block breadcrumb %}
-<li><a href="{{ '/kb'|link }}">{% trans 'Knowledge base' %}</a> <span class="divider">/</span></li>
+<li><a href="{{ '/kb'|link }}">{% trans 'Knowledge base' %}</a></li>
+<li class="divider">/</li>
 <li class="active">{{category.title}}</li>
 {% endblock %}
 

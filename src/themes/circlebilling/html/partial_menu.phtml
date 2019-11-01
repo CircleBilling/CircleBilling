@@ -1,75 +1,98 @@
-<ul class="main-navigation nav-collapse collapse">
-
+<ul class="navbar-nav mr-auto">
     {% if settings.side_menu_dashboard %}
-    <li class="main-menu">
-        <a class="no-submenu" href="{{ '/'|link }}"><span class="awe-home"></span>{% trans 'Dashboard' %}</a>
-    </li>
-    {% endif %}
-    
-    {% if settings.side_menu_order %}
-    <li class="main-menu">
-        <a href="#" class="order-button"><span class="awe-shopping-cart"></span>{% trans 'Order' %}</a>
-    </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ '/'|link }}"><span class="awe-home"></span>{% trans 'Dashboard' %}</a>
+        </li>
     {% endif %}
 
-    {% if settings.side_menu_support %}
-    <li class="main-menu">
-        <a href="{{ '/support'|link }}"><span class="awe-wrench"></span>{% trans 'Support' %}</a>
-    </li>
+    {% if settings.side_menu_order %}
+        <li class="nav-item">
+            <a class="nav-link order-button" href="#"><span class="awe-shopping-cart"></span>{% trans 'Order' %}</a>
+        </li>
     {% endif %}
 
     {% if settings.side_menu_services %}
-    <li class="main-menu">
-        <a href="{{ '/order/service'|link }}"><span class="awe-cogs"></span>{% trans 'Services' %}</a>
-    </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ '/order/service'|link }}"><span class="awe-cogs"></span>{% trans 'Services' %}</a>
+        </li>
     {% endif %}
 
-    {% if settings.side_menu_invoices %}
-    <li class="main-menu">
-        <a href="{{ '/invoice'|link }}"><span class="awe-file-alt"></span>{% trans 'Invoices' %}</a>
-    </li>
-    {% endif %}
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown-payment" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans 'Payment' %}</a>
+        <ul class="dropdown-menu" aria-labelledby="dropdown-payment">
+            {% if settings.side_menu_invoices %}
+                <li>
+                    <a class="dropdown-item" href="{{ '/invoice'|link }}"><span class="awe-file-alt"></span>{% trans 'Invoices' %}</a>
+                </li>
+            {% endif %}
 
-    {% if settings.side_menu_emails %}
-    <li class="main-menu">
-        <a  href="{{ '/email'|link }}"><span class="awe-envelope-alt"></span>{% trans 'Emails' %}</a>
+            {% if settings.side_menu_payments %}
+            <li>
+                <a class="dropdown-item" href="{{ '/client/balance'|link }}"><span class="awe-credit-card"></span>{% trans 'Payment history' %}</a>
+            </li>
+            {% endif %}
+        </ul>
     </li>
-    {% endif %}
 
-    {% if settings.side_menu_payments %}
-    <li class="main-menu">
-        <a href="{{ '/client/balance'|link }}"><span class="awe-credit-card"></span>{% trans 'Payments history' %}</a>
-    </li>
-    {% endif %}
 
-    {% if guest.extension_is_on({"mod":"news"}) %}
-    <li class="main-menu">
-        <a href="{{ '/news'|link }}"><span class="awe-edit"></span>{% trans 'Blog' %}</a>
-    </li>
-    {% endif %}
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown-support" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans 'Support & Hilfe' %}</a>
+        <ul class="dropdown-menu" aria-labelledby="dropdown-support">
+            {% if settings.side_menu_support %}
+                <li>
+                    <a class="dropdown-item" href="{{ '/support'|link }}">Tickets</a>
+                </li>
+            {% endif %}
 
-    {% if guest.extension_is_on({"mod":"kb"}) %}
-    <li class="main-menu">
-        <a href="{{ '/kb'|link }}"><span class="awe-book"></span>{% trans 'Knowledge Base' %}</a>
-    </li>
-    {% endif %}
+            {% if guest.extension_is_on({"mod":"news"}) %}
+                <li>
+                    <a class="dropdown-item" href="{{ '/news'|link }}">{% trans 'Blog' %}</a>
+                </li>
+            {% endif %}
 
-    {% if guest.extension_is_on({"mod":"forum"}) %}
-    <li class="main-menu">
-        <a href="{{ '/forum'|link }}"><span class="awe-comments"></span>{% trans 'Forum' %}</a>
+            {% if guest.extension_is_on({"mod":"kb"}) %}
+                <li>
+                    <a class="dropdown-item" href="{{ '/kb'|link }}">{% trans 'Knowledge Base' %}</a>
+                </li>
+            {% endif %}
+
+            {% if guest.extension_is_on({"mod":"forum"}) %}
+                <li>
+                    <a class="dropdown-item" href="{{ '/forum'|link }}">{% trans 'Forum' %}</a>
+                </li>
+            {% endif %}
+
+
+        </ul>
     </li>
-    {% endif %}
 </ul>
 
-<script type="text/javascript">
-    $('.main-menu').each(function(index){
-        var menu_link = $(this).children('a').attr('href');
-        if ("{{ guest.system_current_url }}" =="{{ '/'|link }}"){
-            $('.main-menu:first').addClass("current");
-        }
-        else if ('{{ guest.system_current_url }}'.indexOf(menu_link) >= 0 && menu_link != "{{ '/'|link }}"){
-            $(this).addClass("current");
-      }
-    });
+<ul class="navbar-nav navbar-right">
+    {% if settings.show_client_details %}
+        <li class="nav-item dropdown user-profile">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown-clients" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{profile.first_name}} {{profile.last_name}}</a>
 
-</script>
+            <ul class="dropdown-menu" aria-labelledby="dropdown-clients">
+                {% if settings.top_menu_profile %}
+                    <li>
+                        <a class="dropdown-item" href="{{ 'client/me'|link }}" title="{% trans 'Profile' %}">{% trans 'Profile' %}</a>
+                    </li>
+                {% endif %}
+
+                {% if settings.side_menu_emails %}
+                    <li>
+                        <a class="dropdown-item" href="{{ '/email'|link }}">{% trans 'Emails' %}</a>
+                    </li>
+                {% endif %}
+
+
+                {% if settings.top_menu_signout %}
+                    <li>
+                        <a class="dropdown-item" href="{{ 'client/logout' | link }}" title="{% trans 'Sign out' %}">{% trans 'Sign out' %}</a>
+                    </li>
+                {% endif %}
+
+            </ul>
+        </li>
+    {% endif %}
+</ul>

@@ -2,10 +2,11 @@
 ._*
 .DS_Store
 .vagrant*
+tmp
 src/.htaccess
-
-src/config*
-!src/config-sample.php
+src/config.php
+src/bb-config*
+!src/bb-config-sample.php
 
 src/data/log/*
 !src/data/log/.gitkeep

@@ -1,0 +1,227 @@
+main .page-content{
+    padding-top: 0;
+    padding-bottom: 2rem;
+}
+
+.green {
+    color: #28a745;
+}
+
+.red {
+    color: #dc3545;
+}
+
+.spacer-20 {
+    height: 20px;
+}
+
+
+/*
+    BOOTSTRAP CUSTOM
+ */
+
+nav.navbar {
+    padding: 0;
+    margin: 0;
+}
+
+nav.navbar .navbar-brand {
+    margin: 0 3rem 0 1rem;
+}
+
+nav.navbar .nav-item {
+    padding: 12px;
+}
+
+nav.navbar .nav-item:hover, .nav-item.dropdown.show  {
+    background-color: #6b758059;
+}
+
+nav.navbar ul.navbar-nav > li.nav-item a.nav-link {
+    font-weight: bold;
+    color: #fff;
+}
+
+nav.navbar .dropdown-menu {
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    min-width: 20rem;
+}
+
+nav.navbar .dropdown-menu .dropdown-item {
+    padding: 1rem 1.5rem;
+}
+
+nav.navbar .navbar-right .dropdown-menu.show {
+    left: unset;
+    right: 0;
+}
+
+nav .dropdown-menu .dropdown-item.active, .dropdown-item:active {
+    color: #212529;
+    text-decoration: none;
+    background-color: rgba(52, 58, 64, 0.17);
+}
+
+nav .nav-tabs .nav-item {
+    border-radius: 0;
+    color: #212529;
+    border: 1px solid #dee2e6;
+    border-bottom: none;
+}
+
+nav .nav-tabs .nav-item.active {
+    background-color: #212529;
+    color: white;
+}
+
+.tab-content {
+    border: 1px solid #dee2e6;
+}
+
+.breadcrumb li {
+    margin: 0 5px 0 5px;
+}
+
+.card,
+.btn,
+.form-control,
+.alert,
+.breadcrumb,
+.modal-content {
+    border-radius: 0;
+}
+
+.modal-content {
+    border: none;
+}
+
+.dark-header,
+.card.dark .card-header,
+.table .thead-dark th,
+.modal-header {
+    font-weight: bold;
+    color: #fff;
+    background-color: #212529;
+    border-color: #32383e;
+    border-radius: 0;
+}
+
+.btn-dark {
+    color: #fff;
+    background-color: #212529;
+    border-color: #32383e;
+    border-radius: 0;
+}
+
+.close {
+    color: #fff;
+    opacity: 1;
+    text-shadow: none;
+}
+
+.close:hover {
+    color: #ffffffcf;
+    opacity: 1;
+    text-shadow: none;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+/*
+    PAGE STYLES
+ */
+
+.footer {
+    background-color: #f5f5f5;
+}
+
+/*
+    SUB DROPDOWN FIX
+ */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu a::after {
+    transform: rotate(-90deg);
+    position: absolute;
+    right: 6px;
+    top: .8em;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-left: .1rem;
+    margin-right: .1rem;
+}
+
+/*
+    TICKET CHAT
+ */
+
+.chat
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chat li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #B3A9A9;
+}
+
+.chat li.left .chat-body
+{
+    margin-left: 70px;
+}
+
+.chat li.right .chat-body
+{
+    margin-right: 60px;
+}
+
+
+.chat li .chat-body p
+{
+    margin: 0;
+    color: #777777;
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+}
+
+.panel-body
+{
+    overflow-y: scroll;
+    height: 250px;
+}
+
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}

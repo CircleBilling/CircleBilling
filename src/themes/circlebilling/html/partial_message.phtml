@@ -1,8 +1,11 @@
 {% for label, messages in flashes %}
-    {% for msg in messages %}
-        <div class="h-block {{label}}">
-            <h2>{{label}}</h2>
-            <p>{{msg}}</p>
+    {% if messages %}
+        <div class="container container-head messages mb-5">
+        {% for msg in messages %}
+            <div class="alert alert-primary" role="alert">
+                <i class="fas fa-exclamation-circle"></i> <strong>{{label}}</strong> {{msg}}
+            </div>
+        {% endfor %}
         </div>
-    {% endfor %}
+    {% endif %}
 {% endfor %}
