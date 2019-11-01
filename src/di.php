@@ -140,22 +140,29 @@ $di['twig'] = function () use ($di) {
     $config = $di['config'];
     $options = $config['twig'];
 
-    $loader = new Twig_Loader_String();
-    $twig = new Twig_Environment($loader, $options);
+    $loader = new Twig\Loader\ArrayLoader();
+    $twig = new Twig\Environment($loader, $options);
 
     $box_extensions = new Box_TwigExtensions();
     $box_extensions->setDi($di);
 
-    $twig->addExtension(new Twig_Extension_Optimizer());
-    $twig->addExtension(new Twig_Extensions_Extension_I18n());
-    $twig->addExtension(new Twig_Extensions_Extension_Debug());
-    $twig->addExtension($box_extensions);
-    $twig->getExtension('core')->setDateFormat($config['locale_date_format']);
-    $twig->getExtension('core')->setTimezone($config['timezone']);
+  // $twig->addExtension(new Twig\Extension\OptimizerExtension());
+    $twig->addExtension(new Twig\Extension\DebugExtension());
+    $twig->addExtension(new Twig\Extensions\I18nExtension());
+    $twig->getExtension(Twig\Extension\CoreExtension::class)->setDateFormat($config['locale_date_format']);
+    $twig->getExtension(Twig\Extension\CoreExtension::class)->setTimezone($config['timezone']);
+
+    $twigExtension = new Box_TwigExtensions();
+    $twigExtension->setDi($di);
+    $twig->addExtension($twigExtension);
+    /*$extensions = new Box_TwigExtensions();
+    foreach($extensions->getFilters() as $filter) {
+        $twig->addFilter($filter);
+    }*/
 
     // add globals
     if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
-        $_GET['ajax'] = TRUE;
+        $_GET['ajax'] = true;
     }
 
     $twig->addGlobal('request', $_GET);

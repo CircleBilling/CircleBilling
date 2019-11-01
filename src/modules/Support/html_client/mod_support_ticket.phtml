@@ -18,7 +18,7 @@
             <p>Ticket number <i>#{{ ticket.id }}</i> for department <i>{{ticket.helpdesk.name}}</i></p>
 
             {% if ticket.status != 'closed' %}
-                <button class="btn btn-small api-button" data-api-url="client/support/ticket_close" data-api-data='{"id" : "{{ ticket.id}}" }' data-api-reload="1"> {% trans 'Close ticket' %}</button>
+                <button class="btn btn-danger btn-small api-button" data-api-url="client/support/ticket_close" data-api-data='{"id" : "{{ ticket.id}}" }' data-api-reload="1"> {% trans 'Close ticket' %}</button>
             {% endif %}
         </div>
     </div>

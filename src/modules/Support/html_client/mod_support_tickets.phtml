@@ -48,7 +48,7 @@
                                         <td>{{ticket.helpdesk.name}}</td>
                                         <td><span class="label {% if ticket.status=='open'%}label-info{% elseif ticket.status == 'on_hold'%}label-warning{%endif%}">{{mf.status_name(ticket.status)}}</span></td>
                                         <td>{{ticket.created_at|timeago}} {% trans 'ago' %}</td>
-                                        <td class="actions"><a href="{{ 'support/ticket'|link }}/{{ticket.id}}" class="btn btn-small">{% if ticket.status=='closed'%}{% trans 'View' %}{% else %}{% trans 'Reply' %}{%endif%}</a></td>
+                                        <td class="actions"><a href="{{ 'support/ticket'|link }}/{{ticket.id}}" class="btn btn-dark btn-small">{% if ticket.status=='closed'%}{% trans 'View' %}{% else %}{% trans 'Reply' %}{%endif%}</a></td>
                                     </tr>
                                 {% else %}
                                     <tr>

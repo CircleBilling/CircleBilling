@@ -30,10 +30,7 @@
         {% endif %}
 
         {% block body %}
-            {% if not client %}
-                <script type="text/javascript">$(function(){bb.redirect('{{ "login"|link }}');});</script>
-
-            {% else %}
+            {% if client %}
                 {% set profile = client.client_get %}
                 {% set company = guest.system_company %}
                 <header>
@@ -164,10 +161,6 @@
             {% endif %}
         {% endblock %}
 
-        {% if settings.top_menu_order or settings.side_menu_order %}
-            <script src="{{'orderbutton/js'| link({'options' : '1', 'width' : 600, 'theme_color' : 'green', 'background_color' : 'black', 'background_opacity' : 50, 'background_close' : 1, 'bind_selector' : '.order-button', 'border_radius' : 0, 'loader' : 8}) }}" ></script>
-        {% endif %}
-
         {% if settings.inject_javascript %}
             {{ settings.inject_javascript | raw}}
         {% endif %}
@@ -178,6 +171,16 @@
         <script src="{{ 'js/popper.min.js' | asset_url}}"></script>
         <script src="{{ 'js/bootstrap.min.js' | asset_url}}"></script>
         <script src="{{ 'js/main.js' | asset_url}}"></script>
+
+        {% if not client %}
+            <script type="text/javascript">
+                CB.APP.Redirect('{{ "login"|link }}');
+            </script>
+        {% endif %}
+
+        {% if settings.top_menu_order or settings.side_menu_order %}
+        <script src="{{'orderbutton/js'| link({'options' : '1', 'width' : 600, 'theme_color' : 'green', 'background_color' : 'black', 'background_opacity' : 50, 'background_close' : 1, 'bind_selector' : '.order-button', 'border_radius' : 0, 'loader' : 8}) }}" ></script>
+        {% endif %}
 
         {% block js %}{% endblock %}
     </body>
