@@ -35,7 +35,7 @@
                     * Rename "bb-config-sample.php" file to "bb-config.php", fill in the values and change this file permissions to read only (CHMOD 644).<br/>
                     * Import /install/structure.sql to your database<br/>
                     * Import /install/content.sql to your database<br/>
-                    * Open browser <a href="{{constant("BB_URL")}}index.php?_url=/bb-admin">{{constant("BB_URL")}}index.php?_url=/bb-admin</a> to create new admin
+                    * Open browser <a href="{{constant("SYSTEM_URL")}}index.php?_url=/bb-admin">{{constant("SYSTEM_URL")}}index.php?_url=/bb-admin</a> to create new admin
                     account.<br/>
                     * Remove /install directory<br/>
                 </p>

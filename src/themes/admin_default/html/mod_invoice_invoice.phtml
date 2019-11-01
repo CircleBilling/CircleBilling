@@ -607,16 +607,14 @@
 
 {% block head %}{{ mf.bb_editor('.bb-textarea') }}{% endblock %}
 {% block js %}
-{% autoescape true js %}
-<script type="text/javascript">
-$(function() {
-    $('input[name=gateway]:first').attr('checked', true);
-    $('#pay-now-button').click(function(){
-        var link = $('input[name=gateway]:checked').val();
-        bb.redirect(link);
-        return false;
-    });
-});
-</script>
-{% endautoescape %}
+    <script type="text/javascript">
+        $(function() {
+            $('input[name=gateway]:first').attr('checked', true);
+            $('#pay-now-button').click(function(){
+                var link = $('input[name=gateway]:checked').val();
+                bb.redirect(link);
+                return false;
+            });
+        });
+    </script>
 {% endblock %}
