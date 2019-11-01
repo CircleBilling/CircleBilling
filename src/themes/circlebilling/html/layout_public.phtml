@@ -4,37 +4,34 @@
 <!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <title>{% block meta_title %}{% endblock %} {{ settings.meta_title }}</title>
+    <title>{% block meta_title %}{{ settings.meta_title }}{% endblock %}</title>
 
-    <meta property="bb:url" content="{{ constant('SYSTEM_URL') }}">
-    <meta property="bb:client_area" content="{{ '/'|link }}">
+    <meta property="app:url" content="{{ constant('SYSTEM_URL') }}">
+    <meta property="app:client_area" content="{{ '/'|link }}">
 
-    <meta name="description" content="{{ settings.meta_description }}">
+    <meta name="description" content="{% block meta_description %}{{ settings.meta_description }}{% endblock %}">
     <meta name="robots" content="{{ settings.meta_robots }}">
     <meta name="author" content="{{ settings.meta_author }}">
-    <meta name="generator" content="BoxBilling {{ guest.system_version }}">
+    <meta name="generator" content="CircleBilling {{ guest.system_version }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel='stylesheet' type='text/css' href="{{ ('css/huraga-' ~ settings.color_scheme ~ '.css') | asset_url }}">
-    <link rel='stylesheet' type='text/css' href="{{ 'css/plugins/jquery.jgrowl.css' | asset_url }}">
+    {% block opengraph %}{% endblock %}
 
-    <link rel="shortcut icon" href="{{ 'favicon.ico' | asset_url }}">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ 'img/icons/apple-touch-icon-114-precomposed.png' | asset_url }}">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ 'img/icons/apple-touch-icon-72-precomposed.png' | asset_url }}">
-    <link rel="apple-touch-icon-precomposed" href="{{ 'img/icons/apple-touch-icon-57-precomposed.png' | asset_url }}">
-
-    <script src="{{ 'js/libs/jquery.js' | asset_url }}"></script>
-    <script src="{{ 'js/bb-jquery.js' | asset_url }}"></script>
-    <script src="{{ 'js/libs/modernizr.js' | asset_url }}"></script>
-    <script src="{{ 'js/bootstrap/bootstrap.min.js' | asset_url}}"></script>
-    <script src="{{ 'js/libs/selectivizr.js' | asset_url }}"></script>
-    <script src="{{ 'js/plugins/jGrowl/jquery.jgrowl.js' | asset_url }}"></script>
+    <link rel='stylesheet' type='text/css' href="{{ ('css/bootstrap.min.css') | asset_url }}">
+    <link rel='stylesheet' type='text/css' href="{{ ('css/fontawesome-all.min.css') | asset_url }}">
+    <link rel='stylesheet' type='text/css' href="{{ ('css/main.css') | asset_url }}">
+    <link rel='stylesheet' type='text/css' href="{{ ('css/shema-' ~ settings.color_scheme ~ '.css') | asset_url }}">
 
     {% block head %}{% endblock %}
-        {% block js %}{% endblock %}
 </head>
 <body>
     {% block body %}{% endblock %}
+
     {% include 'partial_pending_messages.phtml' ignore missing %}
+
+    <script src="{{ 'js/jquery.min.js' | asset_url}}"></script>
+    <script src="{{ 'js/popper.min.js' | asset_url}}"></script>
+    <script src="{{ 'js/bootstrap.min.js' | asset_url}}"></script>
+    <script src="{{ 'js/main.js' | asset_url}}"></script>
 </body>
 </html>
