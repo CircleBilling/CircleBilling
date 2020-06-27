@@ -24,7 +24,7 @@
 
     {% block head %}{% endblock %}
 </head>
-<body>
+<body {% block body_attributes %}{% endblock %}>
     {% block body %}{% endblock %}
 
     {% include 'partial_pending_messages.phtml' ignore missing %}

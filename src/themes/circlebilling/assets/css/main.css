@@ -1,3 +1,18 @@
+body.signin {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: white;
+}
+
 main .page-content{
     padding-top: 0;
     padding-bottom: 2rem;
@@ -13,6 +28,11 @@ main .page-content{
 
 .spacer-20 {
     height: 20px;
+}
+
+.page-logo {
+    border-bottom: 2px solid #212529;
+    padding-bottom: 20px;
 }
 
 
@@ -127,11 +147,42 @@ nav .nav-tabs .nav-item.active {
     text-shadow: none;
 }
 
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-signin .checkbox {
+    font-weight: 400;
+}
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
 @media (min-width: 1200px) {
     .container {
         max-width: 100%;
     }
 }
+
 
 /*
     PAGE STYLES
@@ -225,3 +276,9 @@ nav .nav-tabs .nav-item.active {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: #555;
 }
+
+
+
+
+
+
